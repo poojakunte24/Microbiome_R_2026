@@ -1,0 +1,3423 @@
+,unlist.var_labels.
+key,unique identity key
+f0_m_glu_test_18wks,mother glucose test at 18wks
+v1,mother date of followup at 18wks
+glfast1,mother fasting glucose (mg%) at 18wks
+glfast2,mother fasting glucose at 2nd visit
+gl2hr,mother 120 min glucose at 28wks
+comment_m_glu_28wk,mother any comment on cross checking glucose value 28wks
+sex_f1child,sex of the f1 child
+cscreat6,f1 child serum creatinine (mg%) at 6y
+ccreat_i,f1 child creatinine (mg%) at 12y
+ccreat_18y,f1 child Creatinine (mg%) at 18y
+cgluf_6,f1 child fasting glucose (mg%) at 6y
+cglu30_6,f1 child 30 min glucose (mg%) at 6y
+cglu2h_6,f1 child 120 min glucose (mg%) at 6y
+cinsf_6,f1 child fasting insulin (mu/l) at 6y
+cins30_6,f1 child 30 min insulin (mu/l) at 6y
+cins2h_6,f1 child 120 min insulin (mu/l) at 6y
+cchol6,f1 child cholesterol (mg%) at 6y
+ctg6,f1 child triglycerides (mg%) at 6y
+chdl6,f1 child HDL cholesterol (mg%) at 6y
+cgluf_i,f1 child fasting glucose (mg%) at 12y
+cinsf_i,f1 child fasing plasma insulin (mu/L) at 12y
+cchol_i,f1 child total cholesterol (mg%) at 12y
+chdl_i,f1 child total hdl cholesterol (mg%) at 12y
+ctg_i,f1 child triglycerides (mg%) at 12y
+cgluf_18y,f1 child Fasting Glucose (mg%) at 18y
+cglu30_18y,f1 child 30 min Glucose (mg%) at 18y
+cglu2hr_18y,f1 child 120 min Glucose (mg%) at 18y
+cinsf_18y,f1 child Fasting Insulin (mu/l) at 18y
+cins30_18y,f1 child 30 min Insulin  (mu/l) at 18y
+cins2hr_18y,f1 child 120 min Insulin  (mu/l) at 18y
+cchol_18y,f1 child Cholesterol (mg%) at 18y
+chdl_18y,f1 child  HDL(mg%) at 18y
+ctg_18y,f1 child Triglycerides (mg%) at 18y
+lmp_final,mother final lmp
+del_date,Date of delivery
+gestage_del_f2,Gestation age at delivery in days
+gestage_del_wk_f2,Gestation age at delivery in weeks
+sub_no6,family number at the time of modi study
+subcatn,screening categories for intervention trial
+rx,intervention group
+cagei,f1 child age at 12y
+cage6,f1 child age at the time of modi study(y)
+f1_c_age_6_12y,mean age
+cbi6,childs bicep skinfold(mm)  at 6y
+cbi_i,child bicep (mm)-pmns2
+ctr6,childs tricep skinfold(mm)  at 6y
+ctr_i,child tricep (mm)-pmns2
+css6,childs subscapular skinfold(mm)  at 6y
+css_i,child subscapular (mm) - pmns2
+csu6,childs suprailiac skinfold(mm)  at 6y
+csu_i,child suprailiac (mm)-pmns2
+f1_c_bi_6_12y,mean of 6y and 12y bicep
+f1_c_tr_6_12y,mean of 6y and 12y tricep
+f1_c_ss_6_12y,mean of 6y and 12y suprailiac
+f1_c_su_6_12y,mean of 6y and 12y suprailiac
+f1_c_sum_skf_6_12y,mean of 6y and 12y sum of skinflods
+f1_c_glu_6_12y,mean of 6y and 12y glucose
+f1_c_hdl_6_12y,mean of 6y and 12y hdl
+f1_c_tg_6_12y,mean of 6y and 12y tg
+age,mother age at pre pregnancy
+f0_m_age_28wks,mother age by variable d2 and age from (age of the mother) variable at 28wks
+f0_m_age_6,mother age at 6y
+f0_m_age_12,mother age at 12y
+wt,mother weight during final pre pregnant anthro(kg)
+mwt1,mother weight (kg) at 18wks
+mwt2,mother weight at 28wks
+wt3,mother weight (kg) at 18wks
+mwt6,mother weight(kg) at 6y
+mwt_i,mother weight at 12y
+height,mother height at pre pregnancy
+f0_m_ht_28wks,mother height at 28wks
+mht6,mother height(cm) at 6y
+mht_i,mothers height at 12y
+bmi,prepregnant bmi (kg/m2)
+bmi1,bmi at 1st visit  (kg/m2)
+bmi2,mother bmi at 28wks
+bmi3,bmi at 3rd visit  (kg/m2)
+mbmi6,mothers bmi at 6y
+mbmi_i,mothers bmi at 12y
+waist,Waist circumference during final prepregnant anthro (cm)
+waist1,Waist circumference during 1st visit (cm)
+waist2,Waist circumference during 2nd visit (cm)
+waist3,Waist circumference during 3rd visit (cm)
+mwaist6,mothers waist circ(cm) at 6y
+hip,Hip circumference during final prepregnant anthro (cm)
+hip1,Hip circumference during 1st visit (cm)
+hip2,Hip circumference during 2nd visit (cm)
+hip3,Hip circumference during 3rd visit (cm)
+mhip6,mothers hip circ(cm) at 6y
+whr,prepreg waist-hip ratio
+whr1,waist-hip ratio 1st visit
+whr2,waist-hip ratio 2nd visit
+whr3,waist-hip ratio 3rd visit
+mwhr6,mothers whr  at 6yrs
+f0_f_age_baseline,"father predicted variable using hage,hvisit,fage6,fagei at baseline"
+fage6_new,father age at 6y
+fage12_new,father age  at 12y
+tobacco,Whether women chew tobacco?
+reg_smok,Any reguler smokers in the house?
+gravida,Gravida
+para,Parity
+prehis,"previous history of mtp,abortion,stillbirth"
+del_mode,Mode of delivery
+outcome,outcome of the delivery
+hht,father height (cm) at baseline
+fht_i,fatehrs height at 12y
+fht6,father height(cm) at 6y
+hwt,father weight (cm) at baseline
+fwt6,father weight(kg) at 6y
+fwt_i,fatehrs weight at 12y
+hbmi,father bmi (kg/m2) at baseline
+fbmi6,father bmi at 6y
+fbmi_i,fathers bmi at 12y
+hwaist,father waist circumference (cm) at baseline
+fwaist6,father waist circ(cm) at 6y
+hhip,father hip circumference (cm) at basline
+fhip6,fathers hip circ(cm) at 6y
+hwhr,husbands waist-hip ratio
+fwhr6,fathers whr  at 6yrs
+father_24yr_loss,father expire/death status
+f0_f_date_death,father expire/death date
+f0_m_mother_24,mother expire/death status
+f0_m_date_death,mother date of death
+totalsco,socio economic score by Parek & Trivedi at baseline
+sliscore,socio economic score by sli at 6y
+slisc_i,socio economic score by sli at 12y
+sli_score_24,socio economic score by sli at 24y
+hglfast,father fasting glucose (mg%) at baseline
+hinfast,father fasting insulin (pmol/L) at baseline
+f0_f_fg_18_baseline,father fasting glucose converted into SI unit (HOMA2 model) at baseline
+f0_f_fi_6_baseline,father fasting insulin converted into SI unit (HOMA2 model) at baseline
+f0_f_homab_baseline,father HOMA B at baseline
+f0_f_homas_baseline,father HOMA S at baseline
+f0_f_homar_baseline,father HOMA IR at baseline
+fgluf_6,father fasting glucose(mg%) at 6y
+finsf_6,father fasting insulin(mu/l)  at 6y
+f0_f_fg_18_6y,father fasting glucose converted into SI unit (HOMA2 model) at 6y
+f0_f_fi_6_6y,father fasting insulin converted into SI unit (HOMA2 model) at 6y
+f0_f_homab_6y,father HOMA B at 6y
+f0_f_homas_6y,father HOMA S at 6y
+f0_f_homar_6y,father HOMA IR at 6y
+fgluf_i,father fasting glucose at 12y
+finsf_i,father fasting insulin  at 12y
+f0_f_fg_18_12y,father fasting glucose converted into SI unit (HOMA2 model) at 12y
+f0_f_fi_18_12y,father fasting insulin converted into SI unit (HOMA2 model) at 12y
+f0_f_homab_12y,father HOMA B at 12y
+f0_f_homas_12y,father HOMA S at 12y
+f0_f_homar_12y,father HOMA IR at 12y
+fins2,mother fasting insulin at 2nd visit
+f0_m_fg_18_28wks,mother fasting glucose converted into SI unit (HOMA2 model) at 28wks
+f0_m_fi_6_28wks,mother fasting insulin converted into SI unit (HOMA2 model) at 28wks
+f0_m_homab_28wks,mother HOMA B at 28wks
+f0_m_homas_28wks,mother HOMA S at 28wks
+f0_m_homar_28wks,mother HOMA IR at 28wks
+mgluf_6,mothers fasting glucose (mg%) at 6y
+minsf_6,mothers fasting insulin (mu/l) at 6y
+f0_m_fg_18_6y,mother fasting glucose converted into SI unit (HOMA2 model) at 6y
+f0_m_fi_6_6y,mother fasting insulin converted into SI unit (HOMA2 model) at 6y
+f0_m_homab_6y,mother HOMA B at 6y
+f0_m_homas_6y,mother HOMA S at 6y
+f0_m_homar_6y,mother HOMA IR at 6y
+mgluf_i,mother fasting glucose at 12y
+minsf_i,mother fasting insulin  at 12y
+f0_m_fg_18_12y,mother fasting glucose converted into SI unit (HOMA2 model) at 12y
+f0_m_fi_6_12y,mother fasting insulin converted into SI unit (HOMA2 model) at 12y
+f0_m_homab_12y,mother HOMA B at 12y
+f0_m_homas_12y,mother HOMA S at 12y
+f0_m_homar_12y,mother HOMA IR at 12y
+LengthZScore,f1 child birth length Z score (using intergrowth model)
+WeightZScore,f1 child birth weight Z score (using intergrowth model)
+HeadCircumferenceZScore,f1 child birth head circumference Z score (using intergrowth model)
+LengthZScore_f2,f2 child birth length Z score (using intergrowth model)
+WeightZScore_f2,f2 child birth weight Z score (using intergrowth model)
+HeadCircumferenceZScore_f2,f2 child birth head circumference Z score (using intergrowth model)
+icmrscr_dt,f1 child followup date at 17y
+c_followup_18y,f1 child followup date at 18y
+cht_18y,f1 child height at 18y
+fdob,father date of birth
+f0_f_Diabetic_St,father diabetic status
+f0_f_follow_upstatus_baseline,father date of followup at baseline
+f0_f_dov_baseline,"father predicted variable using hage,hvisit,fage6,fagei at baseline"
+hhead,father head circumference (cm) at baseline
+hgl2hr,father 120 min glucose (mg%) level at baseline
+f0_f_dov_6,father date of followup at 6y
+f0_f_follow_upstatus_6y,father date of followup status
+fhc6,father head circ(cm) at 6y
+fglu2h_6,father 120 min glucose (mg%) at 6y
+fftdxp_9,father  total (bmc+tissue) fat% at 6y
+fsyst6,father systolic blood pressure (mmhg) at 6y
+fdia6,father diastolic blood pressure (mmhg) at 6y
+fpulse6,father pulse(/min) at 6y
+f0_f_dov_12,father date of followup at 12y
+f0_f_follow_upstatus_12y,father date of followup status at 12y
+mother_24yr_loss,mother expire/death status
+f0_m_Diabetic_St,mother diabetic status
+mhc6,mothers head circ(cm) at 6y
+f0_f_status_24,father expire/death status
+bw,f1 child Birth weight (gm)
+mdob,mother date of birth
+d2,mother date of followup pre pregnancy
+f0_m_followup_status_28wks,mother followup status pre pregnancy
+f0_m_followup_status_6,mother followup status 6y
+f0_m_followup_status_12,mother followup status 12y
+f0_m_dov_12,mother date of  followup 12y
+f0_m_sys_bp_12,mother systolic blood pressure at 12y
+f0_m_dia_bp_12,mother diastolic blood pressure at 12y
+f0_m_pulse_12,mother pulse at 12y
+mother_st_24yr,"mother glucose test (OGTT,Fasting,Known diabetes) 24y"
+f0_m_dov_6,mother date of followup at 6y
+mglu2h_6,mother 2h glucose (mg%) at 6y
+mftdxp_9,mother total (bmc+tissue) fat% at 6y
+cen_dt6_copy,mother date of followup at 6y
+mage6,mother age at 6y
+pmns2dt_copy,mother date of followup at 12y
+magei,mothers age at 12y
+fintst,father status at 12y
+fdtdth,father date of death reporrted at 12y
+frdth,father death reason reported at 12y
+father_st_24yr,"father glucose test (OGTT,Fasting,Known diabetes) 24y"
+pmns2dt,f1 child date of followup at 24y
+fagei,father age at 12y
+cen_dt6,f1 child  date of followup at 6y
+fage6,fathers age at 6y
+fagedx6,father age by dexa scan at 6y
+f1_c_ldl_6y,f1 child LDL at 6y
+f1_c_age_mon_12,f1 child age (months) at 12y
+cwt_i,f1 child weight (kg) 12y
+cht_i,f1 child height (cm) 12y
+f1_c_age_mon_6,f1 child age (months) at 12y
+cwt6,f1 child weight(kg) at 6y
+cht6,f1 child height(cm) at 6y
+f1_c_fastglu_6_HOMA2,f1 child fasting glucose converted into SI unit (HOMA2 model) at 6y
+f1_c_fastins_6_HOMA2,f1 child fasting insulin converted into SI unit (HOMA2 model) at 6y
+f1_c_homaB_6,f1 child HOMA B at 6y
+f1_c_homaS_6,f1 child HOMA S at 6y
+f1_c_homaIR_6,f1 child HOMA IR at 6y
+f1_c_fastglu_12_HOMA2,f1 child fasting glucose converted into SI unit (HOMA2 model) at 12y
+f1_c_fastins_12_HOMA2,f1 child fasting insulin converted into SI unit (HOMA2 model) at 12y
+f1_c_homaB_12,f1 child HOMA B at 12y
+f1_c_homaS_12,f1 child HOMA S at 12y
+f1_c_homaIR_12,f1 child HOMA IR at 12y
+f1_c_fastglu_18_HOMA2,f1 child fasting glucose converted into SI unit (HOMA2 model) at 18y
+f1_c_fastins_18_HOMA2,f1 child fasting insulin converted into SI unit (HOMA2 model) at 18y
+f1_c_homaB_18,f1 child HOMA B at 18y
+f1_c_homaS_18,f1 child HOMA S at 18y
+f1_c_homaIR_18,f1 child HOMA IR at 18y
+f0_m_BMI_2cate_28wks,mother BMI status ( < 25 & >= 25) at 28wks
+f0_m_BMI_3cate_28wks,mother BMI category at 28wks
+f0_m_BMI_2cate_6y,mother BMI status ( < 25 & >= 25) at 6y
+f0_m_BMI_3cate_6y,mother BMI category at 6y
+f0_m_BMI_2cate_12y,mother BMI status ( < 25 & >= 25) at 12y
+f0_m_BMI_3cate_12y,mother BMI category at 12y
+f0_f_BMI_2cate_baseline,father BMI status ( < 25 & >= 25) at baseline
+f0_f_BMI_3cate_baseline,father BMI category at basline
+f0_f_BMI_2cate_6y,father BMI status ( < 25 & >= 25) at 6y
+f0_f_BMI_3cate_6y,father BMI category at 6y
+f0_f_BMI_2cate_12y,father BMI status ( < 25 & >= 25) at 12y
+f0_f_BMI_3cate_12y,father BMI category at 12y
+cB12_cate_for_18y,f1 child PIS combined group category &  Placebo+Excluded 18y
+csfol_6,f1 child serum folate (nmol/L) at 6y
+cb12_6,f1 child b12 (pmol/L) at 6y
+chcy_6yr,f1 child plasma homocysteine (micromol/L) on HPLC System at 6y
+cSFOL_i,f1 child serum folate at 12y
+cb12_i,f1 child b12 at 12y
+chcy_i,f1 child homocysteine at 12y
+cage_scr,f1 child age at 17y
+cfolate_scr,f1 child folate at (nmol/L) 17y
+cb12_scr,f1 child b12 at (pmol/L) 17y
+CHOLO_TC_scr,f1 child holo TC at 17y
+chcy_scr,f1 child homocysteine (micromol/l) at 17y
+cage18y,f1 child age at 18y
+cfol_18y,f1 child folate at (nmol/L) 18y
+cb12_18y,f1 child b12 at (pmol/L) 18y
+CHOLO_TC_18yr,f1 child holo TC at 18y
+chcy_18y1,f1 child homocysteine (micromol/l) at 18y
+d1,mother date of followup at 18wks
+f0_f_age_derived_int,father derived age variable f0 fa using f0 mo visit date 18 wks at baseline
+hage,father age at baseline
+derived_h_age,father derived age at baseline
+g1_sex,f2 child sex of the baby
+village,village
+hamname,hamlet name
+villnumber,village number
+hamlet,hamlet number
+popn_area,Child population area
+sliscore_18y,socio economic score by sli at 18y
+cdob,childs date of birth
+f_dob,fathers date of birth
+c_followup_6y,f1 child followup status at 6y
+c_followup_12y,f1 child followup status at 12y
+pmns2,f1 child followup status at by data entry 12y
+c_followup_17y,f1 child followup status at 17y
+date_18y,f1 child date of followup at 18y
+gad_18y,f1 child GAD at 18y
+cgad_18y,f1 child GAD at 18y
+f0_f_glu_test_int,father derived variable for glucose test using intial visit at baseline
+hb12,father vitamin B12 (pM) at baseline
+hhcy,father  homocysteine (micromol/L) at baseline
+comm_hhcy,father any comment on total homocysteine at baseline
+comment_f_glu_int,father derived variable for glucose value cross check at baseline
+hhb,father hb value (gm%) at baseline
+hin2hr,father 120 min insulin (pmol/L) at baseline
+hproins,father pro insulin (pmol/L) at baseline
+hsplit,father split insulin (pmol/L) at baseline
+hwbc,father wbc at baseline
+hrbc,father rbc at baseline
+hhct,father haematocrit at baseline
+hplt,father platelet count at baseline
+hly_perc,father ly% at baseline
+hly_no,father ly# at baseline
+hmalb,father microalbumen at baseline
+hb1,mother hb (gm%) at 18wks
+hct1,mother haematcrit at 18wks
+fins1,mother fasting insulin (pmol/L) at 18wks
+proins1,mother pro insulin (pmol/L) at 18wks
+split1,mother split insulin (pmol/L) at 18wks
+rcf1,mother red cell folate (ng/mL) at 18wks
+fer1,mother ferritin (microgm/L) at 18wks
+vitc1,mother serum vitamin c (micromol/l) at 18wks
+vitac1,mother VITC1+1 at 18wks
+chol1,mother cholesterol (mg%) at 18wks
+tg1,mother triglyceride (mg%) at 18wks
+hdlchol1,mother HDL (mg%) at 18wks
+urac1,mother uric acid at 18wks
+creat1,mother creatinine (mg%) at 18wks
+urcreat1,mother urine creatinine (mg%) at 18wks
+ur5oxo1,mother urine 5oxoproline at 18wks
+opcr1,mother ratio of urine oxoproline/creatinie at 18wks
+alb1,mother serum albumen at 18wks
+nefa1,mother nonesterified fatty acid at 18wks
+wbc1,mother wbc at 18wks
+rbc1,mother rbc at 18wks
+ly_no1,mother lymphocite # at 18wks
+ly_perc1,mother lymphocite % at 18wks
+plt1,mother platelet count at 18wks
+malb1,mother micro albumen at 18wks
+b12_v1,mother b12 (pmol/L) at 18 wks
+fol_v1,mother serum folate at 18 wks
+thcy_v1,mother homocysteine (micromol/L) at 18 wks
+tcys_v1,mother total cysteine at 18 wks
+cysta_v1,mother cystathionine at 18 wks
+met_v1,mother methionine visit 18 wks
+mma_v1,mother mma at 18 wks
+hb2,mother hb at 28wks
+hct2,mother haematocrit at 28wks
+in2hr2,mother 120 min insulin at 28wks
+proins2,mother pro insulin at 28wks
+split2,mother split insulin at 28wks
+rcf2,mother red cell folate at 28wks
+fer2,mother ferritin at 28wks
+vitc2,mother serum vitamin c (micromol/l) at 28wks
+vitac2,mother vitc2+1 at 28wks
+chol2,mother cholesterol at 28wks
+tg2,mother triglyceride at 28wks
+hdlchol2,mother HDL at 28wks
+urac2,mother uric acid at 28wks
+creat2,mother Serum Creatinine at 28wks
+urcreat2,mother Urine creatinine at 28wks
+ur5oxo2,mother Urine 5oxoproline at 28wks
+opcr2,mother Ratio of urine oxoproline/creatinie at 28wks
+alb2,mother Serum Albumin at 28wks
+nefa2,mother Nonesterified fatty acid at 28wks
+wbc2,mother WBC at 28wks
+rbc2,mother RBC at 28wks
+ly_no2,mother WOMENS LYMPHOCITE # at 28wks
+ly_perc2,mother WOMENS LYMPHOCITE % at 28wks
+plt2,mother platelet count at 28wks
+malb2,mother Microalbumen at 28wks
+blood_gr,mother blood group
+b12_v2,mother b12 b12 at 28wks (pmol/L)
+fol_v2,mother S folate at 28wks
+thcy_v2,mother homocysteine at 28wks (micromol/L)
+tcys_v2,mother total cysteine at 28wks
+cysta_v2,mother cystathionine at 28wks
+met_v2,mother methionine at 28wks
+mma_v2,mother mma at 28wks
+vitd32,mother 25-OH-vitmin D (nM/L) at 28wks
+crp_2,mother  CRP ng/ml at 28wks
+cwt_18y,f1 child weight at 18y (kg)
+cbmi_18y,f1 child BMI at 18y(kg/m2)
+cwbc_18y,f1 child White blood cells at 18y
+cly_18y,f1 child Lymphocyte percents at 18y
+cmo_18y,f1 child Monocyte percents at 18y
+cgr_18y,f1 child Granulocyte percents at 18y
+clyno_18y,f1 child Lymphocyte counts at 18y
+cmono_18y,f1 child Monocyte counts at 18y
+cgrno_18y,f1 child Granulocyte counts at 18y
+crbc_18y,f1 child Red blood cells at 18y
+chb_18y,f1 child Hemoglobin at 18y
+chct_18y,f1 child Hematocrit at 18y
+cmcv_18y,f1 child Mean corpuscular volume at 18y
+cmch_18y,f1 child Mean corpuscular hemoglobin at 18y
+cmchc_18y,f1 child Mean corpuscular hemoglobin concentration at 18y
+crdw_18y,f1 child Red cell distribution width at 18y
+cplt_18y,f1 child Platelet count at 18y
+cmpv_18y,f1 child Mean platelet volume at 18y
+cpct_18y,f1 child Plateletcrit at 18y
+cpdw_18y,f1 child Platelet distribution width at 18y
+cghb_18y,f1 child HBA1C (%)  at 18y
+alt_18y,f1 child ALT at 18y
+cfolate_18y,f1 child Folate at 18y
+chcy_18y,f1 child homocysteine at 18y
+comment_CHOLO_TC_18yr,f1 child any comment on holo TC at 18y
+ccyst_18y,f1 child cysteine at 18y
+cb6_18y,f1 child B6-pyridoxal-5-phosphate at 18y
+cb6pyx_18y,f1 child pyridoxal at 18y
+cglut_18y,f1 child glutathione at 18y
+cb2_18y,f1 child vitamin B2 18y
+cgluf5_18y,f1 child Fasting (-5 min) glucose (mg%)  at  18y
+cleptin_18y,f1 child Leptin (ng/ml) at 18y
+crbc_gsh_f18,f1 child Fasting RBC GSH at 18y
+crbcgsh_hb_f18,f1 child Fasting RBC GSH Hb at 18y
+hmwadip_18y,f1 child High molecular weighty adiponectin (microgm/ml) at 18y
+totaladip_18y,f1 child Total adiponectin (microgm/ml) at 18y
+ccu_18y,f1 child copper (microgm/dl) at 18y
+cferritin_18y,f1 child ferritin (ng/ml) at 18y
+ct4_18y,f1 child Free T4 (ng/dl) at 18y
+ctsh_18y,f1 child TSH (microIU/ml) at 18y
+ciron_18y,f1 child  iron (micromol/L) at 18y
+cwbc_scr,f1 child White blood cells at 17y
+cly_scr,f1 child Lymphocyte % at 17y
+cmo_scr,f1 child Monocyte % at 17y
+cgr_scr,f1 child Granulocyte % at 17y
+clyno_scr,f1 child Lymphocyte  count at 17y
+cmono_scr,f1 child Monocyte count at 17y
+cgrno_scr,f1 child Granulocyte count at 17y
+crbc_scr,f1 child Red blood cells at 17y
+chb_scr,f1 child Hemoglobin at 17y
+chct_scr,f1 child Hematocrit at 17y
+cmcv_scr,f1 child Mean corpuscular volume at 17y
+cmch_scr,f1 child Mean corpuscular hematocrit at 17y
+cmchc_scr,f1 child Mean corpuscular hematocrit concentration at 17y
+crdw_scr,f1 child Red cell distribution width at 17y
+cplt_scr,f1 child Platelet count at 17y
+cmpv_scr,f1 child Mean platelet volume at 17y
+cpct_scr,f1 child Plateletcrit count at 17y
+cpdw_scr,f1 child Platelet distribution width at 17y
+crandglu_scr,f1 child Childs Random glucose at 17y
+c_hpylori_scr_nov,f1 child H.Pylori (NTU/ml)  Novatec at 17y
+f1_c_hpylori_17y,f1 child H.Pylori (NTU/ml)  Novatec at 17y
+ctrthy_scr,f1 child transthyritin (ng/ml) at 17y
+ctotaladip_scr,f1 child Total adiponectin (microgm/ml) at 17y
+chmwadip_scr,f1 child High molecular weight adiponectin (microgm/ml) at 17y
+cleptin_scr,f1 child leptin (ng/ml) at 17y
+comment_CHOLO_TC_scr,f1 child any comment on holo TC at 17y
+ccyst_scr,f1 child cysteine (micromol/l) at 17y
+cglut_scr,f1 child glutathione (micromol/l) at 17y
+ccholine_scr,f1 child child choline (micromol/l) at 17y
+cb6_scr,f1 child B6-pyridoxal-5-phosphate (microgm/l) at 17y
+cb6pyx_scr,f1 child pyridoxal: (microgm/l) at 17y
+cwbc_i,f1 child wbc count at 12y
+cly_i,f1 child lymphocyte at 12y
+cmo_i,f1 child monocyte at 12y
+cgr_i,f1 child granulocyte at 12y
+clyno_i,f1 child lymphocyte no at 12y
+cmono_i,f1 child monocyte no at 12y
+cgrno_i,f1 child granulocyte at 12y
+crbc_i,f1 child rbc  at 12y
+chb_i,f1 child hb at 12y
+chct_i,f1 child haematocrete at 12y
+cmcv_i,f1 child mcv at 12y
+cmch_i,f1 child mch- at 12y
+cmchc_i,f1 child mchc- at 12y
+crdw_i,f1 child rdw at 12y
+cplt_i,f1 child platelet at 12y
+cmpv_i,f1 child mpv at 12y
+cpct_i,f1 child pct at 12y
+cpdw_i,f1 child pdw at 12y
+f1_c_hpylori_12y,f1 child H.Pylori (NTU/ml)  Novatec at 12y
+ciron_i,f1 child iron at 12y
+comment_ciron_i,f1 child any comment on child iron at 12y
+cferritin_i,f1 child ferritin at 12y
+comment_cferritin_i,f1 child any comment on child ferritin at 12y
+ccrp_i,f1 child crp (ng/ml) at 12y
+clept_i,f1 child leprin (ng/ml) at 12y
+ctotaladip_i,f1 child total adiponectin (µg/ml) at 12y
+mpmns2,mother followup status at 12y
+mintst,mother status at 12y
+mdtdth,mother date of death reporrted at 12y
+mrdth,mother death reason reported at 12y
+mblcd,mother blood collection status at 12y
+mwbc_i,mother wbc count at 12y
+mly_i,mother lymphocyte at 12y
+mmo_i,mother monocyte at 12y
+mgr_i,mother granulocyte  at 12y
+mlyno_i,mother lymphocyte no at 12y
+mmono_i,mother monocyte no at 12y
+mgrno_i,mother granulocyte at 12y
+mrbc_i,mother rbc at 12y
+mhb_i,mother hb at 12y
+mhct_i,mother haematocrete at 12y
+mmcv_i,mother mcv at 12y
+mmch_i,mother mch at 12y
+mmchc_i,mother mchc at 12y
+mrdw_i,mother rdw at 12y
+mplt_i,mother platelet at 12y
+mmpv_i,mother mpv at 12y
+mpct_i,mother pct at 12y
+mpdw_i,mother pdw at 12y
+mchol_i,mother total cholesterol (mg%) at 12y
+mhdl_i,mother total hdl cholesterol (mg%) at 12y
+mtg_i,mother triglycerides (mg%) at 12y
+mldl_i,mother ldl cholesterol using freiwald eqn  at 12y
+mcreat_i,mother creatinine (mg%) at 12y
+mb12_i,mother b12 (pmol/l) at 12y
+mSFOL_i,mother serum folate (nmol/l)  at 12y
+mhcy_i,mother homocystein (MICRM/L) at 12y
+fpmns2,father followup status at 12y
+fblcd,father blood collection status at 12y
+fwbc_i,father wbc count at 12y
+fly_i,father lymphocyte at 12y
+fmo_i,father monocyte at 12y
+fgr_i,father granulocyte  at 12y
+flyno_i,father lymphocyte no at 12y
+fmono_i,father monocyte no at 12y
+fgrno_i,father granulocyte no at 12y
+frbc_i,father rbc at 12y
+fhb_i,father hb at 12y
+fhct_i,father haematocrete at 12y
+fmcv_i,father mcv at 12y
+fmch_i,father mch  at 12y
+fmchc_i,father mchc at 12y
+frdw_i,father rdw at 12y
+fplt_i,father platelet at 12y
+fmpv_i,father mpv at 12y
+fpct_i,father pct at 12y
+fpdw_i,father pdw at 12y
+fchol_i,father total cholesterol (mg%)  at 12y
+ftg_i,father triglycerides (mg%) at 12y
+fhdl_i,father total hdl cholesterol (mg%) at 12y
+fldl_i,father ldl cholesterol using freiwald eqn  at 12y
+fcreat_i,father creatinine (mg%)  at 12y
+fb12_i,father b12 (pmol/l) at 12y
+fSFOL_i,father serum folate (nmol/l) at 12y
+fhcy_i,father homocysteine (MICRM/L) at 12y
+cwbc6,f1 child wbc count at 6y
+cly6,f1 child lymphocyte count at 6y
+cmo6,f1 child monocyte count at 6y
+cgr6,f1 child granulocyte count at 6y
+clyno6,f1 child lymphocyte no at 6y
+cmono6,f1 child monocyte no at 6y
+cgrno6,f1 child granulocyte no at 6y
+crbc6,f1 child rbc count at 6y
+chb6,f1 child haemoglobin(gm%) at 6y
+chct6,f1 child haematocrete at 6y
+cmcv6,f1 child mcv at 6y
+cmch6,f1 child mch at 6y
+cmchc6,f1 child mchc at 6y
+crdw6,f1 child red cell distribution width at 6y
+cplt6,f1 child platelette count at 6y
+cmpv6,f1 child mean platelette volume at 6y
+crcf_6,f1 child serum rcf at 6y (ng/mL)
+f1_c_hpylori_6y,f1 child H.Pylori (NTU/ml)  Novatec at 6y
+ccrp_6,f1 child crp (mg/L) at 6y
+cil6_6,f1 child interlukin-6 (pg/mL) at 6y
+ctnf_6,f1 child tnf alpha (pg/mL) at 6y
+ctotaladip_6,f1 child total adiponectin (µg/ml) at  6y
+cinssp_6,f1 child split insulin (pmol/l) at 6y
+cinspr_6,f1 child pro insulin(pmol/l) at 6y
+clept_6,f1 child leptin (ng/ml) at 6y
+crbp4_6,f1 child RBP4  (µg/ml) at 6y
+fwbc6,father wbc count at 6y
+fly6,father lymphocyte count at 6y
+fmo6,father monocyte count at 6y
+fgr6,father granulocyte count at 6y
+flyno6,father lymphocyte no at 6y
+fmono6,father monocyte no at 6y
+fgrno6,father granulocyte no at 6y
+frbc6,father rbc count at 6y
+fhb6,father haemoglobin(gm%) at 6y
+fhct6,father haematocrete at 6y
+fmcv6,father mcv at 6y
+fmch6,father mch at 6y
+fmchc6,father mchc at 6y
+frdw6,father red cell distribution width at 6y
+fplt6,father platelette count at 6y
+fmpv6,father mean platelette volume at 6y
+fchol6,father cholesterol (mg%) at 6y
+ftg6,father triglycerides (mg%) at 6y
+fhdl6,father HDL cholesterol (mg%) at 6y
+fscreat6,father serum creatinine (mg%) at 6y
+fins30_6,father 30 min insulin(mu/l) at 6y
+fins2h_6,father 120 min insulin (mu/l) at 6y
+fb12_6yr,father Vitamin B12 (pM) at 6y
+fsfol_6yr,father Plasma Folate (nM) at 6y
+fhcy_6yr,father homocysteine (micromol/L) on Architet machine at 6y
+fhcy_com_6yr,father any comment on Total Homocysteine at 6y
+mwbc6,mothers wbc count at 6y
+mly6,mother lymphocyte count at 6y
+mmo6,mother monocyte count at 6y
+mgr6,mother granulocyte count at 6y
+mlyno6,mother lymphocyte no at 6y
+mmono6,mother monocyte no at 6y
+mgrno6,mother granulocyte no at 6y
+mrbc6,mother rbc count at 6y
+mhb6,mother haemoglobin(gm%) at 6y
+mhct6,mother haematocrete at 6y
+mmcv6,mother mcv at 6y
+mmch6,mother mch at 6y
+mmchc6,mother mchc at 6y
+mrdw6,mother red cell distribution width at 6y
+mplt6,mother platelette count at 6y
+mmpv6,mother mean platelette volume at 6y
+mchol6,mother cholesterol (mg%) at 6y
+mhdl6,mother  HDL cholesterol (mg%) at 6y
+mtg6,mother triglycerides (mg%) at 6y
+mscreat6,mother serum creatinine (mg%) at 6y
+mins30_6,mother 30 min insulin(mu/l) at 6y
+mins2h_6,mother 120 min insulin (mu/l) at 6y
+mb12_6yr,mother Vitamin B12 (pM) at 6y
+msfol_6yr,mother Plasma Folate (nM) at 6y
+mhcy_6yr,mother Total Homocysteine (micromol/L) on Architet machine at 6y
+mhcy_comm_6yr,mother any comment on homocysteine at 6y
+fintocu,father occupation at 12y
+d3,mother date of followup at 34wks
+fbptm_i,father blood pressure timing at 12y
+fbptmp_i,room temparature(oc) during fathers blood pressure at 12y
+fsys1_i,father syst bp (mmhg) 1st reading at 12y
+fsys_i,father syst bp (mmhg) 2nd reading at 12y
+f0_f_sys_bp_12,father systolic blood pressure at 12y
+fdia1_i,father diast bp(mmhg)1st reading at 12y
+fdia_i,father diast bp(mmhg) 2nd reading at 12y
+f0_f_dia_bp_12,father systolic blood pressure at 12y
+fpul1_i,father pulse (/min)1st reading at 12y
+fpul_i,father pulse (/min)2nd reading at 12y
+f0_f_pulse_12,father pulse pressure at 12y
+rx_y,combine the group1 and  group3 intervention group
+g1_bw,f2 child birth weight
+delta_ges_age,delta birth weight (f2-f1 child)
+Nsliscor,Percentile Group of sli score 6y
+child_no,f2 child unique identity key
+reason,reason for offspring death
+cfn,childs first name ( recorded at 6y)
+mfn,pmns mothers first name (recorded at 6y)
+ffn,pmns fathers first name (recorded at 6y)
+fsn,pmns family name (recorded at 6y)
+fmn,pmns fathers middle name (recorded at 6y)
+cup_number,couple number
+age_old_file,mother age (from old file) at baseline
+derived_birthdate,mother date of birth
+f0_age_int,father age at baseline
+finalen,final enrollment (n=797)
+del_no,delivery number
+dosurvey,date of prepreg anthro
+visit_date,mother visit date
+name_fir,first name of the women (pmns)
+name_mid,middle name of the women (pmns)
+name_sur,surname of the women (pmns)
+dupen,duplicate enrollment (subject enrolled twice in pmns)
+tph,thrifty phenotype sample (n=631)
+matmet,filter for maternal metabolism paper (n=700)
+sample,sample of interest (n=702 deliveries with bw)
+alldel,all deliveries (n=779/814)
+alllidel,all live deliveries (n=771/814)
+finaldel,final deliveries(n=770/797 the final enrollment)
+finallivedel,final live deliveries(n=762/797 the final enrollment)
+ft,full term delivery with known bw (n=633)
+fin_stat,final status
+mstatus,mother status
+prevcs,preveous ceaser
+primcs,primcs
+wom_edun,maternal education in years
+hus_edun,husband education in years
+relg,religon
+anom,any anomalies in pregnancy?
+anomspec,Anomaly spec
+agemarr,age at marriage in years
+lmp,LMP
+ulmp,LMP based on usg
+lmpdiff,Difference between lmp & ulmp
+mar_rel,married to close relative?
+vom1,vomiitng for a week before 1st vis?
+head,Head circumference of the women (cm)
+tr,Triceps skinfold during final prepregnant anthro (cm)
+bi,Biceps skinfold during final prepregnant anthro (mm)
+ss,Subscapular skinfold during final prepregnant anthro (mm)
+su,Suprailliac skinfold during final prepregnant anthro (mm)
+ma,Midarm circumference during final prepregnant anthro (cm)
+hb,Final prepregnant Hb value-filter paper (gm%)
+gl1,Gestation based on LMP at 1 st visit
+gf1,Gestation based on Final LMP at 1 st visit
+gu1,Gestation based on sonographic LMP at 1st visit
+pulsea1,1st pulse recorded on 1st visit (/min)
+pulseb1,2nd pulse recorded on 1st visit (/min)
+f0_m_pulse_18wks,mean pulse
+sya1,1st systolic BP on 1st visit (mmHg)
+syb1,2nd systolic BP on 1st visit (mmHg)
+f0_m_sysbp_18wks,mean sys bp 18wks
+dia1,1st diastolic BP on 1st visit (mmHg)
+dib1,2nd diastolic BP on 1st visit (mmHg)
+f0_m_diabp_18wks,mean dias bp 18wks
+mapa1,1st Mean AP on 1st visit (mmHg)
+mapb1,2nd Mean AP on 1st visit (mmHg)
+fh1,Fundal height during  1st visit (cm)
+ag1,Abdominal circumference on 1st visit (cm)
+tr1,Triceps skinfold during 1st visit (mm)
+bi1,Biceps skinfold during 1st visit (mm)
+ss1,Subscapular skinfold during 1st visit (mm)
+su1,Suprailliac skinfold during 1st visit (mm)
+ma1,Midarm circumference during 1st visit (cm)
+gl2,Gestation based on LMP at 2nd visit
+gf2,Gestation based on Final LMP at 2nd visit
+gu2,Gestation based on sonographic LMP at 2nd visit
+pulsea2,1st pulse recorded on 2nd visit (/min)
+pulseb2,2nd pulse recorded on 2nd visit (/min)
+f0_m_pulse_28wks,mean
+sya2,1st systolic BP on 2nd visit (mmHg)
+syb2,2nd systolic BP on 2nd visit (mmHg)
+f0_m_sysbp_28wks,mean
+dia2,1st diastolic BP on 2nd visit (mmHg)
+dib2,2nd diastolic BP on 2nd visit (mmhg)
+f0_m_diabp_28wks,mean
+mapa2,1st Mean AP on 2nd visit (mmHg)
+mapb2,2nd Mean AP on 2nd visit (mmHg)
+fh2,Fundal height during 2nd visit (cm)
+ag2,Abdominal circumference on 2nd visit (cm)
+tr2,Triceps skinfold during 2nd visit (mm)
+bi2,Biceps skinfold during 2nd visit (mm)
+ss2,Subscapular skinfold during 2nd visit (mm)
+su2,Suprailliac skinfold during 2nd visit  (mm)
+ma2,Midarm circumference during 2nd visit (cm)
+gl3,Gestation based on LMP at 3rd visit
+gf3,Gestation based on Final LMP at 3rd visit
+gu3,Gestation based on sonographic LMP at 3rd visit
+pulsea3,1st pulse recorded on 3rd visit (/min)
+pulseb3,2nd pulse recorded on 3rd visit (/min)
+sya3,1st systolic BP on 3rd visit (mmHg)
+dia3,1st diastolic BP on 3rd visit (mmHg)
+syb3,2nd systolic BP on 3rd visit (mmHg)
+dib3,2nd diastolic BP on 3rd visit (mmHg)
+mapa3,1st Mean AP on 3rd visit (mmHg)
+mapb3,2nd Mean AP on 3rd visit (mmHg)
+fh3,Fundal height during 3rd visit (cm)
+ag3,Abdominal circumference on 3rd visit (cm)
+tr3,Triceps skinfold during 3rd visit (mm)
+bi3,Biceps skinfold during 3rd visit  (mm)
+ss3,Subscapular skinfold during 3rd visit  (mm)
+su3,Suprailliac skinfold during 3rd visit  (mm)
+ma3,Midarm circumference during 3rd visit  (cm)
+bpd1,Biparietal diameter measured during 1st USG (cm)
+hc1,Head circumference measured during 1st USG ((cm)
+ac1,Abdominal circumference measured during 1st USG (cm)
+fl1,Femur length measured during 1st USG (cm)
+liquor1,Liquor at 1st visit
+placpos1,Placental position 1st visit
+volume,Placental volume measured during 1st USG (ml)
+len,Placental length measured during 1st USG (cm)
+thick1,Placental thickness measured during 1st USG (cm)
+cereb1,Cerebellum measured during 1st USG
+g1,Sonographic age at 1st USG
+bpd2,Biparietal diameter measured during 2nd USG (cm)
+hc2,Head circumference measured during 2nd USG  (cm)
+ac2,Abdominal circumference measured during 2nd USG (cm)
+liquor,Liquor
+fl2,Femur length measured during 2nd USG  (cm)
+placpos2,Placental position 2nd visit
+thick2,Placental thickness measured during 2nd USG (cm)
+lk2,Length of the left kidney at 2nd USG
+rk2,Length of the right kidney at 2nd USG
+abdw2,Abdominal wall thickness during 2nd USG
+cereb2,Cerebellum measured during 2nd USG
+lap2,AP section of liver measured during 2nd visit
+ltr2,TR section of liver measured during 2nd visit
+lcc2,CC section of liver measured during 2nd visit
+g2,Sonographic age at 2nd USG
+bpd3,Biparietal diameter measured during 3rd USG (cm)
+hc3,Head circumference measured during 3rd USG (cm)
+ac3,Abdominal circumference measured during 3rd USG (cm)
+fl3,Femur length measured during 3rd USG  (cm)
+liquor3,Liquor
+placpos3,Placental position 3rd visit  (cm)
+thick3,Placental thickness measured during 3rd USG
+lk3,Length of the left kidney during 3rd USG
+rk3,Length of the right kidney during 3rd USG
+abdw3,Abdominal wall thickness during 3rd USG
+lap3,AP section of liver measured during 3rd visit
+ltr3,TR section of liver measured during 3rd visit
+lcc3,CC section of liver measured during 3rd visit
+g3,Sonographic age at 3RD USG
+fwt,Final weight closest to delivery
+dfwt,Date of final weight
+gufwt,Gestation during final weight based on USG
+glfwt,Gestation during final weight based on LMP
+gffwt,Gestation during final weight based on final LMP
+gld,Gestation at delivery based on LMP
+gfd,Gestation at delivery based on final LMP
+gud,Gestation at delivery based on sonographic LMP
+monthdel,Month of delivery
+daydel,Day of delivery
+westastr,Western zodiac sign
+del_plac,Place of delivery
+attenden,Attendent at the delivery
+wtanm,Weight recorded by ANM
+placwtan,Placental weight recorded by ANM (gm)
+wtn,Weight of the newborn (gm)
+length,Length of the newborn (cm)
+hcn,Head circumference of the newborn (cm)
+chn,Chest circumference of the newborn (cm)
+abdn,Abdominal circumference of the newborn (cm)
+man,Midarm circumference of the newborn (cm)
+trn,Triceps skinfold of the newborn (mm)
+ssn,Subscapular skinfold of the newborn (mm)
+foot,Foot length of the newborn (cm)
+wtd,Weight of the women after delivery (kg)
+hblood_g,Husbands blood group
+sestatus,Socioeconomic status (Parek & Trivedi)
+chb,coulter adjusted prepreg hb
+pondi,ponderal index of the newborn (kg/m3)
+fatmass,prepreg fat mass by durnins equation (kg)
+lbmass,prepreg lean body mass by durnins equation (kg)
+fatmass1,1 st vis fat mass by durnins equation (kg)
+lbmass1,1st vis lean body mass by durnins equation (kg)
+fatmass2,2nd vis fat mass by durnins equation (kg)
+lbmass2,2nd vis lean body mass by durnins equation (kg)
+fatmass3,3rd vis fat mass by durnins equation (kg)
+lbmass3,3rd vis lean body mass by durnins equation (kg)
+mumass,pre preg muscle mass  by durnins equation (kg)
+mumass1,1st visit muscle mass (kg) (muac tricep formulae)
+mumass2,2nd visit  muscle mass  (kg) (muac tricep formulae)
+mumass3,3rd visit  muscle mass (kg) (muac tricep formulae)
+ind1,date of 1st intake visit
+ind2,date of 2nd intake visit
+ind3,date of 3rd intake visit
+visseas1,season of 1st 24 hr recall visit
+visseas2,season of 2nd 24 hr recall visit
+visseas3,season of 3rd 24 hr recall visit
+totcal1,total calorie intake on 1st visit (kcal)
+totcal2,total calorie intake on 2nd visit (kcal)
+totcal3,total calorie intake on 3rd visit (kcal)
+totpro1,total protein intake on 1st visit (gm)
+totpro2,total protein intake on 2nd visit (gm)
+totpro3,total protein intake on 3rd visit (gm)
+totfat1,total fat intake on 1st visit (gm)
+totfat2,total fat intake on 2nd visit (gm)
+totfat3,total fat intake on 3rd visit (gm)
+totiron1,total iron intake on 1st visit (gm)
+totiron2,total iron intake on 2nd visit (gm)
+totiron3,total iron intake on 3rd visit (gm)
+totcarb1,total carbohydrate intake on 1st visit (gm)
+totcarb2,total carbohydrate intake on 2nd visit (gm)
+totcarb3,total carbohydrate intake on 3rd visit (gm)
+calcer1,calories from cerials on 1st visit
+calcer2,calories from cerials on 2nd visit
+calcer3,calories from cerials on 3rd visit
+procer1,proteins from cerials on 1st visit
+procer2,proteins from cerials on 2nd visit
+procer3,proteins from cerials on 3rd visit
+fatcer1,fats from cerials on 1st visit
+fatcer2,fats from cerials on 2nd visit
+fatcer3,fats from cerials on 1st visit
+ironcer1,iron from cerials on 1st visit
+ironcer2,iron from cerials on 2nd visit
+ironcer3,iron from cerials on 3rd visit
+calpul1,calories from pulses on 1st visit
+calpul2,calories from pulses on 2nd visit
+calpul3,calories from pulses on 3rd visit
+propul1,proteins from pulses on 1st visit
+propul2,proteins from pulses on 2nd visit
+propul3,proteins from pulses on 3rd visit
+fatpul1,proteins from pulses on 1st visit
+fatpul2,proteins from pulses on 2nd visit
+fatpul3,proteins from pulses on 3rd visit
+ironpul1,iron from pulses on 1st visit
+ironpul2,iron from pulses on 2nd visit
+ironpul3,iron from pulses on 2nd visit
+calglv1,calories from glv on 1st visit
+calglv2,calories from glv on 2nd visit
+calglv3,calories from glv on 3rd visit
+proglv1,proteins from glv on 1st visit
+proglv2,proteins from glv on 2nd visit
+proglv3,proteins from glv on 3rd visit
+fatglv1,fats from glv on 1st visit
+fatglv2,fats from glv on 2nd visit
+fatglv3,fats from glv on 3rd visit
+ironglv1,iron from glv on 1st visit
+ironglv2,iron from glv on 2nd visit
+ironglv3,iron from glv on 3rd visit
+calfveg1,calores from fruit vegetables on 1st visit
+calfveg2,calores from fruit vegetables on 2nd visit
+calfveg3,calores from fruit vegetables on 3rd visit
+profveg1,proteins from fruit vegetables on 1st visit
+profveg2,proteins from fruit vegetables on 2nd visit
+profveg3,proteins from fruit vegetables on 3rd visit
+fatfveg1,fats from fruit vegetables on 1st visit
+fatfveg2,fats from fruit vegetables on 2nd visit
+fatfveg3,fats from fruit vegetables on 3rd visit
+ironfve1,iron from fruit vegetables on 1st visit
+ironfve2,iron from fruit vegetables on 2nd visit
+ironfve3,iron from fruit vegetables on 3rd visit
+calch1,calories from chutney on 1st visit
+calch2,calories from chutney on 2nd visit
+calch3,calories from chutney on 3rd visit
+proch1,proteins from chutney on 1st visit
+proch2,proteins from chutney on 2nd visit
+proch3,proteins from chutney on 3rd visit
+fatch1,fats from chutney on 1st visit
+fatch2,fats from chutney on 2nd visit
+fatch3,fats from chutney on 3rd visit
+ironch1,iron from chutney on 1st visit
+ironch2,iron from chutney on 2nd visit
+ironch3,iron from chutney on 3rd visit
+calfru1,calories from fruits on 1st visit
+calfru2,calories from fruits on 2nd visit
+calfru3,calories from fruits on 3rd visit
+profru1,proteins from fruits on 1st visit
+profru2,proteins from fruits on 2nd visit
+profru3,proteins from fruits on 3rd visit
+fatfru1,fats from fruits on 1st visit
+fatfru2,fats from fruits on 2nd visit
+fatfru3,fats from fruits on 3rd visit
+ironfru1,iron from fruits on 1st visit
+ironfru2,iron from fruits on 2nd visit
+ironfru3,iron from fruits on 3rd visit
+calfes1,calories from festival foods on 1st visit
+calfes2,calories from festival foods on 2nd visit
+calfes3,calories from festival foods on 3rd visit
+profes1,proteins from festival foods on 1st visit
+profes2,proteins from festival foods on 2nd visit
+profes3,proteins from festival foods on 3rd visit
+fatfes1,fats from festival foods on 1st visit
+fatfes2,fats from festival foods on 2nd visit
+fatfes3,fats from festival foods on 3rd visit
+ironfes1,iron from festival foods on 1st visit
+ironfes2,iron from festival foods on 2nd visit
+ironfes3,iron from festival foods on 3rd visit
+calbev1,calories from beverages on 1st visit(tea & coffe only)
+calbev2,calories from beverages on 2nd visit(tea & coffe only)
+calbev3,calories from beverages on 3rd visit(tea & coffe only)
+probev1,proteins from beverages on 1st visit(tea & coffe only)
+probev2,proteins from beverages on 2nd visit(tea & coffe only)
+probev3,proteins from beverages on 3rd visit(tea & coffe only)
+fatbev1,fats from beverages on 1st visit(tea & coffe only)
+fatbev2,fats from beverages on 2nd visit(tea & coffe only)
+fatbev3,fats from beverages on 3rd visit(tea & coffe only)
+ironbev1,iron from beverages on 1st visit(tea & coffe only)
+ironbev2,iron from beverages on 2nd visit(tea & coffe only)
+ironbev3,iron from beverages on 3rd visit(tea & coffe only)
+caldai1,calories from dairy products on 1st visit(milk and milk prod
+caldai2,calories from dairy products on 2nd visit(milk and milk prod
+caldai3,calories from dairy products on 3rd visit(milk and milk prod
+prodai1,proteins from dairy products on 1st visit(milk and milk prod
+prodai2,proteins from dairy products on 2nd visit(milk and milk prod
+prodai3,proteins from dairy products on 3rd visit(milk and milk prod
+fatdai1,fats from dairy products on 1st visit(milk and milk products
+fatdai2,fats from dairy products on 2nd visit(milk and milk products
+fatdai3,fats from dairy products on 3rd visit(milk and milk products
+irondai1,iron from dairy products on 1st visit(milk and milk products
+irondai2,iron from dairy products on 2nd visit(milk and milk products
+irondai3,iron from dairy products on 3rd visit(milk and milk products
+btcal1,calories during breakfast at 1st visit
+btcal2,calories during breakfast at 2nd visit
+btcal3,calories during breakfast at 3rd visit
+btpro1,proteins during breakfast at 1st visit
+btpro2,proteins during breakfast at 2nd visit
+btpro3,proteins during breakfast at 3rd visit
+btfat1,fats during breakfast at 1st visit
+btfat2,fats during breakfast at 2nd visit
+btfat3,fats during breakfast at 3rd visit
+btiron1,iron during breakfast at 1st visit
+btiron2,iron during breakfast at 2nd visit
+btiron3,iron during breakfast at 3rd visit
+ltcal1,calories during lunch at 1st visit
+ltcal2,calories during lunch at 2nd visit
+ltcal3,calories during lunch at 3rd visit
+ltpro1,proteins during lunch at 1st visit
+ltpro2,proteins during lunch at 2nd visit
+ltpro3,proteins during lunch at 3rd visit
+ltfat1,fats during lunch at 1st visit
+ltfat2,fats during lunch at 2nd visit
+ltfat3,fats during lunch at 3rd visit
+ltiron1,iron during lunch at 1st visit
+ltiron2,iron during lunch at 2nd visit
+ltiron3,iron during lunch at 3rd visit
+dtcal1,calories during dinner at 1st visit
+dtcal2,calories during dinner at 2nd visit
+dtcal3,calories during dinner at 3rd visit
+dtpro1,proteins during dinner at 1st visit
+dtpro2,proteins during dinner at 2nd visit
+dtpro3,proteins during dinner at 3rd visit
+dtfat1,fats during dinner at 1st visit
+dtfat2,fats during dinner at 2nd visit
+dtfat3,fats during dinner at 3rd visit
+dtiron1,iron during dinner at 1st visit
+dtiron2,iron during dinner at 2nd visit
+dtiron3,iron during dinner at 3rd visit
+apro1,animal proteins during 1st visit (without tea & coffee)
+apro2,animal proteins during 2nd visit (without tea & coffee)
+apro3,animal proteins during 3rd visit (without tea & coffee)
+teapro1,animals proteins thru tea & coffee 1st visit
+teapro2,animals proteins thru tea & coffee 2nd visit
+teapro3,animals proteins thru tea & coffee 3rd visit
+rcal1,calories consumed from roties on 1st visit
+rcal2,calories consumed from roties on 2nd visit
+rcal3,calories consumed from roties on 3rd visit
+rpro1,proteins consumed from roties on 1st visit
+rpro2,proteins consumed from roties on 2nd visit
+rpro3,proteins consumed from roties on 3rd visit
+riron1,iron consumed from roties on 1st visit
+riron2,iron consumed from roties on 2nd visit
+riron3,iron consumed from roties on 3rd visit
+rfat1,fats consumed from roties on 1st visit
+rfat2,fats consumed from roties on 2nd visit
+rfat3,fats consumed from roties on 3rd visit
+rcarb1,carbohydrates consumed from roties on 1st visit
+rcarb2,carbohydrates consumed from roties on 2nd visit
+rcarb3,carbohydrates consumed from roties on 3rd visit
+stp1,no of times staple food consumed in a day on 1st visit
+stp2,no of times staple food consumed in a day on 2nd visit
+stp3,no of times staple food consumed in a day on 3rd visit
+cit1,no of times citrus fruits consumed in a day on 1st visit
+cit2,no of times citrus fruits consumed in a day on 2nd visit
+cit3,no of times citrus fruits consumed in a day on 3rd visit
+gveg1,no of times glv consumed in a day on 1st visit
+gveg2,no of times glv consumed in a day on 2nd visit
+gveg3,no of times glv consumed in a day on 3rd visit
+nveg1,no of times non veg items consumed in a day on 1st visit
+nveg2,no of times non veg fruits consumed in a day on 2nd visit
+nveg3,no of times non veg fruits consumed in a day on 3rd visit
+puls1,no of times pulses eaten in a day on 1st visit
+puls2,no of times pulses eaten in a day on 2nd visit
+puls3,no of times pulses eaten in a day on 3rd visit
+fru1,no of times fruits eaten in a day on 1st visit
+fru2,no of times fruits eaten in a day on 2nd visit
+fru3,no of times fruits eaten in a day on 3rd visit
+milk1,no of times milk consumed in a day on 1st visit
+milk2,no of times milk consumed in a day on 2nd visit
+milk3,no of times milk consumed in a day on 3rd visit
+bct1,no of times roties eaten in a day on 1st visit
+bct2,no of times roties eaten in a day on 2nd visit
+bct3,no of times roties eaten in a day on 3rd visit
+act1,no of times rice eaten in a day on 1st visit
+act2,no of times rice eaten in a day on 2nd visit
+act3,no of times rice eaten in a day on 3rd visit
+ffd1,date of ffq - 1st visit
+ffd2,date of ffq - 2nd visit
+ffd3,date of ffq - 3rd visit
+ffqseas1,ffq season 1st visit
+seasffq1,ffq season 1st visit numeric
+ffqseas2,ffq season 2nd visit
+seasffq2,ffq season 2nd visit numeric
+ffqseas3,ffq season 3rd visit
+seasffq3,ffq season 3rd visit numeric
+asc1,beverage consumption score 1st visit
+asc2,beverage consumption score 2nd visit
+asc3,beverage consumption score 3rd visit
+bsc1,roti consumption score 1st visit
+bsc2,roti consumption score 2nd visit
+bsc3,roti consumption score 3rd visit
+csc1,rice consumption score 1st visit
+csc2,rice consumption score 2nd visit
+csc3,rice consumption score 3rd visit
+dsc1,dal consumption score 1st visit
+dsc2,dal consumption score 2nd visit
+dsc3,dal consumption score 3rd visit
+esc1,legume consumption score 1st visit
+esc2,legume consumption score 2nd visit
+esc3,legume consumption score 3rd visit
+fsc1,fruit vegetable consumption score 1st visit
+fsc2,fruit vegetable consumption score 2nd visit
+fsc3,fruit vegetable consumption score 3rd visit
+gsc1,glv consumption score 1st visit
+gsc2,glv consumption score 2nd visit
+gsc3,glv consumption score 3rd visit
+hsc1,chutney consumption score 1st visit
+hsc2,chutney consumption score 2nd visit
+hsc3,chutney consumption score 3rd visit
+isc1,fasting foods consumption score 1st visit
+isc2,fasting foods consumption score 2nd visit
+isc3,fasting foods consumption score 3rd visit
+jsc1,fruit consumption score 1st visit
+jsc2,fruit consumption score 2nd visit
+jsc3,fruit consumption score 3rd visit
+ksc1,non veg consumption score 1st visit
+ksc2,non veg consumption score 2nd visit
+ksc3,non veg consumption score 3rd visit
+nonveg1,stratified non veg consumption on first visit
+nonveg2,stratified non veg consumption on second visit
+fishcons1,stratified fish consumption on first visit
+fishcons2,stratified fish consumption on second visit
+fishcons3,stratified fish consumption on third visit
+lsc1,milk products consumption score 1st visit
+lsc2,milk products consumption score 2nd visit
+lsc3,milk products consumption score 3rd visit
+msc1,bakery items  consumption score 1st visit
+msc2,bakery items  consumption score 2nd visit
+msc3,bakery items  consumption score 3rd visit
+nsc1,spicy snacks consumption score 1st visit
+nsc2,spicy snacks consumption score 2nd visit
+nsc3,spicy snacks consumption score 3rd visit
+osc1,sweet snacks consumption score 1st visit
+osc2,sweet snacks consumption score 2nd visit
+osc3,sweet snacks consumption score 3rd visit
+psc1,festival foods consumption score 1st visit
+psc2,festival foods consumption score 2nd visit
+psc3,festival foods consumption score 3rd visit
+qsc1,special foods consumption score 1st visit
+qsc2,special foods consumption score 2nd visit
+qsc3,special foods consumption score 3rd visit
+dairy1,dairy products consumption score 1st visit
+dairy2,dairy products consumption score 2nd visit
+dairy3,dairy products consumption score 3rd visit
+c2_31,"spicy rice consumption  c1,c2 masala, phodni on 1st visit"
+c2_32,"spicy rice consumption  c1,c2 masala, phodni on 2nd visit"
+c2_33,"spicy rice consumption  c1,c2 masala, phodni on 3rd visit"
+dnot7111,dal consumption score execept besan & kadhi on 1st visit
+dnot7112,dal consumption score execept besan & kadhi on 2nd visit
+dnot7113,dal consumption score execept besan & kadhi on 3rd visit
+f6_91,"cluster bean & cabage f6, f9 consumption score on 1st visit"
+f6_92,"cluster bean & cabage f6, f9 consumption score on 2nd visit"
+f6_93,"cluster bean & cabage f6, f9 consumption score on 3rd visit"
+fnot6_91,fruit vegetable consumption score except cabbage & cluster beans on 1st visit
+fnot6_92,fruit vegetable consumption score except cabbage & cluster beans on 2nd visit
+fnot6_93,fruit vegetable consumption score except cabbage & cluster beans on 3rd visit
+g136791,"glv consumption score items g1,g3,g6,g7,g9 on 1st visit"
+g136792,"glv consumption score items g1,g3,g6,g7,g9 on 2nd visit"
+g136793,"glv consumption score items g1,g3,g6,g7,g9 on 3rd visit"
+h2_3_41,"chutney consumption score of items h2,h3,h4 on 1st visit"
+h2_3_42,"chutney consumption score of items h2,h3,h4 on 2nd visit"
+h2_3_43,"chutney consumption score of items h2,h3,h4 on 3rd visit"
+citrus1,"citrus friut consumption scire j1,j2,j3,j4 on 1st visit"
+citrus2,"citrus friut consumption scire j1,j2,j3,j4 on 2nd visit"
+citrus3,"citrus friut consumption scire j1,j2,j3,j4 on 3rd visit"
+m4_51,"bakery product cobumption score of items m4,m5 on 1st visit"
+m4_52,"bakery product cobumption score of items m4,m5 on 2nd visit"
+m4_53,"bakery product cobumption score of items m4,m5 on 3rd visit"
+n1_2_31,"sum of score for spicy snack items n1,n2,n3 sanja,pohe,bhaji on 1st visit"
+n1_2_32,"sum of score for spicy snack items n1,n2,n3 sanja,pohe,bhaji on 2nd visit"
+n1_2_33,"sum of score for spicy snack items n1,n2,n3 sanja,pohe,bhaji on 3rd visit"
+n4_5_61,"sum of score for spicy snack items n4,n5,n6 bhel,pharsan,batata wada on 1st visit"
+n4_5_62,"sum of score for spicy snack items n4,n5,n6 bhel,pharsan,batata wada on 2nd visit"
+n4_5_63,"sum of score for spicy snack items n4,n5,n6 bhel,pharsan,batata wada on 3rd visit"
+snacks1,"snacks consumption score on 1st visit n,o,p,q spicy,sweet,fest,special"
+snacks2,"snacks consumption score on 2nd visit n,o,p,q spicy,sweet,fest,special"
+snacks3,"snacks consumption score on 3rd visit n,o,p,q spicy,sweet,fest,special"
+wld1,date of workload survey - 1st visit
+wld2,date of workload survey - 2nd visit
+wld3,date of workload survey - 3rd visit
+resc1,resting score - 1st visit
+resc2,resting score - 2nd visit
+resc3,resting score - 3rd visit
+dosc1,domestic score - 1st visit
+dosc2,domestic score - 2nd visit
+dosc3,domestic score - 3rd visit
+ofsc1,farm work score - 1st visit
+ofsc2,farm work score - 2nd visit
+ofsc3,farm work score - 3rd visit
+farm1,work on farm?-visit1
+farm2,work on farm?-visit-2
+totsc1,total activity score - 1st visit
+totsc2,total activity score - 2nd visit
+totsc3,total activity score - 3rd visit
+meat1,"meat sconsumption score k1,k2 chicken & mutton on 1st visit"
+meat2,"meat sconsumption score k1,k2 chicken & mutton on 2nd visit"
+meat3,"meat sconsumption score k1,k2 chicken & mutton on 3rd visit"
+fish1,"fish consumption score k4,k5 bombil & fish on 1st visit"
+fish2,"fish consumption score k4,k5 bombil & fish on 2nd visit"
+fish3,"fish consumption score k4,k5 bombil & fish on 3rd visit"
+glv1,glv consumption 1st visit
+glv2,glv consumption 2nd visit
+glv3,glv consumption 3rd visit
+calpro1,proteins as % of calories 1st visit
+calpro2,proteins as % of calories 2nd visit
+calpro3,proteins as % calories 3rd visit
+calfat1,fats as % of calories 1st visit
+calfat2,fats as % calories 2nd visit
+calfat3,fats as % caories 3rd visit
+calcarb1,carbohyd as % calores 1st visit
+calcarb2,carbohy as % calories 2nd visit
+calcarb3,carboh as as % of calories 3rd visit
+paragp,Parity groups
+nssn,Normalized neonatal subscapular (logged)
+ntrn,Normalized neonatal tricep (logged)
+ntr,Normalized mat prepreg tricep (logged)
+nss,Normalized mat prepreg subscapular (logged)
+ndairy1,no of times dairy items consumed on 1st vis
+ndairy2,no of times dairy items consumed on 2nd vis
+ndairy3,no of times dairy items consumed on 3rd vis
+sstrn,ss/tr ratio for newborn
+sstr,prepreg maternal ss/tr ratio
+nsstr,normalized prepreg ss/tr (logged)
+nsstrn,normalized  neonatal ss/tr (logged)
+dry1,dairy consumption on 1st visit
+dry2,dairy items consumption on 2nd visit
+dry3,dairy items consuption on 3rd visit
+frut1,fruit consumption 1st visit
+frut2,fruit consumption 2nd visit
+frut3,fruit consumption 3rd visit
+nfer1,Normalized ferritin at 16 wks (logged)
+nfer2,Normalized ferritin at 28 wks (logged)
+nnefa1,Normalized nefa at 16 wks
+nnefa2,Normalized nefa at 28 wks
+nmalb1,Normalized micro albumen at 16 wks
+nmalb2,Normalized micro albumen at 28 wks
+ncreat1,Normalized s creat at 16 wks
+ncreat2,normalized s creat at 28 wks
+w1,Weight gain at 16 wks (kg)
+w2,Weight gain at 28 wks (kg)
+w3,Weight gain at 34 wks (kg)
+bwkg,Birthweight in Kg
+ldlchol2,ldl cholesterol at 28 wks (using Friewalds)
+ldlchol1,ldl cholesterol at 16 wks (using Friewalds)
+homar1,Maternal Homa-R at 16 wks
+betar1,Beta R at 16 wks
+homar2,Maternal Homa-R at 28 wks
+betar2,Beta-R at 28 wks
+hhomar,Fathers Homa-R
+hbetar,Fathers Beta-R
+nhomar1,Normalized maternal Homa-R at 16 wks (logged)
+nhomar2,Normalized maternal Homa-R at 28 wks (logged)
+nhhomar,Normalized Fathers Homa-R (logged)
+nbetar1,normalized beta-r at 1st visit (logged)
+nbetar2,normalized beta-r at 2nd visit (logged)
+nhbetar,normalized husbands beta-r (logged)
+nhinfast,Normalized pat fast insulim
+nhin2hr,Normalized pat 2h insulin
+pi,pie
+nfins1,Normalized fasting insulin  16 wks logged
+nfins2,Normalized Fasting Insulin 28 wks logged
+nin2hr2,Normalized 2hr insulin 28 wks logged
+nvitc1,Normalized vitc at 16 wks logeed(vitac1+1)
+nvitc2,Normalized vitamin c at 28 wks  logeed(vitac2+1)
+occupati,occupation of head of household:trivedi pareek-q1
+caste,caste of the family:  trivedi pareek-q2
+educatio,education of head of household:  trivedi pareek-q3
+famtype,family type:  trivedi pareek-q4a
+famsize,family size:  trivedi pareek-q4b
+famfeatu,distinctive features: trivedi pareek-q4c
+farmpowe,farm power: trivedi pareek-q5
+animals,milch animals:trivedi pareek-q6
+land,family land ownership:trivedi pareek-q7
+cart,possess bullck cart?: trivedi pareek-q8a
+cycle,possess bicycle?: trivedi pareek-q8b
+tape,possess tape?: trivedi pareek-q8c
+electr,posess elctricity: trivedi pareek-q8d
+wheel,possess two wheeler: trivedi pareek-q8e
+iron,possess iron/private well?: trivedi pareek-q8f
+housetyp,house type
+material,material possession score: trivedi pareek total score
+w_ill_fu,mothets literacy status
+nsplit2,Normalized split insulin at 28 wks
+nproins2,Normalized proinsulin at 28 wks
+nhsplit,Normalized husbands split insulin
+nhproins,Normalized husbands pro insulin
+wtgdel,wt gain after delivery
+agedth,age at death
+dcl,death code
+cmort,mortality code
+risk,any risk involved?
+risk1_1,age<16 or >30
+risk1_2,height < 145
+risk1_3,history of infertility
+risk2_1,>=2 abortions
+risk2_2,stillbirth
+risk2_3,neonatal death
+risk2_4,preterm delivery
+risk2_5,other bad obstetric history
+risk3_1,anaemia
+risk3_2,febrile illness
+risk3_3,jaundice
+risk3_4,heart disease
+risk3_5,other concurrent medical problems
+risk4_1,threatened abortion
+risk4_2,pih
+risk4_3,antepartum haemorhage
+risk4_4,iugr
+risk4_5,prev caesarean section
+risk4_6,prev instrumental delivery
+risk4_7,other obstetric complication
+risk1,patient characteristics
+risk2,bad obstetric history
+risk3,concurrent medical problems
+risk4,obstetric complications
+sstr1,s/t ratio at 18 wks
+sstr2,s/t ratio at 28 wks
+cecw6,Child-extra cellular volume at 6y using bioimpedence
+ctbw6,Child-total body water at 6y using bioimpedence
+cimp6,child-impedance at 50 mHz using bioimpedence
+cfreq6,Type of Machine used for bioimpedence at 6y
+cbptemp6,temparature during childs bp recording(oc) at 6y
+fbptemp6,temparature during fathers bp recording(oc) at 6y
+mbptemp6,temparature during mothers bp recording(oc) at 6y
+cbphum6,humidity during childs bp recording(%) at 6y
+fbphum6,humidity during fathers bp recording(%) at 6y
+mbphum6,humidity during mothers bp recording(%) at 6y
+csyst6,childs systolic bp(mmhg) at 6y
+msyst6,mothers systolic bp(mmhg) at 6y
+cdia6,childs diastolic bp(mmhg) at 6y
+mdia6,mothers diastolic bp(mmhg) at 6y
+cmap6,childs mean art bp(mmhg) at 6y
+fmap6,fathers mean art bp(mmhg) at 6y
+mmap6,mothers mean art bp(mmhg) at 6y
+cpulse6,childs pulse (/min) at 6y
+mpulse6,mothers pulse(/min) at 6y
+cbpcode6,child bp recorder at 6y
+fbpcode6,fathers bp recorder  at 6y
+mbpcode6,mothers bp recorder at 6y
+csht6,childs sitting height(cm) at 6y
+fsht6,fathers sitting height(cm) at 6y
+msht6,mothers sitting height(cm) at 6y
+chc6,childs head circ(cm) at 6y
+cma6,childs mid arm circ(cm) at 6y
+fma6,fathers mid arm circ(cm) at 6y
+mma6,mothers mid arm circ(cm) at 6y
+cwaist6,childs waist circ(cm) at 6y
+chip6,childs hip circ(cm) at 6y
+fbi6,fathers bicep skinfold(mm)  at 6y
+mbi6,mothers bicep skinfold(mm)  at 6y
+ftr6,fathers tricep skinfold(mm)   at 6y
+mtr6,mothers tricep skinfold(mm)  at 6y
+fss6,fathers subscapular skinfold(mm)  at 6y
+mss6,mothers subscapular skinfold(mm)  at 6y
+fsu6,fathers suprailiac skinfold(mm)  at 6y
+msu6,mothers suprailiac skinfold(mm)  at 6y
+cmthigh6,childs mid thight circ(cm)  at 6y
+fmthigh6,fathers mid thigh circ(cm)  at 6y
+mmthigh6,mothers mid thigh circ(cm)  at 6y
+cmcalf6,child mid calf circ(cm)  at 6y
+fmcalf6,fathers mid calf circ(cm) at 6y
+mmcalf6,mothers mid calf circ(cm) at 6y
+cmthsf6,childs mid thigh skinfold(mm) at 6y
+fmthsf6,fathers mid thigh skinfold(mm) at 6y
+mmthsf6,mothers mid thigh skinfold(mm) at 6y
+cmcasf6,childs mid calf skinfold(mm) at 6y
+fmcasf6,fathers mid calf skinfold(mm) at 6y
+mmcasf6,mothers mid calf skinfold(mm) at 6y
+canthc6,childs anthro at 6y done by
+fanthc6,fathers anthro at 6y done by
+manthc6,mothers anthro at 6y done by
+canth6,child anthro  done at 6y
+fanth6,father anthro done at 6y
+manth6,mother anthro done at 6y
+cbp6,child bp recorded at 6y
+fbp6,father bp recorded at 6y
+mbp6,mother bp recorded at 6y
+csfrt6,child skinfolds measured on right side at 6y
+fsfrt6,father skinfolds measured on right side at 6y
+msfrt6,mother  skinfolds measured on right side at 6y
+cbplh6,child BP measured on left side at 6y
+fbplh6,father BP measured on left side at 6y
+mbplh6,mother  BP measured on left side at 6y
+falive6,father alive at 6yrs?
+malive6,mother alive at 6yrs?
+mpreg6,mother pregnant at 6yrs
+fdm6,father has diabetes? at 6y
+mdm6,mother has diabetes? at 6y
+fdmage6,fathers age(yrs)  at diagnosis of diabetes
+mdmage6,mothers age (yrs) at diagnosis of diabetes
+fhyp6,father has hypertension? at 6y
+mhyp6,mother has hypertension? at 6y
+fhypage6,fathers age(yrs)  at diagnosis of hypertension
+mhypage6,mothers age (yrs) at diagnosis of hypertension
+fihd6,father has ihd? at 6y
+mihd6,mother has ihd? at 6y
+fihdage6,fathers age(yrs)  at diagnosis of ihd
+mihdage6,mothers age (yrs) at diagnosis of ihd
+fast6,father has asthama? at 6y
+mast6,mother has asthama? at 6y
+fastage6,fathers age(yrs)  at diagnosis of asthama
+mastage6,mothers age (yrs) at diagnosis of asthama
+chbsag6,child hbsag at 6y
+fhbsag6,father hbsag at 6y
+mhbsag6,mother hbsag at 6y
+cbgrp6,child blood group rec at 6y
+crh6,child rh factor recorded at 6y
+ccbgrp6,child blood grp  recorded  at 6y (string)
+fbgrp6,father blood group rec at 6y
+frh6,father rh factor recorded at 6y
+fcbgrp6,father  blood grp  recorded  at 6y (string)
+mbgrp6,mother blood group rec at 6y
+mrh6,mother rh factor recorded at 6y
+mcbgrp6,mother blood grp  recorded  at 6y (string)
+cgttcd6,childs gtt outcome at 6yr
+cgttrs6,reason for no childs gtt at 6yr
+fgttcd6,fathers gtt outcome at 6yr
+fgttrs6,reason for no father gtt at 6yr
+mgttcd6,fathers gtt outcome at 6yr
+mgttrs6,reason for no mother gtt at 6yr
+mig,any migration ?
+consang,h/o consanguinity
+typecons,grade of consanguinity
+bfst6,breast feeding started on which day of life? (rec  at 6y)
+weanst6,weaning started at which month? (rec at 6y)
+weanty6,type of weaning (rec at 6y)
+bfstop6,month breast feeding stopped (rec at 6y)
+sph6,sphincter control at  6y?
+ncinsf_6,normalized childs fast inulin at 6y –log
+grav6,maternal gravida recorded at 6y (post pmns)
+para6,maternal parity  recorded at 6y (post pmns)
+abort6,maternal abortions recorded at 6y (post pmns)
+sli_1,read & write at 6y
+sli_3,occupation at 6y
+sli_4,religon
+sli_4sp,other religion
+sli_5,caste
+sli_6,family type
+sli_7,total no of persons
+sli_8,drinking water source
+sli_9,toilet facility
+sli_10,light source
+sli_10sp,other light source details
+sli_11,no of rooms in house
+sli_12,separate kithchen?
+sli_13,fuel type
+sli_13sp,other fuel type
+sli_14,house ownership
+sli_15,house type
+sli_16,agriculture land ownership
+sli_16sp,size of agriculture land
+sli_17,size of irrigated land
+sli_18,any livestock?
+sli_18sp,total livestock
+sli_18ty,livestock details
+slit1,matress
+slit2,pressure cooker
+slit3,chair
+slit4,"bed,cot"
+slit5,table
+slit6,"clock,watch"
+slit7,electric fan
+slit8,bicycle
+slit9,"redio,transistor"
+slit10,tv
+slit11,colour tv
+slit12,2 whheler
+slit13,4 wheeler
+slit14,water pump
+slit15,bullock cart
+slit16,thresher
+slit17,tractor
+slit18,refrigerator
+slit19,telephone
+slit20,sewing machione
+slit21,iron
+slit22,private well
+k3,education in yrs
+k1,occupation type
+k2,caste
+k9,type of house
+slimig,is place of work & res same?
+slimigsp,place of work
+sli_18a,no of cows
+sli_18b,no of buffaloes
+sli_18c,no of goats
+sli_18d,no of bullocks
+sli_18e,no of other livestock
+sli_19,any graduate or suppl source of livelihood?
+cdexa6,Child dexa done at 6y
+fdexa6,Father dexa done at 6y
+mdexa6,Mother dexa done at 6y
+cloc6,File location of child dxa scan at 6y
+floc6,File location of father dxa scan at 6y
+mloc6,File location of mother dxa scan at 6y
+cbfname6,child dxa scan file name at 6y
+fbfname6,father dxa scan file name at 6y
+mbfname6,mother dxa scan file name at 6y
+cscan_dt6,child dxa scan date at 6y
+fscan_dt6,father dxa scan date at 6y
+mscan_dt6,mother  dxa scan date at 6y
+cdxht6,child height measured for dexa at 6y
+fdxht6,fathers height measured for dexa at 6y
+mdxht6,mothers height measured for dexa at 6y
+cdxwt6,childs weight measured for dexa at 6y
+fdxwt6,fathers weight measured for dexa at at 6y
+mdxwt6,mothers weight measured for dexa at 6y
+cbmd_0,childs head bmd at 6y
+fbmd_0,fathers head bmd at 6y
+mbmd_0,mothers head bmd at 6y
+cbmd_1,childs arm bmd at 6y
+fbmd_1,fathers arm bmd at 6y
+mbmd_1,mothers arm bmd at 6y
+cbmd_2,childs leg bmd at 6y
+fbmd_2,fathers leg  bmd at 6y
+mbmd_2,mothers leg bmd at 6y
+cbmd_3,childs trunk bmd at 6y
+fbmd_3,fathers trunk bmd at 6y
+mbmd_3,mothers  trunk bmd at 6y
+cbmd_4,childs head bmd at 6y
+fbmd_4,fathers head bmd at 6y
+mbmd_4,mothers head bmd at 6y
+cbmd_5,childs pelvis bmd at 6y
+fbmd_5,fathers pelvis bmd at 6y
+mbmd_5,mothers pelvis bmd at 6y
+cbmd_6,childs spine bmd at 6y
+fbmd_6,fathers spine bmd at 6y
+mbmd_6,fathers spine bmd at 6y
+cbmd_7,childs spine1 bmd at 6y
+fbmd_7,fathers spine1bmd at 6y
+mbmd_7,fathers spine1 bmd at 6y
+cbmd_8,childs spine2 bmd at 6y
+fbmd_8,fathers spine2 bmd at 6y
+mbmd_8,fathers spine2  bmd at 6y
+cbmd_9,childs total bmd at 6y
+fbmd_9,fathers total  bmd at 6y
+mbmd_9,mothers spine bmd at 6y
+cbmc_0,childs  head bone mineral content at 6y
+fbmc_0,fathers head bone mineral content at 6y
+mbmc_0,mothers  head bone mineral content at 6y
+cbmc_1,childs  arm bone mineral content at 6y
+fbmc_1,fathers arm bone mineral content at 6y
+mbmc_1,mothers arm bone mineral content at 6y
+cbmc_2,childs  leg bone mineral content at 6y
+fbmc_2,fathers leg bone mineral content at 6y
+mbmc_2,mothers  leg  bone mineral content at 6y
+cbmc_3,childs  trunk bone mineral content at 6y
+fbmc_3,fathers trunk bone mineral content at 6y
+mbmc_3,mothers  trunk bone mineral content at 6y
+cbmc_4,childs  ribs bone mineral content at 6y
+fbmc_4,fathers ribs bone mineral content at 6y
+mbmc_4,mothers  ribs bone mineral content at 6y
+cbmc_5,childs pelvis bone mineral content at 6y
+fbmc_5,fatherspelvis bone mineral content at 6y
+mbmc_5,mothers  pelvis bone mineral content at 6y
+cbmc_6,childs  spine bone mineral content at 6y
+fbmc_6,fathers  spine bone mineral content at 6y
+mbmc_6,mothers  spine bone mineral content at 6y
+cbmc_7,childs  spine1 bone mineral content at 6y
+fbmc_7,fathers  spine1 bone mineral content at 6y
+mbmc_7,mothers  spine1 bone mineral content at 6y
+cbmc_8,childs  spine2 bone mineral content at 6y
+fbmc_8,fathers  spine2 bone mineral content at 6y
+mbmc_8,mothers  spine2 bone mineral content at 6y
+cbmc_9,childs  total  bone mineral content at 6y
+fbmc_9,fathers  total bone mineral content at 6y
+mbmc_9,mothers  total bone mineral content at 6y
+carea_0,child head area at 6y
+farea_0,father head area at 6y
+marea_0,mother head area at 6y
+carea_1,child arms area at 6y
+farea_1,father arms area at 6y
+marea_1,mother arm  area at 6y
+carea_2,child leg area at 6y
+farea_2,father leg  area at 6y
+marea_2,mother leg  area at 6y
+carea_3,child trunk area at 6y
+farea_3,father trunk area at 6y
+marea_3,mother trunk area at 6y
+carea_4,child rib area at 6y
+farea_4,father rib area at 6y
+marea_4,mother rib area at 6y
+carea_5,child pelvis  area at 6y
+farea_5,father pelvis area at 6y
+marea_5,motherpelvis  area at 6y
+carea_6,child spine area at 6y
+farea_6,father spine  area at 6y
+marea_6,mother spine area at 6y
+carea_7,child spine1 area at 6y
+farea_7,father spine1 area at 6y
+marea_7,mother spine1 area at 6y
+carea_8,child spine2 area at 6y
+farea_8,father spine2 area at 6y
+marea_8,mother spine2 area at 6y
+carea_9,child total area at 6y
+farea_9,father total  area at 6y
+marea_9,mother total area at 6y
+cstiss_0,childs  head soft tissue in gm at 6y
+fstiss_0,fathers  head soft tissue in gm at 6y
+mstiss_0,mothers  head soft tissue in gm at 6y
+cstiss_1,childs  arm soft tissue in gm at 6y
+fstiss_1,fathers  arm soft tissue in gm at 6y
+mstiss_1,mothers  arm soft tissue in gm at 6y
+cstiss_2,childs  leg soft tissue in gm at 6y
+fstiss_2,fathers  leg  soft tissue in gm at 6y
+mstiss_2,mothers  leg soft tissue in gm at 6y
+cstiss_3,childs  trunk soft tissue in gm at 6y
+fstiss_3,fathers trunk soft tissue in gm at 6y
+mstiss_3,mothers  trunk soft tissue in gm at 6y
+cstiss_4,childs  ribs soft tissue in gm at 6y
+fstiss_4,fathers  ribs soft tissue in gm at 6y
+mstiss_4,mothers  ribs soft tissue in gm at 6y
+cstiss_5,childs  pelvis  soft tissue in gm at 6y
+fstiss_5,fathers  pelvis soft tissue in gm at 6y
+mstiss_5,mothers  pelvis soft tissue in gm at 6y
+cstiss_6,childs  spine soft tissue in gm at 6y
+fstiss_6,fathers  spine soft tissue in gm at 6y
+mstiss_6,mothers  spine soft tissue in gm at 6y
+cstiss_7,childs  spine1 soft tissue in gm at 6y
+fstiss_7,fathers  spine1 soft tissue in gm at 6y
+mstiss_7,mothers  spine1 soft tissue in gm at 6y
+cstiss_8,childs  spine2 soft tissue in gm at 6y
+fstiss_8,fathers  spine2 soft tissue in gm at 6y
+mstiss_8,mothers  spine2soft tissue in gm at 6y
+cstiss_9,childs  total soft tissue in gm at 6y
+fstiss_9,fathers  total soft tissue in gm at 6y
+mstiss_9,mothers  total  soft tissue in gm at 6y
+cdxfat_0,childs head fat in gm at 6y
+fdxfat_0,fathers head fat in gm at 6y
+mdxfat_0,mothers  head fat in gm at 6y
+cdxfat_1,childs arm fat in gm at 6y
+fdxfat_1,fathers arm fat in gm at 6y
+mdxfat_1,mothers  arm fat in gm at 6y
+cdxfat_2,childs leg fat in gm at 6y
+fdxfat_2,fathers leg fat in gm at 6y
+mdxfat_2,mothers  leg  fat in gm at 6y
+cdxfat_3,childs trunk fat in gm at 6y
+fdxfat_3,fathers trunk  fat in gm at 6y
+mdxfat_3,mothers  trunk   fat in gm at 6y
+cdxfat_4,child ribs fat in gm at 6y
+fdxfat_4,fathers ribs fat in gm at 6y
+mdxfat_4,mothers  ribs  fat in gm at 6y
+cdxfat_5,childs pelvis fat in gm at 6y
+fdxfat_5,fathers pelvis fat in gm at 6y
+mdxfat_5,mothers pelvis  fat in gm at 6y
+cdxfat_6,childs spine fat in gm at 6y
+fdxfat_6,fathersspine fat in gm at 6y
+mdxfat_6,mothers  spine  fat in gm at 6y
+cdxfat_7,childs spine1 fat in gm at 6y
+fdxfat_7,fathersspine1 fat in gm at 6y
+mdxfat_7,mothers  spine1  fat in gm at 6y
+cdxfat_8,childs spine2  fat in gm at 6y
+fdxfat_8, fathers spine2 fat in gm at 6y
+mdxfat_8,mothers  spine2  fat in gm at 6y
+cdxfat_9,childs total  fat in gm at 6y
+fdxfat_9, fathers total fat in gm at 6y
+mdxfat_9,mothers  total  fat in gm at 6y
+clean_0,childs head lean tissue in gm at 6y
+flean_0,fathers head lean tissue in gm at 6y
+mlean_0,mothers head lean tissue in gm at 6y
+clean_1,childs  arm lean tissue in gm at 6y
+flean_1,fathers arm lean tissue in gm at 6y
+mlean_1,mothersarm lean tissue in gm at 6y
+clean_2,childs leg lean tissue in gm at 6y
+flean_2,fathers leg lean tissue in gm at 6y
+mlean_2,mothers leg lean tissue in gm at 6y
+clean_3,childs trunk lean tissue in gm at 6y
+flean_3,fathers head lean tissue in gm at 6y
+mlean_3,mothers head lean tissue in gm at 6y
+clean_4,childs ribs lean tissue in gm at 6y
+flean_4,fathers ribs lean tissue in gm at 6y
+mlean_4,mothers ribs  lean tissue in gm at 6y
+clean_5,childs pelvis lean tissue in gm at 6y
+flean_5,fathers pelvis lean tissue in gm at 6y
+mlean_5,mothers pelvis lean tissue in gm at 6y
+clean_6,childs spine lean tissue in gm at 6y
+flean_6,fathers spine lean tissue in gm at 6y
+mlean_6,mothers spine  lean tissue in gm at 6y
+clean_7,childs spine1 lean tissue in gm at 6y
+flean_7,fathers spine1 lean tissue in gm at 6y
+mlean_7,mothers spine1  lean tissue in gm at 6y
+clean_8,childs spine2 lean tissue in gm at 6y
+flean_8,fathers spine2 lean tissue in gm at 6y
+mlean_8,mothers spine2  lean tissue in gm at 6y
+clean_9,childs total lean tissue in gm at 6y
+flean_9,fathers  total lean tissue in gm at 6y
+mlean_9,motherstotal  lean tissue in gm at 6y
+cftdxp_0,childs head total(bmc+tissue) fat% at 6y
+cftdxp_1,childs arm total(bmc+tissue) fat% at 6y
+cftdxp_2,childs leg total(bmc+tissue) fat% at 6y
+cftdxp_3,childs trunk total(bmc+tissue) fat% at 6y
+cftdxp_4,childs ribs total(bmc+tissue) fat% at 6y
+cftdxp_5,childs pelvis total(bmc+tissue) fat% at 6y
+cftdxp_6,childs spine total(bmc+tissue) fat% at 6y
+cftdxp_7,childs spine1 total(bmc+tissue) fat% at 6y
+cftdxp_8,childs spine2 total(bmc+tissue) fat% at 6y
+cftdxp_9,childs  total(bmc+tissue) fat% at 6y
+fftdxp_0,fathers head total(bmc+tissue) fat% at 6y
+fftdxp_1,fathers arm total(bmc+tissue) fat% at 6y
+fftdxp_2,fathers leg total(bmc+tissue) fat% at 6y
+fftdxp_3,fathers trunk total(bmc+tissue) fat% at 6y
+fftdxp_4,fathers ribs total(bmc+tissue) fat% at 6y
+fftdxp_5,fathers pelvis total(bmc+tissue) fat% at 6y
+fftdxp_6,fathers spine total(bmc+tissue) fat% at 6y
+fftdxp_7,fathers spine1 total(bmc+tissue) fat% at 6y
+fftdxp_8,fathers spine2 total(bmc+tissue) fat% at 6y
+mftdxp_0,mothers head total(bmc+tissue) fat% at 6y
+mftdxp_1,mothers arm total(bmc+tissue) fat% at 6y
+mftdxp_2,mothers leg total(bmc+tissue) fat% at 6y
+mftdxp_3,mothers trunk total(bmc+tissue) fat% at 6y
+mftdxp_4,mothers ribs total(bmc+tissue) fat% at 6y
+mftdxp_5,mothers pelvis total(bmc+tissue) fat% at 6y
+mftdxp_6,mothers spine total(bmc+tissue) fat% at 6y
+mftdxp_7,mothers spine1 total(bmc+tissue) fat% at 6y
+mftdxp_8,mothers spine2 total(bmc+tissue) fat% at 6y
+clndxp_0,childs head total(bmc+tissue) lean% at 6y
+clndxp_1,childs arm total(bmc+tissue) lean% at 6y
+clndxp_2,childs leg total(bmc+tissue) lean% at 6y
+clndxp_3,childs trunk total(bmc+tissue) lean% at 6y
+clndxp_4,childs ribs total(bmc+tissue) lean% at 6y
+clndxp_5,childspelvis total(bmc+tissue) lean% at 6y
+clndxp_6,childs spine total(bmc+tissue) lean% at 6y
+clndxp_7,childs spine1 total(bmc+tissue) lean% at 6y
+clndxp_8,childs spine2 total(bmc+tissue) lean% at 6y
+clndxp_9,childs  total(bmc+tissue) lean% at 6y
+flndxp_0,fathers head total(bmc+tissue) lean% at 6y
+flndxp_1,fathers arm total(bmc+tissue) lean% at 6y
+flndxp_2,fathers leg total(bmc+tissue) lean% at 6y
+flndxp_3,fathers trunk total(bmc+tissue) lean% at 6y
+flndxp_4,fathers ribs total(bmc+tissue) lean% at 6y
+flndxp_5,fathers pelvis total(bmc+tissue) lean% at 6y
+flndxp_6,fathers spine total(bmc+tissue) lean% at 6y
+flndxp_7,fathers spine1 total(bmc+tissue) lean% at 6y
+flndxp_8,fathers spine2 total(bmc+tissue) lean% at 6y
+flndxp_9,fathers  total(bmc+tissue) lean% at 6y
+mlndxp_0,mothers head total(bmc+tissue) lean% at 6y
+mlndxp_1,mothers arm total(bmc+tissue) lean% at 6y
+mlndxp_2,mothers leg total(bmc+tissue) lean% at 6y
+mlndxp_3,mothers trunk total(bmc+tissue) lean% at 6y
+mlndxp_4,mothers ribs total(bmc+tissue) lean% at 6y
+mlndxp_5,mothers pelvis total(bmc+tissue) lean% at 6y
+mlndxp_6,mothers spine total(bmc+tissue) lean% at 6y
+mlndxp_7,mothers spine1 total(bmc+tissue) lean% at 6y
+mlndxp_8,mothers spine2 total(bmc+tissue) lean% at 6y
+mlndxp_9,mothers  total(bmc+tissue) lean% at 6y
+cbcdxp_0,childs head total(bmc+tissue) bmc% at 6y
+cbcdxp_1,childs arm total(bmc+tissue) bmc% at 6y
+cbcdxp_2,childs leg total(bmc+tissue) bmc% at 6y
+cbcdxp_3,childs trunk total(bmc+tissue) bmc% at 6y
+cbcdxp_4,childs ribs total(bmc+tissue) bmc% at 6y
+cbcdxp_5,childs pelvis total(bmc+tissue) bmc% at 6y
+cbcdxp_6,childs spine total(bmc+tissue) bmc% at 6y
+cbcdxp_7,childs spine1 total(bmc+tissue) bmc% at 6y
+cbcdxp_8,childs spine2 total(bmc+tissue) bmc% at 6y
+cbcdxp_9,childs  total(bmc+tissue) bmc% at 6y
+fbcdxp_0,fathers head total(bmc+tissue) bmc% at 6y
+fbcdxp_1,fathers arm total(bmc+tissue) bmc% at 6y
+fbcdxp_2,fathers leg total(bmc+tissue) bmc% at 6y
+fbcdxp_3,fathers trunk total(bmc+tissue) bmc% at 6y
+fbcdxp_4,fathers ribs total(bmc+tissue) bmc% at 6y
+fbcdxp_5,fathers pelvis total(bmc+tissue) bmc% at 6y
+fbcdxp_6,fathers spine total(bmc+tissue) bmc% at 6y
+fbcdxp_7,fathers spine1 total(bmc+tissue) bmc% at 6y
+fbcdxp_8,fathers spine2 total(bmc+tissue) bmc% at 6y
+fbcdxp_9,fathers  total(bmc+tissue) bmc% at 6y
+mbcdxp_0,mothers head total(bmc+tissue) bmc% at 6y
+mbcdxp_1,mothers arm total(bmc+tissue) bmc% at 6y
+mbcdxp_2,mothers leg total(bmc+tissue) bmc% at 6y
+mbcdxp_3,mothers trunk total(bmc+tissue) bmc% at 6y
+mbcdxp_4,mothers ribs total(bmc+tissue) bmc% at 6y
+mbcdxp_5,mothers pelvis total(bmc+tissue) bmc% at 6y
+mbcdxp_6,mothers spine total(bmc+tissue) bmc% at 6y
+mbcdxp_7,mothers spine1 total(bmc+tissue) bmc% at 6y
+mbcdxp_8,mothers spine2 total(bmc+tissue) bmc% at 6y
+mbcdxp_9,mothers  total(bmc+tissue) bmc% at 6y
+cbmi6,childs bmi at 6yrs
+cwhr6,child whr  at 6yrs
+csstr6,childs s-t ratio at 6yrs
+fsstr6,fathers s-t ratio at 6yrs
+msstr6,mothers s-t ratio at 6yrs
+modi6,child studied at 6yrs
+modimoth,non preg mothers at 6y
+modifath,modi fathers at 6y
+chomar6old,child homa resistance at 6y using mathews 1985 ref
+fhomar6old,fathers homa resistance at 6y using mathews 1985 ref
+mhomar6old,mothers homa resistance at 6y using mathews 1985 ref
+cldl6,child LDL cholesterol at 6y (mg%) using friewald eqn
+fldl6,father LDL cholesterol at 6y (mg%) using friewald eqn
+mldl6,mother LDL cholesterol at 6y (mg%) using friewald eqn
+a1_1,Tea score  using FFQ 1st pregnancy visit
+a2_1,Milk score using FFQ 1st pregnancy visit
+a3_1,Coffee score using FFQ 1st pregnancy visit
+a4_1,Lemon squash score using FFQ 1st pregnancy visit
+b1_1,Jawar/Sorgum Roti score using FFQ 1st pregnancy visit
+b2_1,Bajra/Pearl Millet Roti score using FFQ 1st pregnancy visit
+b3_1,Chapati  score using FFQ 1st pregnancy visit
+b4_1,Tahlipith (Cereal+Pulse)  score using FFQ 1st pregnancy visit
+b5_1,Dhirde (Bengal gram flour)  score using FFQ 1st pregnancy visit
+b6_1,Khakra  score using FFQ 1st pregnancy visit
+b7_1,Paratha(Potato Stuff)  score using FFQ 1st pregnancy visit
+c1_1,Rice plain  score using FFQ 1st pregnancy visit
+c2_1,Rice spicy  score using FFQ 1st pregnancy visit
+c3_1,Rice seasoned  score using FFQ 1st pregnancy visit
+c4_1,Khichdi  score using FFQ 1st pregnancy visit
+c5_1,Sweet Rice  score using FFQ 1st pregnancy visit
+c6_1,Biryani  score using FFQ 1st pregnancy visit
+d1_1,Red gram curry  score using FFQ 1st pregnancy visit
+d2_1,Green gram curry  score using FFQ 1st pregnancy visit
+d3_1,Black gram curry  score using FFQ 1st pregnancy visit
+d4_1,Bengal gram curry  score using FFQ 1st pregnancy visit
+d5_1,Moth been curry  score using FFQ 1st pregnancy visit
+d6_1,Bengal gram flour (Pithle)  score using FFQ 1st pregnancy visit
+d7_1,Ground nut curry  score using FFQ 1st pregnancy visit
+d8_1,Cow pea curry  score using FFQ 1st pregnancy visit
+d9_1,Lentil curry  score using FFQ 1st pregnancy visit
+d10_1,Val dal curry  score using FFQ 1st pregnancy visit
+d11_1,Butter milk seasoned  score using FFQ 1st pregnancy visit
+d12_1,Sandge amti  score using FFQ 1st pregnancy visit
+d13_1,Jit wada/Wada Kanda  score using FFQ 1st pregnancy visit
+d14_1,Dal kanda  score using FFQ 1st pregnancy visit
+d15_1,Wafwade  score using FFQ 1st pregnancy visit
+d16_1,Bhaji amti  score using FFQ 1st pregnancy visit
+d17_1,Potatoe Grate-Kanda  score using FFQ 1st pregnancy visit
+e1_1,Green gram W  score using FFQ 1st pregnancy visit
+e2_1,Bengal gram W  score using FFQ 1st pregnancy visit
+e3_1,Cowpea W  score using FFQ 1st pregnancy visit
+e4_1,Horse gram W  score using FFQ 1st pregnancy visit
+e5_1,Mothbean sprouted  score using FFQ 1st pregnancy visit
+e6_1,Peas  score using FFQ 1st pregnancy visit
+e7_1,Gavale Wal  score using FFQ 1st pregnancy visit
+e8_1,Rajma  score using FFQ 1st pregnancy visit
+e9_1,Red gram W  score using FFQ 1st pregnancy visit
+e10_1,Black beans  score using FFQ 1st pregnancy visit
+e11_1,Pavata  score using FFQ 1st pregnancy visit
+e12_1,Massoor(lentil)  score using FFQ 1st pregnancy visit
+e13_1,Hurads dal  score using FFQ 1st pregnancy visit
+e14_1,Soyabean Usal  score using FFQ 1st pregnancy visit
+f1_1,Potato  score using FFQ 1st pregnancy visit
+f2_1,Onion  score using FFQ 1st pregnancy visit
+f3_1,Brinjal  score using FFQ 1st pregnancy visit
+f4_1,White pumpkin  score using FFQ 1st pregnancy visit
+f5_1,Red pumpkin  score using FFQ 1st pregnancy visit
+f6_1,Cluster beans  score using FFQ 1st pregnancy visit
+f7_1,Lady finger  score using FFQ 1st pregnancy visit
+f8_1,Knol-khol  score using FFQ 1st pregnancy visit
+f9_1,Cabagge  score using FFQ 1st pregnancy visit
+f10_1,Cauliflower  score using FFQ 1st pregnancy visit
+f11_1,Bitter gourd  score using FFQ 1st pregnancy visit
+f12_1,Ridge gourd  score using FFQ 1st pregnancy visit
+f13_1,Capsicum  score using FFQ 1st pregnancy visit
+f14_1,Drumstick  score using FFQ 1st pregnancy visit
+f15_1,Shravan Ghevda  score using FFQ 1st pregnancy visit
+f16_1,Tondali  score using FFQ 1st pregnancy visit
+f17_1,Turmudya sheng  score using FFQ 1st pregnancy visit
+f18_1,Walvar sheng  score using FFQ 1st pregnancy visit
+f19_1,Mula(Raddish}  score using FFQ 1st pregnancy visit
+f20_1,Suran  score using FFQ 1st pregnancy visit
+f21_1,Chawli sheng (Cow pea)  score using FFQ 1st pregnancy visit
+f22_1,Ghosale  score using FFQ 1st pregnancy visit
+g1_1,Spinach  score using FFQ 1st pregnancy visit
+g2_1,Fenugreek  score using FFQ 1st pregnancy visit
+g3_1,Amaranthas  score using FFQ 1st pregnancy visit
+g4_1,Safflower  score using FFQ 1st pregnancy visit
+g5_1,Onion stalk  score using FFQ 1st pregnancy visit
+g6_1,Bengal gram leaves  score using FFQ 1st pregnancy visit
+g7_1,Colocasia  score using FFQ 1st pregnancy visit
+g8_1,Coriander vadi  score using FFQ 1st pregnancy visit
+g9_1,Shepu  score using FFQ 1st pregnancy visit
+g10_1,Amaranth spined  score using FFQ 1st pregnancy visit
+g11_1,Hatga  score using FFQ 1st pregnancy visit
+g12_1,Chilu   score using FFQ 1st pregnancy visit
+g13_1,Chuka/Chakwat   score using FFQ 1st pregnancy visit
+g14_1,Ghas bhaji   score using FFQ 1st pregnancy visit
+h1_1,Chili/Garlic   score using FFQ 1st pregnancy visit
+h2_1,Groundnut   score using FFQ 1st pregnancy visit
+h3_1,Sesame/Nigerseeds   score using FFQ 1st pregnancy visit
+h4_1,Coconut   score using FFQ 1st pregnancy visit
+h5_1,Onion   score using FFQ 1st pregnancy visit
+h6_1,Tomato   score using FFQ 1st pregnancy visit
+h7_1,Pickle   score using FFQ 1st pregnancy visit
+h8_1,Papad/kurdai   score using FFQ 1st pregnancy visit
+h9_1,Pudins(mint)   score using FFQ 1st pregnancy visit
+h10_1,Sandge(fried)   score using FFQ 1st pregnancy visit
+i1_1,Sago  score using FFQ 1st pregnancy visit
+i2_1,Potato bhaji/Chivda  score using FFQ 1st pregnancy visit
+i3_1,Groundnut chikki/ladoo  score using FFQ 1st pregnancy visit
+i4_1,Groundnut/Jaggery  score using FFQ 1st pregnancy visit
+i5_1,French millet  score using FFQ 1st pregnancy visit
+i6_1,Sweet Potato  score using FFQ 1st pregnancy visit
+i7_1,Others  score using FFQ 1st pregnancy visit
+i8_1,Kachori score using FFQ 1st pregnancy visit
+i9_1,Tilvadi  score using FFQ 1st pregnancy visit
+i10_1,Rajgira Wadi  score using FFQ 1st pregnancy visit
+i11_1,Sago wada  score using FFQ 1st pregnancy visit
+j1_1,Zyzapus  score using FFQ 1st pregnancy visit
+j2_1,Guava  score using FFQ 1st pregnancy visit
+j3_1,Orange  score using FFQ 1st pregnancy visit
+j4_1,Sweet lime  score using FFQ 1st pregnancy visit
+j5_1,Amla  score using FFQ 1st pregnancy visit
+j6_1,Tamarind  score using FFQ 1st pregnancy visit
+j7_1,Custard apple  score using FFQ 1st pregnancy visit
+j8_1,Banana  score using FFQ 1st pregnancy visit
+j9_1,Sapota  score using FFQ 1st pregnancy visit
+j10_1,Tomato  score using FFQ 1st pregnancy visit
+j11_1,Cucumber  score using FFQ 1st pregnancy visit
+j12_1,Maize  score using FFQ 1st pregnancy visit
+j13_1,Kairy(Raw mango)  score using FFQ 1st pregnancy visit
+j14_1,Papai  score using FFQ 1st pregnancy visit
+j15_1,Kalingad(watermelon)  score using FFQ 1st pregnancy visit
+j16_1,Safarchand(apple)  score using FFQ 1st pregnancy visit
+j17_1,Jambhool (rose apple)  score using FFQ 1st pregnancy visit
+j18_1,Draksha (Grapes)  score using FFQ 1st pregnancy visit
+j19_1,Dalimbe (Pomegranate)  score using FFQ 1st pregnancy visit
+j20_1,Kavath(Wood apple)  score using FFQ 1st pregnancy visit
+j21_1,Ananas (Pineapple)  score using FFQ 1st pregnancy visit
+j22_1,Karvanda (karonda)  score using FFQ 1st pregnancy visit
+j23_1,Anjir(Fig)  score using FFQ 1st pregnancy visit
+j24_1,Umbar  score using FFQ 1st pregnancy visit
+j25_1,Limbu(lemon)  score using FFQ 1st pregnancy visit
+j26_1,Gajar(Carrot)  score using FFQ 1st pregnancy visit
+j27_1,Naral pani(Coconut water)  score using FFQ 1st pregnancy visit
+j28_1,Sugarcane  score using FFQ 1st pregnancy visit
+j29_1,Ramphal(Bullocks Heart)  score using FFQ 1st pregnancy visit
+j30_1,Moong sheng(Gram Tender)  score using FFQ 1st pregnancy visit
+j31_1,Dry fruits  score using FFQ 1st pregnancy visit
+j32_1,Fanas (jackfruit)  score using FFQ 1st pregnancy visit
+j33_1,Harbara (b. gram tender)  score using FFQ 1st pregnancy visit
+k1_1,Chicken  score using FFQ 1st pregnancy visit
+k2_1,Mutton  score using FFQ 1st pregnancy visit
+k3_1,Eggs  score using FFQ 1st pregnancy visit
+k4_1,Dry fish  score using FFQ 1st pregnancy visit
+k5_1,Fresh fish  score using FFQ 1st pregnancy visit
+l1_1,Curds  score using FFQ 1st pregnancy visit
+l2_1,Buttermilk  score using FFQ 1st pregnancy visit
+l3_1,Ghee  score using FFQ 1st pregnancy visit
+l4_1,Ice cream  score using FFQ 1st pregnancy visit
+l5_1,Kulfi  score using FFQ 1st pregnancy visit
+l6_1,Lassi  score using FFQ 1st pregnancy visit
+m1_1,Bread  score using FFQ 1st pregnancy visit
+m2_1,Toast  score using FFQ 1st pregnancy visit
+m3_1,Khari  score using FFQ 1st pregnancy visit
+m4_1,Butter  score using FFQ 1st pregnancy visit
+m5_1,Biscuits  score using FFQ 1st pregnancy visit
+m6_1,Cake  score using FFQ 1st pregnancy visit
+m7_1,Cream role  score using FFQ 1st pregnancy visit
+m8_1,Rote  score using FFQ 1st pregnancy visit
+m9_1,Nankatai  score using FFQ 1st pregnancy visit
+n1_1,Semolina spicy  score using FFQ 1st pregnancy visit
+n2_1,Rice flakes  score using FFQ 1st pregnancy visit
+n3_1,Bhaji  score using FFQ 1st pregnancy visit
+n4_1,Bhel  score using FFQ 1st pregnancy visit
+n5_1,Farsan/Shev  score using FFQ 1st pregnancy visit
+n6_1,Potato vada  score using FFQ 1st pregnancy visit
+n7_1,Chivda  score using FFQ 1st pregnancy visit
+n8_1,Chakli  score using FFQ 1st pregnancy visit
+n9_1,Pav bhaji  score using FFQ 1st pregnancy visit
+n10_1,Idli Sambar  score using FFQ 1st pregnancy visit
+n11_1,Dosa  score using FFQ 1st pregnancy visit
+n12_1,Uttapa  score using FFQ 1st pregnancy visit
+n13_1,Samosa  score using FFQ 1st pregnancy visit
+n14_1,Spicy Puri  score using FFQ 1st pregnancy visit
+n15_1,Dhokala  score using FFQ 1st pregnancy visit
+n16_1,Ragada/pani puri  score using FFQ 1st pregnancy visit
+n17_1,Bakarvadi  score using FFQ 1st pregnancy visit
+n18_1,Misal  score using FFQ 1st pregnancy visit
+n19_1,Kachori  score using FFQ 1st pregnancy visit
+o1_1,Semolina sweet  score using FFQ 1st pregnancy visit
+o2_1,Sweet Puriya  score using FFQ 1st pregnancy visit
+o3_1,Shankarpali  score using FFQ 1st pregnancy visit
+o4_1,Revadi  score using FFQ 1st pregnancy visit
+o5_1,Modak  score using FFQ 1st pregnancy visit
+o6_1,Gode shev  score using FFQ 1st pregnancy visit
+o7_1,Sutarfeni  score using FFQ 1st pregnancy visit
+o8_1,Karanji  score using FFQ 1st pregnancy visit
+o9_1,Anarsa  score using FFQ 1st pregnancy visit
+o10_1,Kapanya  score using FFQ 1st pregnancy visit
+o11_1,Sanja Puri  score using FFQ 1st pregnancy visit
+p1_1,Puranpoli  score using FFQ 1st pregnancy visit
+p2_1,Shrikhand  score using FFQ 1st pregnancy visit
+p3_1,Bundi  score using FFQ 1st pregnancy visit
+p4_1,Porridge  score using FFQ 1st pregnancy visit
+p5_1,Puriya  score using FFQ 1st pregnancy visit
+p6_1,Jilebi  score using FFQ 1st pregnancy visit
+p7_1,Gulabjam  score using FFQ 1st pregnancy visit
+p8_1,Amaras  score using FFQ 1st pregnancy visit
+p9_1,Pedhe  score using FFQ 1st pregnancy visit
+p10_1,Burphi  score using FFQ 1st pregnancy visit
+p11_1,Kunda  score using FFQ 1st pregnancy visit
+p12_1,Rava/Besan Ladoo  score using FFQ 1st pregnancy visit
+p13_1,Mysorepak  score using FFQ 1st pregnancy visit
+p14_1,Mahim Halwa/Balushahi  score using FFQ 1st pregnancy visit
+q1_1,Shengolya  score using FFQ 1st pregnancy visit
+q2_1,Kharvas  score using FFQ 1st pregnancy visit
+q3_1,Colocasia vadi  score using FFQ 1st pregnancy visit
+q4_1,Masvadi  score using FFQ 1st pregnancy visit
+q5_1,Thapevadi  score using FFQ 1st pregnancy visit
+q6_1,Wheat chik  score using FFQ 1st pregnancy visit
+q7_1,Ambil  score using FFQ 1st pregnancy visit
+q8_1,Malida  score using FFQ 1st pregnancy visit
+q9_1,Waffers  score using FFQ 1st pregnancy visit
+q10_1,Coconut  score using FFQ 1st pregnancy visit
+q11_1,Phutane  score using FFQ 1st pregnancy visit
+q12_1,Gulgule  score using FFQ 1st pregnancy visit
+q13_1,Wheat kheer  score using FFQ 1st pregnancy visit
+r1_1,Lemon(number)
+r2_1,Tamarind (Kg)
+r3_1,Rajgira (number)
+r4_1,Green chili (Kgs)
+r5_1,Capsicum (Kg)
+r6_1,Knol-khol(Kg)
+r7_1,Drumstick (kg)
+r8_1,Fenugreek(number)
+r9_1,Coriander (number)
+s1_1,Zizapus (number)
+s2_1,Guava (number)
+s3_1,Orange (number)
+s4_1,Sweet lime (number)
+s5_1,Amla (number)
+a1_2,Tea  score using FFQ 2nd  pregnancy visit
+a2_2,Milk score using FFQ 2nd pregnancy visit
+a3_2,Coffee score using FFQ 2nd pregnancy visit
+a4_2,Lemon squash score using FFQ 2nd pregnancy visit
+b1_2,Jawar/Sorgum Roti score using FFQ 2nd pregnancy visit
+b2_2,Bajra/Pearl Millet Roti score using FFQ 2nd pregnancy visit
+b3_2,Chapati score using FFQ 2nd pregnancy visit
+b4_2,Tahlipith (Cereal+Pulse) score using FFQ 2nd pregnancy visit
+b5_2,Dhirde (Bengal gram flour) score using FFQ 2nd pregnancy visit
+b6_2,Khakra score using FFQ 2nd pregnancy visit
+b7_2,Paratha(Potato Stuff) score using FFQ 2nd pregnancy visit
+c1_2,Rice plain score using FFQ 2nd pregnancy visit
+c2_2,Rice spicy score using FFQ 2nd pregnancy visit
+c3_2,Rice seasoned  score using FFQ 2nd pregnancy visit
+c4_2,Khichdi   score using FFQ 2nd pregnancy visit
+c5_2,Sweet Rice score using FFQ 2nd pregnancy visit
+c6_2,Biryani score using FFQ 2nd pregnancy visit
+d1_2,Red gram curry score using FFQ 2nd pregnancy visit
+d2_2,Green gram curry score using FFQ 2nd pregnancy visit
+d3_2,Black gram curry score using FFQ 2nd pregnancy visit
+d4_2,Bengal gram curry score using FFQ 2nd pregnancy visit
+d5_2,Moth been curry score using FFQ 2nd pregnancy visit
+d6_2,Bengal gram flour (Pithle) score using FFQ 2nd pregnancy visit
+d7_2,Ground nut curry score using FFQ 2nd pregnancy visit
+d8_2,Cow pea curry score using FFQ 2nd pregnancy visit
+d9_2,Lentil curry score using FFQ 2nd pregnancy visit
+d10_2,Val dal curry score using FFQ 2nd pregnancy visit
+d11_2,Butter milk seasoned score using FFQ 2nd pregnancy visit
+d12_2,Sandge amti score using FFQ 2nd pregnancy visit
+d13_2,Jit wada/Wada Kanda score using FFQ 2nd pregnancy visit
+d14_2,Dal kanda score using FFQ 2nd pregnancy visit
+d15_2,Wafwade score using FFQ 2nd pregnancy visit
+d16_2,Bhaji amti score using FFQ 2nd pregnancy visit
+d17_2,Potatoe Grate-Kanda score using FFQ 2nd pregnancy visit
+e1_2,Green gram W score using FFQ 2nd pregnancy visit
+e2_2,Bengal gram W score using FFQ 2nd pregnancy visit
+e3_2,Cowpea W score using FFQ 2nd pregnancy visit
+e4_2,Horse gram W score using FFQ 2nd pregnancy visit
+e5_2,Mothbean sprouted score using FFQ 2nd pregnancy visit
+e6_2,Peas score using FFQ 2nd pregnancy visit
+e7_2,Gavale Wal score using FFQ 2nd pregnancy visit
+e8_2,Rajma score using FFQ 2nd pregnancy visit
+e9_2,Red gram W score using FFQ 2nd pregnancy visit
+e10_2,Black beans score using FFQ 2nd pregnancy visit
+e11_2,Pavata score using FFQ 2nd pregnancy visit
+e12_2,Massoor(lentil) score using FFQ 2nd pregnancy visit
+e13_2,Hurads dal score using FFQ 2nd pregnancy visit
+e14_2,Soyabean Usal score using FFQ 2nd pregnancy visit
+f1_2,Potato score using FFQ 2nd pregnancy visit
+f2_2,Onion score using FFQ 2nd pregnancy visit
+f3_2,Brinjal score using FFQ 2nd pregnancy visit
+f4_2,White pumpkin score using FFQ 2nd pregnancy visit
+f5_2,Red pumpkin score using FFQ 2nd pregnancy visit
+f6_2,Cluster beans score using FFQ 2nd pregnancy visit
+f7_2,Lady finger score using FFQ 2nd pregnancy visit
+f8_2,Knol-khol score using FFQ 2nd pregnancy visit
+f9_2,Cabagge score using FFQ 2nd pregnancy visit
+f10_2, score using FFQ 2nd pregnancy visit
+f11_2,Bitter gourd score using FFQ 2nd pregnancy visit
+f12_2,Ridge gourd score using FFQ 2nd pregnancy visit
+f13_2,Capsicum score using FFQ 2nd pregnancy visit
+f14_2,Drumstick score using FFQ 2nd pregnancy visit
+f15_2,Shravan Ghevda score using FFQ 2nd pregnancy visit
+f16_2,Tondali score using FFQ 2nd pregnancy visit
+f17_2,Turmudya sheng score using FFQ 2nd pregnancy visit
+f18_2,Walvar sheng score using FFQ 2nd pregnancy visit
+f19_2,Mula(Raddish} score using FFQ 2nd pregnancy visit
+f20_2,Suran score using FFQ 2nd pregnancy visit
+f21_2,Chawli sheng (Cow pea) score using FFQ 2nd pregnancy visit
+f22_2,Ghosale score using FFQ 2nd pregnancy visit
+g1_2,Spinach score using FFQ 2nd pregnancy visit
+g2_2,Fenugreek score using FFQ 2nd pregnancy visit
+g3_2,Amaranthas score using FFQ 2nd pregnancy visit
+g4_2,Safflower score using FFQ 2nd pregnancy visit
+g5_2,Onion stalk score using FFQ 2nd pregnancy visit
+g6_2,Bengal gram leaves score using FFQ 2nd pregnancy visit
+g7_2,Colocasia score using FFQ 2nd pregnancy visit
+g8_2,Coriander vadi score using FFQ 2nd pregnancy visit
+g9_2,Shepu score using FFQ 2nd pregnancy visit
+g10_2,Amaranth spined score using FFQ 2nd pregnancy visit
+g11_2,Hatga score using FFQ 2nd pregnancy visit
+g12_2,Chilu score using FFQ 2nd pregnancy visit
+g13_2,Chuka/Chakwat score using FFQ 2nd pregnancy visit
+g14_2,Ghas bhaji score using FFQ 2nd pregnancy visit
+h1_2,Chili/Garlic score using FFQ 2nd pregnancy visit
+h2_2,Groundnut score using FFQ 2nd pregnancy visit
+h3_2,Sesame/Nigerseeds score using FFQ 2nd pregnancy visit
+h4_2,Coconut score using FFQ 2nd pregnancy visit
+h5_2,Onion score using FFQ 2nd pregnancy visit
+h6_2,Tomato score using FFQ 2nd pregnancy visit
+h7_2,Pickle score using FFQ 2nd pregnancy visit
+h8_2,Papad/kurdai score using FFQ 2nd pregnancy visit
+h9_2,Pudins(mint) score using FFQ 2nd pregnancy visit
+h10_2,Sandge(fried) score using FFQ 2nd pregnancy visit
+i1_2,Sago score using FFQ 2nd pregnancy visit
+i2_2,Potato bhaji/Chivda score using FFQ 2nd pregnancy visit
+i3_2,Groundnut chikki/ladoo score using FFQ 2nd pregnancy visit
+i4_2,Groundnut/Jaggery score using FFQ 2nd pregnancy visit
+i5_2,French millet score using FFQ 2nd pregnancy visit
+i6_2,Sweet Potato score using FFQ 2nd pregnancy visit
+i7_2,Others score using FFQ 2nd pregnancy visit
+i8_2,Kachori score using FFQ 2nd pregnancy visit
+i9_2,Tilvadi score using FFQ 2nd pregnancy visit
+i10_2,Rajgira Wadi score using FFQ 2nd pregnancy visit
+i11_2,Sago wada score using FFQ 2nd pregnancy visit
+j1_2,Zyzapus score using FFQ 2nd pregnancy visit
+j2_2,Guava score using FFQ 2nd pregnancy visit
+j3_2,Orange score using FFQ 2nd pregnancy visit
+j4_2,Sweet lime score using FFQ 2nd pregnancy visit
+j5_2,Amla score using FFQ 2nd pregnancy visit
+j6_2,Tamarind score using FFQ 2nd pregnancy visit
+j7_2,Custard apple score using FFQ 2nd pregnancy visit
+j8_2,Banana score using FFQ 2nd pregnancy visit
+j9_2,Sapota score using FFQ 2nd pregnancy visit
+j10_2,Tomato score using FFQ 2nd pregnancy visit
+j11_2,Cucumber score using FFQ 2nd pregnancy visit
+j12_2,Maize score using FFQ 2nd pregnancy visit
+j13_2,Kairy(Raw mango) score using FFQ 2nd pregnancy visit
+j14_2,Papai score using FFQ 2nd pregnancy visit
+j15_2,Kalingad(watermelon) score using FFQ 2nd pregnancy visit
+j16_2,Safarchand(apple) score using FFQ 2nd pregnancy visit
+j17_2,Jambhool (rose apple) score using FFQ 2nd pregnancy visit
+j18_2,Draksha (Grapes) score using FFQ 2nd pregnancy visit
+j19_2,Dalimbe (Pomegranate) score using FFQ 2nd pregnancy visit
+j20_2,Kavath(Wood apple) score using FFQ 2nd pregnancy visit
+j21_2,Ananas (Pineapple) score using FFQ 2nd pregnancy visit
+j22_2,Karvanda (karonda) score using FFQ 2nd pregnancy visit
+j23_2,Anjir(Fig) score using FFQ 2nd pregnancy visit
+j24_2,Umbar score using FFQ 2nd pregnancy visit
+j25_2,Limbu(lemon) score using FFQ 2nd pregnancy visit
+j26_2,Gajar(Carrot) score using FFQ 2nd pregnancy visit
+j27_2,Naral pani(Coconut water) score using FFQ 2nd pregnancy visit
+j28_2,Sugarcane score using FFQ 2nd pregnancy visit
+j29_2,Ramphal(Bullocks Heart) score using FFQ 2nd pregnancy visit
+j30_2,Moong sheng(Gram Tender) score using FFQ 2nd pregnancy visit
+j31_2,Dry fruits score using FFQ 2nd pregnancy visit
+j32_2,Fanas (jackfruit) score using FFQ 2nd pregnancy visit
+j33_2,Harbara (b. gram tender) score using FFQ 2nd pregnancy visit
+k1_2,Chicken score using FFQ 2nd pregnancy visit
+k2_2,Mutton score using FFQ 2nd pregnancy visit
+k3_2,Eggs score using FFQ 2nd pregnancy visit
+k4_2,Dry fish score using FFQ 2nd pregnancy visit
+k5_2,Fresh fish score using FFQ 2nd pregnancy visit
+l1_2,Curds score using FFQ 2nd pregnancy visit
+l2_2,Buttermilk score using FFQ 2nd pregnancy visit
+l3_2,Ghee score using FFQ 2nd pregnancy visit
+l4_2,Ice cream score using FFQ 2nd pregnancy visit
+l5_2,Kulfi score using FFQ 2nd pregnancy visit
+l6_2,Lassi score using FFQ 2nd pregnancy visit
+m1_2,Bread score using FFQ 2nd pregnancy visit
+m2_2,Toast score using FFQ 2nd pregnancy visit
+m3_2,Khari score using FFQ 2nd pregnancy visit
+m4_2,Butter score using FFQ 2nd pregnancy visit
+m5_2,Biscuits score using FFQ 2nd pregnancy visit
+m6_2,Cake score using FFQ 2nd pregnancy visit
+m7_2,Cream role score using FFQ 2nd pregnancy visit
+m8_2,Rote score using FFQ 2nd pregnancy visit
+m9_2,Nankatai score using FFQ 2nd pregnancy visit
+n1_2,Semolina spicy score using FFQ 2nd pregnancy visit
+n2_2,Rice flakes score using FFQ 2nd pregnancy visit
+n3_2,Bhaji score using FFQ 2nd pregnancy visit
+n4_2,Bhel score using FFQ 2nd pregnancy visit
+n5_2,Farsan/Shev score using FFQ 2nd pregnancy visit
+n6_2,Potato vada score using FFQ 2nd pregnancy visit
+n7_2,Chivda score using FFQ 2nd pregnancy visit
+n8_2,Chakli score using FFQ 2nd pregnancy visit
+n9_2,Pav bhaji score using FFQ 2nd pregnancy visit
+n10_2,Idli Sambar score using FFQ 2nd pregnancy visit
+n11_2,Dosa score using FFQ 2nd pregnancy visit
+n12_2,Uttapa score using FFQ 2nd pregnancy visit
+n13_2,Samosa score using FFQ 2nd pregnancy visit
+n14_2,Spicy Puri score using FFQ 2nd pregnancy visit
+n15_2,Dhokala score using FFQ 2nd pregnancy visit
+n16_2,Ragada/pani puri score using FFQ 2nd pregnancy visit
+n17_2,Bakarvadi score using FFQ 2nd pregnancy visit
+n18_2,Misal score using FFQ 2nd pregnancy visit
+n19_2,Kachori score using FFQ 2nd pregnancy visit
+o1_2,Semolina sweet score using FFQ 2nd pregnancy visit
+o2_2,Sweet Puriya score using FFQ 2nd pregnancy visit
+o3_2,Shankarpali score using FFQ 2nd pregnancy visit
+o4_2,Revadi score using FFQ 2nd pregnancy visit
+o5_2,Modak score using FFQ 2nd pregnancy visit
+o6_2,Gode shev score using FFQ 2nd pregnancy visit
+o7_2,Sutarfeni score using FFQ 2nd pregnancy visit
+o8_2,Karanji score using FFQ 2nd pregnancy visit
+o9_2,Anarsa score using FFQ 2nd pregnancy visit
+o10_2,Kapanya score using FFQ 2nd pregnancy visit
+o11_2,Sanja Puri score using FFQ 2nd pregnancy visit
+p1_2,Puranpoli score using FFQ 2nd pregnancy visit
+p2_2,Shrikhand score using FFQ 2nd pregnancy visit
+p3_2,Bundi score using FFQ 2nd pregnancy visit
+p4_2,Porridge score using FFQ 2nd pregnancy visit
+p5_2,Puriya score using FFQ 2nd pregnancy visit
+p6_2,Jilebi score using FFQ 2nd pregnancy visit
+p7_2,Gulabjam score using FFQ 2nd pregnancy visit
+p8_2,Amaras score using FFQ 2nd pregnancy visit
+p9_2,Pedhe score using FFQ 2nd pregnancy visit
+p10_2,Burphi score using FFQ 2nd pregnancy visit
+p11_2,Kunda score using FFQ 2nd pregnancy visit
+p12_2,Rava/Besan Ladoo score using FFQ 2nd pregnancy visit
+p13_2,Mysorepak score using FFQ 2nd pregnancy visit
+p14_2,Mahim Halwa/Balushahi score using FFQ 2nd pregnancy visit
+q1_2,Shengolya score using FFQ 2nd pregnancy visit
+q2_2,Kharvas score using FFQ 2nd pregnancy visit
+q3_2,Colocasia vadi score using FFQ 2nd pregnancy visit
+q4_2,Masvadi score using FFQ 2nd pregnancy visit
+q5_2,Thapevadi score using FFQ 2nd pregnancy visit
+q6_2,Wheat chik score using FFQ 2nd pregnancy visit
+q7_2,Ambil score using FFQ 2nd pregnancy visit
+q8_2,Malida score using FFQ 2nd pregnancy visit
+q9_2,Waffers score using FFQ 2nd pregnancy visit
+q10_2,Coconut score using FFQ 2nd pregnancy visit
+q11_2,Phutane score using FFQ 2nd pregnancy visit
+q12_2,Gulgule score using FFQ 2nd pregnancy visit
+q13_2,Wheat kheer score using FFQ 2nd pregnancy visit
+r1_2,Lemon(number)
+r2_2,Tamarind (Kg)
+r3_2,Rajgira (number)
+r4_2,Green chili (Kgs)
+r5_2,Capsicum (Kg)
+r6_2,Knol-khol(Kg)
+r7_2,Drumstick (kg)
+r8_2,Fenugreek(number)
+r9_2,Coriander (number)
+s1_2,Zizapus (number)
+s2_2,Guava (number)
+s3_2,Orange (number)
+s4_2,Sweet lime (number)
+s5_2,Amla (number)
+ncin30_6,normalized childs 30 min insulin at 6y-sqrt
+ncin2h_6,normalized childs 2h insulin at 6y-log
+nchomar6old,normalized childs insulin resistance at 6y-log using mathews 1985 ref
+ncgl30_6,normalized childs 30 min glucose at 6y-log
+nctg6,normalized childs triglycerides at 6y-log
+nclept_6,normalized childs leptin at 6y-0.6
+ncss6,normalized childs subscapular at 6y-rec
+nctr6,normalized childs tricep at 6y-log
+ncsstr6,normalized childs ss/tr ratio-log
+ncbi6,normalized childs bicep at 6y-rec
+ncsu6,normalized childs subscapular at 6y-log
+nfinsf_6,normalized fathers fast inulin at 6y-log
+nfin2h_6,normalized fathers 2h insulin at 6y-log
+nfhomar6old,normalized fathers insulin resistance-log using mathews 1985 ref
+nfgluf_6,normalized fathers fast glucose at 6y-rec
+nfgl2h_6,normalized fathers 2h glucose at 6y-log
+nfchol6,normalized fathers total cholesterol at 6y-log
+nftg6,normalized fathers triglycerides at 6y-log
+nfss6,normalized fathers subscapular at 6y-log
+nftr6,normalized fathers triceps at 6y-log
+nfbi6,normalized fathers biceps at 6y-rec
+nfsu6,normalized fathers suprailiac at 6y-log
+nfbmi6,normalized fathers bmi at 6y-log
+nfsyst6,normalized fathers syst bp at 6y-rec
+nfdia6,normalized fathers dist bp at 6y-log
+nminsf_6,normalized mothers fast insulin at 6y-log
+nmin2h_6,normalized mothers 2h insulin at 6y-log
+nmgluf_6,normalized mothers fast glucose at 6y-rec
+nmgl2h_6,normalized mothers 2h glucose at 6y-log
+nmhdl6,normalized mothers hdl cholesterol at 6y-log
+nmtg6,normalized mothers triglycerides at 6y-log
+nmwt6,normalized maternal wt at 6y-log
+nmss6,normalized mothers subscapular at 6y-log
+nmtr6,normalized mothers triceps at 6y-log
+nmbi6,normalized mothers biceps at 6y-rec
+nmwaist6,normalized mothers waist circ at 6y-log
+nsu,normalized maternal prepreg suprailiac-log
+nbi,normalized maternal prepreg biceps-log
+nrcf1,normalized red cell folate (ng/ml) at 18 wks-logged
+nrcf2,normalized red cell folate (ng/ml) at 28 wks-logged
+ffqsea1,season of 1st ffq
+ffqsea2,season of 2nd ffq
+modi6en,modi subject from final sample   698/797
+nomeas72,no birth measurement within 72 hours
+cagedx6,childs age at dexa- scan 6y
+magedx6,mother age at dexa-scan 6y
+term,full term-pre term
+inlspreg,years since last pregnancy
+mthdel,month of delivery
+cftp_9,childs fat% by dxa (fatmass/stissue) at 6y
+cltp_9,childs lean% by dxa (leanmass/stissue) at 6y
+bmdpap,filter for bmd paper
+ncdxfat9,normalized childs fat mass-sqr
+nfdxfat9,normalized fathers fat mass-log
+nmdxfat9,normalized mothers fat mass-log
+cgttdxdf,diff beween gtt & dxa
+dxfilt,filter for dxa & gtt +- 4 months
+nmbmi6,normalized maternal bmi  at 6y-log
+gestgr,gestation at delivery groups
+seasdel,season of delivery
+lbw,"lbw, nbw"
+ncdxag6,normalized age at dexa-child
+bfldt,date of last bf recall
+bf1,have you ever brestfed?
+bf1r,reason for not breast feeding
+bf2,hours after delivery
+bf3,if not fed within 24h did you disposed off the milk?
+bf4,is baby top fed?
+bf41,month top fed started?
+bf4a,cow milk
+bf4b,buffaloe milk
+bf4c,lamb milk
+bf4d,powder milk
+bf7,weaning started?
+bf71,weaning month
+bf7a,"buiscuits,bread"
+bf7b,"rice, cereals"
+bf7c,fruits
+bf7d,adult food
+bf8,do you still breastfeed?
+bf9a,insuff milk
+bf9b,pregnancy
+bf9c,pregnancy related illness
+bf9d,mothers choice
+bf9e,other reason
+bf9er,details of otherreason
+pmnsbf,pmns breast feeding questionnaire
+agebf,age of the baby at last bf recall from mother
+bf2gr,breast feeding started after how many hrs?
+bf41gr,top feed started at which month
+bf71gr,weaning started at which month
+stbf.WITHIN A YEAR,1
+stbf.AFTER A YEAR,2
+nctnf_6,normalized childs tnf alpha at 6y-log
+ncwbc_6,normalized childs tlc at 6y-log
+ncil6_6,normalized childs interlukin-6 at 6y-log
+nccrp_6,normalized childs crp at 6y-log
+lnb12_v1,normalized maternal b12 at 18 wks-logged
+tb12v2,normalized maternal b12 at 28 wks  1-1/sqrt
+lnmma_v1,normalized maternal methyl malonic acid at 18 wks-log
+lnmma_v2,normalized maternal methyl malonic acid at 28 wks-log
+lnhcy_v1,normalized maternal homocysteine at 18 wks-log
+lnhcy_v2,normalized maternal homocysteine at 28 wks-log
+nsfol1,normalized maternal serum folate at 18 wks-log
+nsfol2,normalized maternal serum folate at 28 wks-log
+ncb12_6,normalized child b12 at 6y (logged)
+ncrbp4_6,normalized child rbp4 at 6y-sqrt
+nctotaladip_6,normalized child  total adiponectin at 6y-logged
+ntotfat1,normalized fat intake at 18 wks-log
+ntotfat2,normalized fat intake at 28 wks-log
+ntotcal1,normalized caloric intake at 18 wks-sqrt
+ntotcal2,normalized caloric intake at 28 wks-sqrt
+ntotpro1,normalized protein intake at 18 wks-sqrt
+ntotpro2,normalized protein intake at 28 wks-sqrt
+ntotcar1,normalized carbohydrate intake at 18 wks-sqrt
+ntotcar2,normalized carbohydrate intake at 28 wks-sqrt
+ncdxfat3,normalized childs trunk fatmass at 6y-log
+ncdxfat2,normalized childs leg fatmass at 6y-log
+ncdxfat1,normalized childs arm fatmass at 6y-sqrt
+ncdxfat4,normalized childs ribs fatmass at 6y-log
+bey6p5y,children with dxa within +- 6 mth of the 6th bday
+dxbey6p5,children dxa beyond 6.5 yrs
+win3m,children within +- 3 mth of the 6th bday
+win6m,children within +- 6 mth of the 6th bday
+dxwin3m,children with dxa within +-3 mth of the 6th bday
+dxwin6m,children dxa at 6ywithin 6 months of 6th birday
+diff, difference between ages of gtt & dxa at 6y
+anom1,anomalies on ultrasound at 1st visit
+anom1spe,details of anomalies on ultrasound at 1st visit
+anom2,anomalies on ultrasound at 2nd  visit
+anom2spe,details of anomalies on ultrasound at 2nd  visit
+anom3,anomalies on ultrasound at 3rd visit
+anom3spe,details of anomalies on ultrasound at  3rd  visit
+exbr,months of exclusibve breast feeding
+decileb129,B12 deilce fup at 9y
+decileb12,28 wk mat b12 decile
+decilefol,28 wk mat folate decile
+hype_pre,hypertension in pregnancy
+hype_npr,hyopertension in non pregnancy
+tuber,tuberculosis?
+heart,heart diseas?
+renal,renal disease?
+anaemia,anaemia?
+other,other abnormalities?
+other_sp,other_spec
+betel,betel nut?
+fingr,gestation at delivery groups
+vitd3_2,maternal 25-OH-vitmin D (ng/mL) at 28 weeks divide nm/L by 2.496
+nvitd3_2,normalized maternal 25-OH-vitmin D (ng/mL) at 28 weeks-cuberoot
+month2,Month of 2nd visit
+ncrp_2,normalized maternal  CRP ng/ml at 28 wks-logged
+finfht,fathers height (cm)
+finfhc,fathers head circ (cm)
+cmig,migration at 6y
+rth,child anthro done on rt hand at pmns2
+cpmns2,child status-pmns2
+cblcd,child blood status at pmns2
+chc_i,child head circ (cm)-pmns2
+csht_i,child sittinh height (cm)-pmns2
+cma_i,child muac (cm)-pmns2
+cwaist_i,child waist circ (cm)-pmns2
+chip_i,child hip circ (cm)-pmns2
+cbmi_i,child bmiI (kg/m2)-pmns2
+cwhr_i,child whr-pmns2
+csstr_i,child s/t ratio -pmns2
+dhand,dominant hand-pmns2
+rh1,hand grip-rt hand 1st reading at pmns2
+rh2,hand grip-rt hand 2nd reading at pmns2
+lh1,hand grip-lt hand 1st reading at pmns2
+lh2,hand grip-lt hand 2nd reading at pmns2
+cbptm_i,child-blood pressure timing at pmns2
+cbptmp_i,tempartutre at the time of childs bp at pmns2
+sy1_i,child-syst bp (mmhg) 1st reading at pmns2
+di1_i,child-diast bp(mmhg)1st reading at pmns2
+pul1_i,child-pulse (/min)1st reading at pmns2
+csys_i,child-syst bp (mmhg) 2nd reading at pmns2
+cdia_i,child-diast bp(mmhg) 2nd reading at pmns2
+cpul_i,child-pulse (/min)2nd reading at pmns2
+cbp_i,child-blood pressure recorder at pmns2
+f1_c_sys_12y,Child systolic BP at pmns2
+cbpcomm_i,comment  on childs bp at pmns2
+rh_i,hand grip-rt hand-pmns2
+lh_i,hand grip-lt hand-pmns2
+csch_i,child school going at pmns2?
+cscstd_i,standard in scheool a the pmn2
+g_in,mothers- gravida at pmns2
+p_in,mother-parity at pmns2
+a_in,mother-abortions at pmns2
+d_in,mother-deliveries at pmns2
+prg_i,mother-pregnant at pmns2
+mintocu,mother occupation at pmns2
+mbptmp_i,room temparature(oc) during mothers blood pressure at pmns2
+msys1_i,mother-syst bp (mmhg) 1st reading at pmns2
+msys_i,mother-syst bp (mmhg) 2nd reading at pmns2
+mdia1_i,mother-diast bp(mmhg)1st reading at pmns2
+mdia_i,mother-diast bp(mmhg) 2nd reading at pmns2
+mpul1_i,mother-pulse (/min)1st reading at pmns2
+mpul_i,mother-pulse (/min)2nd reading at pmns2
+base_fna,base_fname for dxa scan at pmns2
+cdxht_i,Childs height during dxa at pmns2
+cdxwt_i,Childs weight during dxa at pmns2
+cscdt_i,date of  DXA scan at pmns2
+canaldt,pmns2 dxa scan analysis date
+cbmd_i0,Child-bmd-head-pmns2
+cbmc_i0,Child-bmc-head-pmns2
+carea_i0,Child-area-head-pmns2
+cstis_i0,Child-soft tissue-head-pmns2
+cfat_i0,Child-fat-head-pmns2
+clean_i0,Child-lean-head-pmns2
+cbmd_i1,Child-bmd-arm-pmns2
+cbmc_i1,Child-bmc-arm-pmns2
+carea_i1,Child-area-arm-pmns2
+cstis_i1,Child-soft tissue-arm-pmns2
+cfat_i1,Child-fat-arm-pmns2
+clean_i1,Child-lean-arm-pmns2
+cbmd_i2,Child-bmd-leg-pmns2
+cbmc_i2,Child-bmc-leg-pmns2
+carea_i2,Child-area-leg-pmns2
+cstis_i2,Child-soft tissue-leg-pmns2
+cfat_i2,Child-fat-leg-pmns2
+clean_i2,Child-lean-leg-pmns2
+cbmd_i3,Child-bmd-trunk-pmns2
+cbmc_i3,Child-bmc-trunk-pmns2
+carea_i3,Child-area-trunk-pmns2
+cstis_i3,Child-soft tissue-trunk-pmns2
+cfat_i3,Child-fat-trunk-pmns2
+clean_i3,Child-lean-trunk-pmns2
+cbmd_i4,Child-bmd-ribs-pmns2
+cbmc_i4,Child-bmc-ribs-pmns2
+carea_i4,Child-area-ribs-pmns2
+cstis_i4,Child-soft tissue-ribs-pmns2
+cfat_i4,Child-fat-ribs-pmns2
+clean_i4,Child-lean-ribs-pmns2
+cbmd_i5,Child-bmd-pelvis-pmns2
+cbmc_i5,Child-bmc-pelvis-pmns2
+carea_i5,Child-area-pelvis-pmns2
+cstis_i5,Child-soft tissue-pelvis-pmns2
+cfat_i5,Child-fat-pelvis-pmns2
+clean_i5,Child-lean-pelvis-pmns2
+cbmd_i6,Child-bmd-spine-pmns2
+cbmc_i6,Child-bmc-spine-pmns2
+carea_i6,Child-area-spine-pmns2
+cstis_i6,Child-soft tissue-spine-pmns2
+cfat_i6,Child-fat-spine-pmns2
+clean_i6,Child-lean-spine-pmns2
+cbmd_i7,Child-bmd-spine1-pmns2
+cbmc_i7,Child-bmc-spine1-pmns2
+carea_i7,Child-area-spine1-pmns2
+cstis_i7,Child-soft tissue-spine1-pmns2
+cfat_i7,Child-fat-spine1-pmns2
+clean_i7,Child-lean-spine1-pmns2
+cbmd_i8,Child-bmd-spine2-pmns2
+cbmc_i8,Child-bmc-spine2-pmns2
+carea_i8,Child-area-spine2-pmns2
+cstis_i8,Child-soft tissue-spine2-pmns2
+cfat_i8,Child-fat-spine2-pmns2
+clean_i8,Child-lean-spine2-pmns2
+cbmd_i9,Child-bmd-total-pmns2
+cbmc_i9,Child-bmc-total-pmns2
+carea_i9,Child-area-total-pmns2
+cstis_i9,Child-soft tissue-total-pmns2
+cfat_i9,Child-fat-total-pmns2 (gm)
+clean_i9,Child-lean-total-pmns2
+cdxa_i,child dxa done at pmns2
+cfatp_i9,child fat% by fatmass/stiss+bmc dxa at pmns2
+clenp_i9,child len% by lean mass/stiss+bmc dxa at pmns2
+slipmns2,SLI done at pmns2
+dtsli2,date of SLI done at pmns2
+sl_6,family type-slipmns2
+sl_7,total no of persons –slipmns2
+sl_8,drinking water source –slipmns2
+sl_9,toilet facility –slipmns2
+sl_10,light source –slipmns2
+sl_10sp,other light source details –slipmns2
+sl_11,no of rooms in house –slipmns2
+sl_12,separate kithchen? –slipmns2
+sl_13,fuel type –slipmns2
+sl_13sp,other fuel type –slipmns2
+sl_14,house ownership –slipmns2
+sl_15,house type –slipmns2
+sl_16,agriculture land ownership –slipmns2
+sl_16sp,size of agriculture land –slipmns2
+sl_17,size of irrigated land –slipmns2
+sl_18,any livestock? –slipmns2
+sl_18sp,total livestock –slipmns2
+slt1,matress –slipmns2
+slt2,pressure cooker –slipmns2
+slt3,chair –slipmns2
+slt4,"bed,cot –slipmns2"
+slt5,table –slipmns2
+slt6,"clock,watch –slipmns2"
+slt7,electric fan –slipmns2
+slt8,bicycle –slipmns2
+slt9,"rdio,transistor –slipmns2"
+slt10,tv – sli pmns2
+slt11,colour tv – sli pmns2
+slt12,2 whheler – sli pmns2
+slt13,4 wheeler – sli pmns2
+slt14,water pump – sli pmns2
+slt15,bullock cart – sli pmns2
+slt16,thresher – sli pmns2
+slt17,tractor – sli pmns2
+slt18,refrigerator – sli pmns2
+slt19,telephone – sli pmns2
+slt20,sewing machine – sli pmns2
+s_hsetyp,housetype score – sli pmns2
+s_toilet,toilet facility score – sli pmns2
+s_light,lighting source score – sli pmns2
+s_cook,fuel for cooking score – sli pmns2
+s_water,water source score – sli pmns2
+s_kitch,sep.kitchen facility score – sli pmns2
+s_ownhse,house ownership score – sli pmns2
+s_agri,agri land ownership score – sli pmns2
+s_irr,irrigated land ownership score – sli pmns2
+s_livest,livestock ownership score – sli pmns2
+s_it13,4 wheeler score -slipmns2
+s_it17,tractor score -slipmns2
+s_it12,2 wheeler score -slipmns2
+s_it19,telephone score -slipmns2
+s_it18,refrigerator score -slipmns2
+s_it11,color tv score -slipmns2
+s_it7,electric fan score -slipmns2
+s_it8,bicycle score -slipmns2
+s_it9,readio-transistor score -slipmns2
+s_it10,tv score -slipmns2
+s_it14,water pump score --slipmns2
+s_it15,bullock cart - -slipmns2
+s_it16,thresher score -slipmns2
+s_it20,sewing machine -slipmns2
+s_it1,matrees score -slipmns2
+s_it2,pressure cooker -slipmns2
+s_it3,chair score -slipmns2
+s_it4,bed cot score -slipmns2
+s_it5,table score -slipmns2
+s_it6,"clock, watch score-slipmns2"
+items,item score -slipmns2
+cpm,cpm:colo progressive matrices test done at pmns2
+cpm_rs,cpm test-correct response at pmns2
+cpm_er,cpm test-errors at pmns2
+cpm_min,cpm - test time in minutes at pmns2
+cpm_sec,cpm-test time in seconds at pmns2
+cpm_per,cpm-percentile rank at pmns2
+cpm_rm,cpm-remarks at pmns2
+pc,picture completion test done at pmns2
+pc_rs,pictute completion - correct respopnses at pmns2
+pc_er,picture completion – errors at pmns2
+pc_tq,picture completion - total quotient  at pmns2
+ds,digit span test done at pmns2
+df_sc,digit span-forward score at  pmns2
+df_sp,digit span-forward span at  pmns2
+db_sc,digit span-backward score at  pmns2
+db_sp,digit span-backward span at  pmns2
+dst_sc,digit span-total score f+b at  pmns2
+dst_sp,digit span-total span f+b at  pmns2
+dst_tq,digit span-total quotient at  pmns2
+tm1,trail making test-1 done at pmns2
+tm1_min,trail making-1 time in minutes at pmns2
+tm1_sec,trail making-1 time in seconds at pmns2
+tm1_tm,trail making-1 total time in seconds at pmns2
+tm1_er,trail making-1 erros at pmns2
+tm1_lop,trail making-1 low percentile at pmns2
+tm1_hip,trail making-1 hi percentile at pmns2
+tm2,trail making test-2 done at pmns2
+tm2_min,trail making-2 time in minutes at pmns2
+tm2_sec,trail making-2 time in seconds at pmns2
+tm2_tm,trail making-2 total time in seconds at pmns2
+tm2_er,trail making-2 erros at pmns2
+tm2_lop,trail making-2low percentile at pmns2
+tm2_hip,trail making-2  hi percentile at pmns2
+avlt,avlt test done at pmns2
+av_tlsc,avlt-total learning score at pmns2
+av_tllo,avlt-total learning score-low perc at pmns2
+av_tlhi,avlt-total learning score - high perc at pmns2
+av_drsc,avlt-delayed recall score at pmns2
+av_drlo,avlt-delayed recall score-low perc at pmns2
+av_drhi,avlt-delayed recall score-high perc at pmns2
+bd,block design test done at pmns2
+bd_sc,block design-total score at pmns2
+bd_tm,block design-total time in seconds at pmns2
+bd_tql,block design-low perc at pmns2
+bd_tqh,block design-hi perc at pmns2
+bd_cr,block design-correct response at pmns2
+nu_comm,nuro testing comment at pmns2
+nurorec,neuro test administrator at pmns2
+pc_rs4,pictute completion - correct respopnses before 4 consecutive wrong at pmns2
+pc_er4,picture completion - errors before 4 consecutive wrong at pmns2
+pc_tq4,picture completion - total quotient before 4 consecutive wrong at pmns2
+neuropmns2,neuro cognitive test done at pmns2
+cpm_tm,cpm test total time in minutes at pmns2
+dt_ffq,date of child ffq at pmns2
+ffq_i,ffq done at pmns2
+a1,tea score at pmns2
+a21,goat milk score at pmns2
+a22,cow milk  score at pmns2
+a23,buffalo milk score at pmns2
+a3,cofee score at score at pmns2
+l1,curds score at score at pmns2
+l2,buttermilk score at  pmns2
+l4,icecream score at pmns2
+l5,kulfi score at pmns2
+l6,cheese score at pmns2
+l9,lassi score at pmns2
+l10,paneer score at pmns2
+p16,basundi score at pmns2
+p2,shrikhanda score at pmns2
+p11,pedha/khawa score at pmns2
+q2,kharwas score at pmns2
+p9,kheer score at pmns2
+b1,jawar roti score at pmns2
+b2,bajra roti score at pmns2
+b3,chapati score at pmns2
+b5,thalipith score at pmns2
+b6,dhirde score at pmns2
+b15,nachni score at pmns2
+i7,warai score at pmns2
+n1,upma/shira score at pmns2
+n2,pohe score at pmns2
+p1,puranpoli score at pmns2
+c1,rice score at pmns2
+c2,spicy rice score at pmns2
+c4,khichdi score at pmns2
+d2_I,toor dal score at pmns2
+d4_I,moong dal score at pmns2
+d5_I,urid dal score at pmns2
+e1,moong score at pmns2
+e2,harbara score at pmns2
+e3,chawli score at pmns2
+e4,hulga score at pmns2
+e5,peas score at pmns2
+e7,matki score at pmns2
+e8,rajma score at pmns2
+e10,french beans score at pmns2
+e11,tur score at pmns2
+e15,masoor score at pmns2
+e16,pawta score at pmns2
+e20,soyabean score at pmns2
+i33,phutane score at pmns2
+f12,batata score at pmns2
+f32,wangi score at pmns2
+f42,gawar score at pmns2
+f162,bhendi score at pmns2
+f72,kobi  score at pmns2
+f82,cauliflower score at pmns2
+f112,karale score at pmns2
+f192,simla mirchi score at pmns2
+f102,shewga  score at pmns2
+j41,beet root  score at pmns2
+j18,cucumber  score at pmns2
+g12,palak  score at pmns2
+g22,methi  score at pmns2
+g132,amaranth  score at pmns2
+n72,aloo leaves score at pmns2
+g81,kothimbir  score at pmns2
+g102,ambat chooka  score at pmns2
+g141,raddish leaves at pmns2
+h12,pudina  beans score at pmns2
+h1,mirchi kharda score at pmns2
+h2,ground nut chutney  score at pmns2
+h3,"sesame, karale chutney  score at pmns2"
+j9,orange score at pmns2
+j38,awla score at pmns2
+j1,bor score at pmns2
+j5,guava  score at pmns2
+j4,banana score at pmns2
+j2,tamarind  score at pmns2
+j23,carrot score at pmns2
+j14,tomato score at pmns2
+j20,lemon score at pmns2
+j28,grren gram tender score at pmns2
+j21,red gram tender score at pmns2
+k11,chicken score at pmns2
+k22,mutton score at pmns2
+k23,liver score at pmns2
+k34,eggs score at pmns2
+k7,fish score at pmns2
+k51,dry fish score at pmns2
+n20,idli score at pmns2
+n181,dosa score at pmns2
+n18,utaapa score at pmns2
+n17,dhokla score at pmns2
+n201,meduvada score at pmns2
+t1,bournvita score at pmns2
+t2,horlicks score at pmns2
+t3,complan score at pmns2
+l3,ghee score at pmns2
+l7,butter score at pmns2
+l11,dalda score at pmns2
+m1,cread/pav score at pmns2
+m2,toast score at pmns2
+m6,khari score at pmns2
+m4,khare butter score at pmns2
+m3,biscuit score at pmns2
+m7,cake score at pmns2
+m5,cream roll score at pmns2
+n12,batatawada /bhaji score at pmns2
+n14,samosa score at pmns2
+n11,pharsan/papdi/bundi score at pmns2
+q7,missal score at pmns2
+n13,wafers/bobby score at pmns2
+h92,fried papad score at pmns2
+o17,chololate score at pmns2
+o18,limlet sweets score at pmns2
+p7,bundi/ladu score at pmns2
+a81,pepsi cola score at pmns2
+a8,colddrink score at pmns2
+n221,maggie score at pmns2
+g,glv-all score at pmns2
+j,fruits-all score at pmns2
+asc,beverages score at pmns2
+lsc,milk products score at pmns2
+bsc,rotis score at pmns2
+csc,rice score at pmns2
+dsc,dal score at pmns2
+esc,pulses score at pmns2
+fsc,vegetables score at pmns2
+gsc,glv score at pmns2
+jsc,fruits score at pmns2
+hsc,chutney score at pmns2
+ksc,nonveg score at pmns2
+ffsc,fermented food score at pmns2
+supsc,supplement score at pmns2
+sfasc,saturated fats score at pmns2
+msc,bakery products score at pmns2
+nsc,fried-salty snacks score at pmns2
+ssc,sweet snacks score at pmns2
+usc,ready to eat score at pmns2
+fibsc,fibre rich score at pmns2
+mlksc,milk score score at pmns2
+oilgnut,groundnut oil –pmns2
+oilsun,sunflower oil –pmns2
+oilsaf,safflower oil –pmns2
+oilpalm,palm oil–pmns2
+oilmust,mustard oil–pmns2
+oilsoya,soybeen oil–pmns2
+oilcoco,coconut oil–pmns2
+oiloth1,other oil-1–pmns2
+oiloth2,other oil-2–pmns2
+oiloth3,other oil-3–pmns2
+totoil,total oil per month-kg/mo–pmns2
+cook1,when do you wash vegetables? –pmns2
+cook2,when do you cuts vegs before cooking–pmns2
+cook3,what do you do with excess water–pmns2
+cook4,how do you cook food–pmns2
+conut1,total dry coconut-kg/mo–pmns2
+conut2,total fresh coconut-no/mo–pmns2
+gnut,total groundnuts-kg–pmns2
+sesam,total sesame-kg-pmns2
+ut1,aluminium utensils–pmns2
+ut2,german utensils–pmns2
+ut3,steel utensils–pmns2
+ut4,iron utensils–pmns2
+ut5,other type of utensils–pmns2
+sugar,total sugar-kg/mo–pmns2
+jagg,total jaggery-kg/mo–pmns2
+ad,total no of adults – pmns2
+ch,total no of children– pmns2
+hyg1,do you wash hands after defacation? – pmns2
+hyg1a,wash with soap– pmns2
+hyg1b,wash with only water– pmns2
+hyg1c,wash with other– pmns2
+hyg1csp,details of other– pmns2
+hyg2,do wash your hands before eating? – pmns2
+hyg2a,wash with soap– pmns2
+hyg2b,wash with only water– pmns2
+hyg2c,wash with other– pmns2
+hyg2csp,details of other– pmns2
+cheat,how do you think your child eats? – pmns2
+oilyn,oil questionaire– pmns2
+oil_i,oil questionaire– pmns2
+cagedxi,childs age at the pmns2 dxa
+pmns2dxa,pmns2 dxa details
+cldl_i,child ldl cholesterol using freiwald eqn  at pmns2
+ncb12_i,normalized child b12 at pmns2-lg
+ncsfol_i,normalized child serum folate at pmns2-lg
+ncinsf_i,normalized child fasting insulin at pmns2-cuber
+nctg_i,normalized child triglycerides at pmns2 -lg
+nfchol_i,normalized fathers  cholesterol at pmns2-lg
+nftg_i,normalized fathers triglycrides at pmns2 –lg
+nfb12_i,normalized father b12 at pmns2-lg
+nfsfol_i,normalized father serum folate at pmns2-lg
+nmchol_i,normalized mothers  cholesterol at pmns2-lg
+nmtg_i,normalized mothers triglycerides  at pmns2–lg
+nmb12_i,normalized mother b12 at pmns2-lg
+nmsfol_i,normalized mother serum folate at pmns2-lg
+ncfat_i9,normalized fat mass by dxa at pmns2 -lg
+spm_rs,spm test-correct response  - pmns2
+spm_er,spm test-errors – pmns2
+spm_min,spm - test time in minutes – pmns2
+spm_sec,spm-test time in seconds – pmns2
+spm_lop,spm-low percentile rank – pmns2
+spm_hip,spm-hi percentile rank – pmns2
+spm_rm,spm-remarks - pmns2
+spm_tm,spm test-total time in minutes  - pmns2
+dtspmf,date of spm - pmns2
+spmf,spm test done at pmns2
+cagespmi,childs age at spm test at pmns2
+nchcy_i,normalized childs homocysteine at pmns2-LG
+nfhcy_i,normalized fathers homocysteine at pmns2-LG
+nmhcy_i,normalized mothers  homocysteine at pmns2-LG
+nccrp_i,normalized childs crp  at pmns2-LG
+nclept_i,normalised child leptin at pmns2-LG
+nctotaladip_i,normalized child adiponectin at pmns2 -logged
+ctotcal_i,childs total caloric intake by ffq at pmns2
+ctotcarb_i,childs total carbohydrate intake by ffq at pmns2
+ctotfat_i,childs total fat intake by ffq at pmns2
+ctotpro_i,childs total protein intake by ffq at pmns2
+c677tm,mother c677c->t
+c677tc,child c677c->t
+c677tf,father c677c->t
+pat1_28s,ffq-principal component 1 for 28wk or visit-2 -summer
+pat2_28s,ffq-principal component 2 for 28wk or visit-2 -summer
+pat3_28s,ffq-principal component 3 for 28wk or visit-2 -summer
+pat4_28s,ffq-principal component 4 for 28wk or visit-2 -summer
+pat5_28s,ffq-principal component 5 for 28wk or visit-2 -summer
+pat1_28r,ffq-principal component 1 for 28wk or visit-2 -rain
+pat2_28r,ffq-principal component 2 for 28wk or visit-2 -rain
+pat3_28r,ffq-principal component 3 for 28wk or visit-2 -rain
+pat4_28r,ffq-principal component 4 for 28wk or visit-2 -rain
+pat5_28r,ffq-principal component 5 for 28wk or visit-2 -rain
+pat6_28r,ffq-principal component 6 for 28wk or visit-2 -rain
+pat1_28w,ffq-principal component 1 for 28wk or visit-2 -winter
+pat2_28w,ffq-rincipal component 2 for 28wk or visit-2 -winter
+pat3_28w,ffq-principal component 3 for 28wk or visit-2 -winter
+pat4_28w,ffq-principal component 4 for 28wk or visit-2 -winter
+pat5_28w,ffq-principal component 5 for 28wk or visit-2 -winter
+pat6_28w,ffq-principal component 6 for 28wk or visit-2 -winter
+rcf1nm,red cell folate at 1st visit (nmol/L) 2.26xng/ml
+rcf2nm,red cell folate at 2nd  visit (nmol/L) 2.26xng/ml
+ncsfol_6,normalized childs plasma folate at 6y-logged
+ppfatper,pre pregnant fat% using Durnins equation
+zbw,Normal Score of bw using Blom's Formula by sex gestgr (filter of matmet n=700)
+bwcent,bw centile by gest & sex (filter of matmet n=700)
+sga,sga (filter of matmet n=700)
+ncage6,normalised childs age at 6y fup (logged)
+adjbw,birth weight adjusted to 40 wks
+adjht,length at birth adjusted to 40 wks
+adjhc,head circ at birth adjusted to 40 wks
+adjma,mid arm circ at birth adjusted to 40 wks
+adjss,subscapular at birth adjusted to 40 wks
+adjtr,tricep at birth adjusted to 40 wks
+adjpind,ponderal index  at birth adjusted to 40 wks
+zadjbw,zscore:  birth weight adjusted to 40 wks
+zadjht,zscore:  length at birth adjusted to 40 wks
+zadjhc,zscore:  head circ at birth adjusted to 40 wks
+zadjma,zscore:  mid arm circ at birth adjusted to 40 wks
+zadjss,zscore:  subscapular at birth adjusted to 40 wks
+zadjtr,zscore:  tricep at birth adjusted to 40 wks
+birthpca_1,pmns offspring birth pca component 1
+birthpca_2,pmns offspring birth pca component 2
+birthpca_3,pmns offspring birth pca component 3
+birthpca_4,pmns offsoring birth pca component 4
+birthpca_5,pmns offspring birth pca component 5
+birthpca_6,pmns offspring birth pca component 6
+ncagedx6,normalised childs age at 6y dxa (logged)
+agear,childs age at adiposity rebound (years)
+chomabeta_i,child-homabeta at pmns2 using oxford model
+chomas_i,child-homas at pmns2 using oxford model
+chomar_i,child-homar at pmns2 using oxford model
+cdtmenar,pmns child date of menarchy
+cmenarcode,pmns child menarchy code
+cagemenar,pmns child age at menarchy
+chomabeta6,childs homa beta at 6y using oxford model
+chomas6,childs homas at 6y  using oxford model
+chomar6,childs homar at  6y oxford model
+fhomabeta6,fathers homa beta at 6y  using oxford model
+fhomas6,fathers homa beta at 6y using oxford model
+fhomar6,fathers homaR at 6y oxford model
+mhomabeta6,mothers homa beta at 6y using oxford model
+mhoma6,mothers homas at 6y using oxford model
+mhomar6,mothers homaR at 6y using oxford model
+fhomabeta_i,fathers homabeta at pmns2 using oxford model
+fhomas_i,fathers homas at pmns2 using oxford model
+fhomar_i,fathers homa R at pmns2 using oxford model
+mhomabeta_i,mothers homa beta at pmns-2 using oxford model
+mhomas_i,mothers homas at pmns2 using oxford model
+mhomar_i,mothers homa R at pmns2 usinmg oxford model
+nchomar6,normalised child insulin resistance at 6y (logged) based on oxford model
+nfhomar6,normalised fathers insulin resistance at 6y (logged) based on oxford model
+nmhomar6,normalised mothers insulin resistance at 6y (logged) based on oxford model
+cghbf,childs ghb at15-16y (%)
+nmhomar_i,normalised child insulin resistance at pmns2 (logged) based on oxford model
+nchomar_i,normalised fathers insulin resistance at pmns2 (logged) based on oxford model
+nfhomar_i,normalised mothers insulin resistance at pmns2 (logged) based on oxford model
+nrcf1nm,normalised red cell folate nmol/L at 18 wks-logged
+nrcf2nm,normalised red cell folate nmol/L at 28 wks-logged
+fac1_18w,REGR factor score   1 for analysis 1
+fac2_18w,REGR factor score   2 for analysis 1
+fac3_18w,REGR factor score   3 for analysis 1
+fac4_18w,REGR factor score   4 for analysis 1
+fac5_18w,REGR factor score   5 for analysis 1
+fac1_28w,REGR factor score   1 for analysis 1
+fac2_28w,REGR factor score   2 for analysis 1
+fac3_28w,REGR factor score   3 for analysis 1
+fac4_28w,REGR factor score   4 for analysis 1
+fac5_28w,REGR factor score   5 for analysis 1
+fac6_28w,REGR factor score   6 for analysis 1
+fac1_preg,REGR factor score   1 for analysis 1
+fac2_preg,REGR factor score   2 for analysis 1
+fac3_preg,REGR factor score   3 for analysis 1
+fac4_preg,REGR factor score   4 for analysis 1
+fac5_preg,REGR factor score   5 for analysis 1
+fac6_preg,REGR factor score   6 for analysis 1
+fac7_preg,REGR factor score   7 for analysis 1
+fac8_preg,REGR factor score   8 for analysis 1
+fac9_preg,REGR factor score   9 for analysis 1
+fac10_preg,REGR factor score  10 for analysis 1
+fac11_preg,REGR factor score  11 for analysis 1
+FAC1_1,REGR factor score   1 for analysis 1
+FAC2_1,REGR factor score   2 for analysis 1
+FAC3_1,REGR factor score   3 for analysis 1
+FAC4_1,REGR factor score   4 for analysis 1
+cinsby_18y,child Insulin done by at 18 yr
+remins_18y,Remark if any on insulins at 18y
+chomabeta_18y,child homa beta(%) at 18y using oxford model
+chomas_18y,child homa sensitivity (%) at 18y using oxford model
+chomar_18y,child homa resistence at 18y using oxford model
+csyst_18y,childs systolic bp at 18y (mmhg)
+cdiast_18y,childs diastolic bp at 18y (mmhg)
+cpulse_18y,childs pulse rate at 18y (/min)
+rtempbp_18y,room temparature at childs bp recording at 18y (oC)
+cbp_18y, child bp recorded at 18y
+cbpmcode_18y,childs bp at 18y measured by
+subno6dup,family number at the time of modi study
+csht_18y,child sitting height at 18y (cm)
+cwaist_18y,child waist circ at 18y (cm)
+chip_18y,child hip circ at 18y (cm)
+cwhr_18y,child WHR at 18y
+chc_18y,child head circ at 18y (cm)
+cma_18y,child muac at 18y (mm)
+ctr_18y,child tricep skinfold at 18y (mm)
+css_18y,child subscapular skinfold at 18y (mm)
+cbi_18y,child bicep skinfold at 18y (mm)
+csu_18y,child suprailiac skinfold at 18y (mm)
+canth_18y, child anthro done at 18y
+cbmc1,pmns child-arm BMC at 18y
+cfm1,pmns child-fat mass-arms at 18y
+clm1,pmns child-lean mass-arms at 18y
+cbmc2,pmns child-leg BMC at 18y
+cfm2,pmns child-fat mass-legs- at 18y
+clm2,pmns child-lean mass-legs- at 18y
+cbmc3,pmns child-trunk BMC at 18y
+cfm3,pmns child-fat mass-Trunk- at 18y
+clm3,pmns child-lean mass-Trunk- at 18y
+cbmc7,pmns child-total BMC at 18y
+cfm7,pmns child-fat mass-Total- at 18y
+clm7,pmns child-lean mass-Total- at 18y
+cbmc59,pmns child-Bone mineral calcium in g- Android- at 18y
+cfm59,pmns child-fat mass-Android- at 18y
+clm59,pmns child-lean mass-Android- at 18y
+cbmc60,pmns child-Bone mineral calcium in g-Gynoid- at 18y
+cfm60,pmns child-fat mass-Gynoid- at 18y
+clm60,pmns child-lean mass-Gynoid- at 18y
+cbmc61,61 cbmc
+cfm61,61 cfm
+clm61,61 clm
+cbmd0,pmns child-head BMD at 18y
+cbmc0,pmns child-head BMC at 18y
+carea0,pmns child-head area at 18y
+cbmd1,pmns child-arm BMD at 18y
+carea1,pmns child-arm area at 18y
+cbmd2,pmns child-leg BMD at 18y
+carea2,pmns child-leg area at 18y
+cbmd3,pmns child-trunk BMD at 18y
+carea3,pmns child-trunk area at 18y
+cbmd4,pmns child-ribs BMD at 18y
+cbmc4,pmns child-ribs BMC at 18y
+carea4,pmns child-ribs area at 18y
+cbmd5,pmns child-pelvis BMD at 18y
+cbmc5,pmns child-pelvis BMC at 18y
+carea5,pmns child-pelvis area at 18y
+cbmd6,pmns child-spine BMD at 18y
+cbmc6,pmns child-spine BMC at 18y
+carea6,pmns child-spine area at 18y
+cbmd7,pmns child-total BMD at 18y
+carea7,pmns child-total area at 18y
+cbmd61,61 cbmd
+carea61,61 carea
+cbmdsp17,17 cbmdsp
+cbmcsp17,17 cbmcsp
+careasp17,17 careasp
+cbmdsp18,18 cbmdsp
+cbmcsp18,18 cbmcsp
+careasp18,18 careasp
+cbmdsp19,pmns child-L1 BMD at 18y
+cbmcsp19,pmns child-L1 BMC at 18y
+careasp19,pmns child-L1 area at 18y
+cbmdsp20,pmns child-L2 BMD at 18y
+cbmcsp20,pmns child-L2 BMC at 18y
+careasp20,pmns child-L2 area at 18y
+cbmdsp21,pmns child-L3 BMD at 18y
+cbmcsp21,pmns child-L3 BMC at 18y
+careasp21,pmns child-L3 area at 18y
+cbmdsp22,pmns child-L4 BMD at 18y
+cbmcsp22,pmns child-L4 BMC at 18y
+careasp22,pmns child-L4 area at 18y
+cbmdsp23,23 cbmdsp
+cbmcsp23,23 cbmcsp
+careasp23,23 careasp
+cbmdsp26,pmns child-L1L2 BMD at 18y
+cbmcsp26,pmns child-L1L2 BMC at 18y
+careasp26,pmns child-L1L2 area at 18y
+cbmdsp27,pmns child-L1L3 BMD at 18y
+cbmcsp27,pmns child-L1L3 BMC at 18y
+careasp27,pmns child-L1L3 area at 18y
+cbmdsp28,pmns child-L1L4 BMD at 18y
+cbmcsp28,pmns child-L1L4 BMC at 18y
+careasp28,pmns child-L1L4 area at 18y
+cbmdsp29,pmns child-L2L3 BMD at 18y
+cbmcsp29,pmns child-L2L3 BMC at 18y
+careasp29,pmns child-L2L3 area at 18y
+cbmdsp30,pmns child-L2L4 BMD at 18y
+cbmcsp30,pmns child-L2L4 BMC at 18y
+careasp30,pmns child-L2L4 area at 18y
+cbmdsp31,pmns child-L4L5 BMD at 18y
+cbmcsp31,pmns child-L4L5 BMC at 18y
+careasp31,pmns child-L4L5 area at 18y
+cbmdf0,pmns child-femur-neck BMD at 18y
+cbmcf0,pmns child-femur-neck BMC at 18y
+careaf0,pmns child-femur-neck area at 18y
+cbmdf1,pmns child-femur-wards BMD at 18y
+cbmcf1,pmns child-femur-wards BMC at 18y
+careaf1,pmns child-femur-wards area at 18y
+cbmdf2,pmns child-femur-troch BMD at 18y
+cbmcf2,pmns child-femur-troch BMC at 18y
+careaf2,pmns child-femur-troch area at 18y
+cbmdf3,pmns child-femur-shaft BMD at 18y
+cbmcf3,pmns child-femur-shaft BMC at 18y
+careaf3,pmns child-femur-shaft area at 18y
+cbmdf4,pmns child-femur-total BMD at 18y
+cbmcf4,pmns child-femur-total BMC at 18y
+careaf4,pmns child-femur-total area at 18y
+cbmdf5,pmns child-femur-upper neck BMD at 18y
+cbmcf5,pmns child-femur-upper neck BMC at 18y
+careaf5,pmns child-femur-upperneck area at 18y
+cbmdf6,pmns child-femur-lower neck BMD at 18y
+cbmcf6,pmns child-femur-lower neck BMC at 18y
+careaf6,pmns child-femur-lower neck area at 18y
+ctbmdyasp19,19 ctbmdyasp
+czbmdamsp19,19 czbmdamsp
+ctbmdyasp20,20 ctbmdyasp
+czbmdamsp20,20 czbmdamsp
+ctbmdyasp21,21 ctbmdyasp
+czbmdamsp21,21 czbmdamsp
+ctbmdyasp22,22 ctbmdyasp
+czbmdamsp22,22 czbmdamsp
+ctbmdyasp26,26 ctbmdyasp
+czbmdamsp26,26 czbmdamsp
+ctbmdyasp27,27 ctbmdyasp
+czbmdamsp27,27 czbmdamsp
+ctbmdyasp28,28 ctbmdyasp
+czbmdamsp28,28 czbmdamsp
+ctbmdyasp29,29 ctbmdyasp
+czbmdamsp29,29 czbmdamsp
+ctbmdyasp30,30 ctbmdyasp
+czbmdamsp30,30 czbmdamsp
+ctbmdyasp31,31 ctbmdyasp
+czbmdamsp31,31 czbmdamsp
+ctbmdyaf0,0 ctbmdyaf
+czbmdamf0,0 czbmdamf
+ctbmdyaf1,1 ctbmdyaf
+czbmdamf1,1 czbmdamf
+ctbmdyaf2,2 ctbmdyaf
+czbmdamf2,2 czbmdamf
+ctbmdyaf4,4 ctbmdyaf
+czbmdamf4,4 czbmdamf
+ctbmdya7,pmns child-t score-total-young adult at 18y
+czbmdam7,pmns child-z score-total -age matched at 18y
+ctbmdya61,61 ctbmdya
+czbmdam61,61 czbmdam
+cagedx_18y,pmns child-age at 18y  (y)
+ctissuemass7_18y,pmns child-total tissue mass (gm):fat+lean+bone at 18y
+cfatp_18y,pmns child-body fat % at 18y
+cleanp_18y,pmns child-body lean % at 18y
+cinindexwh_18y,child-insulinogenic index at 18y using wareham formule
+cinindexwh6,child-insulinogenic index at 6y using wareham formule
+cdispindex_i,child-disposition index at pmns2
+cdispindex6,child-disposition index at 6y
+cdispindex_18y,Child disposition index at 18y
+cinindex_18y,child-insulinogenic index at 18y
+lmpdiffgr.lmp < usg,1
+lmpdiffgr.lmp>usg,2
+lmpdiffgr.lmp=usg,3
+plbwr,Placenta to birthweight ratio
+cwaistrisk_18y,child-waist circ risk at 18y
+ctgrisk_18y,child-triglyceridesrisk at 18y
+chdlrisk_18y,child-hdl risk at 18y
+cbprisk_18y,child-blood pressure risk at 18y
+ccholrisk_18y,child-cholesterol risk at 18y
+cfatrisk_18y,child-total body fat risk at 18y
+cbmi_18ygr.Underweight -16,1
+cbmi_18ygr.Moderate underweight 16-17,2
+cbmi_18ygr.Mild underweight 17-18.5,3
+cbmi_18ygr.Normal 18.5-25,4
+cbmi_18ygr.Preobese 25-30,5
+cbmi_18ygr.Obese-Class1 30-35,6
+cbmi_18ygr.Ob-Class2  35-40,7
+cbmi_18ygr.Ob-class3 >=40,8
+cwhrrisk_18y,child-waist circ risk at 18y
+cblood_18y,child Blood Collected at 18y
+ccol_code_18y,child Blood collected by at 18y
+cst_detail_18y,child No stool details at 18y
+cstool_18y,child Stool Collected at 18y
+curine_18y,child Urine Collected at 18y
+canem_18y,child-anemia at 18y
+fdispindex6,Fathers disposition index at 6y
+mdispindex6,Mothers disposition index at 6y
+fdispindex_i,Fathers disposition index at pmns2
+mdispindex_i,Mothers disposition index at pmns2
+cinindex6,child-insulinogenic index at 6y
+dose,glucose load/kg body weight administere at 18y
+year_18y,Year of 18y fup
+month_18y,Month of 18y fup
+cabareamri_18y,total abdominal area (mm2) in children at 18y by MRI
+cscutfareamri_18y,total subcutaneous fat area  (mm2)in children at 18y by MRI
+cvisfareamri_18y,total visceral fat  area (mm2) in children at 18y by MRI
+inclexcl.included in PIS,1
+inclexcl.B12 < 100,2
+inclexcl.Other medical illness,3
+inclexcl.Anemic,4
+asc_18y,child beverage consumption score-ffq 18y
+lsc_18y,child milk products consumption score-ffq 18y
+bsc_18y,child roti consumption score-ffq 18y
+cersc_18y,child cereal consumption score-ffq 18y
+csc_18y,child rice consumption score-ffq 18y
+dsc_18y,child dal consumption score-ffq 18y
+esc_18y,child pulses consumption score-ffq 18y
+fsc_18y,child vegetable consumption score-ffq 18y
+gsc_18y,child glv consumption score-ffq 18y
+jsc_18y,child fruit consumption score-ffq 18y
+nutssc_18y,child nuts consumption score-ffq 18y
+chutpicksc_18y,child chutney-pickles consumption score-ffq 18y
+ksc_18y,child non veg consumption score-ffq 18y
+fermfoodsc_18y,child fermented food  consumption score-ffq 18y
+supplsc_18y,child supplement consumption score-ffq 18y
+safasc_18y,child saturated fat consumption score-ffq 18y
+msc_18y,child bakery product consumption score-ffq 18y
+nsc_18y,child fried/salty snacks consumption score-ffq 18y
+sweetsnacks_18y,child sweet snacks consumption score-ffq 18y
+readytoeat_18y,child ready to eat food consumption score-ffq 18y
+fibrerich_18y,child fibre rich food consumption score-ffq 18y
+cmp,(mean) compliance (%)
+cwt_scr,child weight at screening (Kg)
+cht_scr,child height at screening (cm)
+csyst_scr,child syst BP at screening (mmHg)
+cdiast_scr,child siast BP at screening (mmHg)
+cpulse_scr,child pulse at screening (/min)
+cbmi_scr,child BMI at screening (kg/m2)
+Allerg1_A1,Allergies
+cns1_A1,Epilepsy
+cns2_A1,Developmental delay
+cvs1_A1,Hypertension
+cvs2_A1,Congenital heart disease
+cvs3_A1,Rheumatic heart disease
+dethistchrill_scr_A1,If Yes details of chronic illness
+drugs_A1,Receiving any drugs?
+endo1_A1,Diabetes
+endo2_A1,Thyroid
+endo3_A1,Adrenal
+genex1_A1,pallor
+genex2_A1,jaundice
+genex3_A1,hyperpigmenttaion
+genex4_A1,Edema
+genex5_A1,Clubbing
+genex6_A1,Other
+genex7_A1,Normal
+git1_A1,Upper GI
+git2_A1,Lower GI
+git3_A1,Chronic diarreah
+git4_A1,Hepatobilary
+gur1_A1,Chronic UTI
+gur2_A1,Renal stone
+gur3_A1,Other
+histchrill_scr_A1,history of chronic illness?
+mus1_A1,Musculoskeletal
+othgenexdet_A1,Other details
+rs1_A1,ENT/Upper respiratory
+rs2_A1,Asthma
+rs3_A1,Tuberculosis
+rs4_A1,Other
+skin1_A1,Nurocutaneous stigmata
+skin2_A1,Chronic dermatitis
+systex_A1,systemic examination
+systexdet_A1,Abnormality in systenic exam
+vitamin_A1,Receiving any vitamins/minerals?
+drdose1,drug dose
+drdose2,drug dose
+drdose3,drug dose
+drfr1,drug freq (times/day)
+drfr2,drug freq (times/day)
+drfr3,drug freq (times/day)
+drname1,drug name
+drname2,drug name
+drname3,drug name
+drstart1,drug started
+drstart2,drug started
+drstart3,drug started
+drugs,Receiving any drugs?
+vitamin,Receiving any vitamins/minerals?
+vitdose1,vitamin dose
+vitdose2,vitamin dose
+vitfr1,vitamin freq (times/day)
+vitfr2,vitamin freq (times/day)
+vitname1,vitamin name
+vitname2,vitamin name
+vitstart1,vitamins started
+vitstart2,vitamins started
+methggr.Isotopic,1
+methggr.Nonisotopic,2
+meth_cgr_pre,Granulocyte %
+meth_cgrno_pre,Granulocyte count
+meth_chb_pre,Hemoglobin
+meth_chct_pre,Hematocrit
+meth_cly_pre,Lymphocyte %
+meth_clyno_pre,Lymphocyte  count
+meth_cmch_pre,Mean corpuscular hematocrit
+meth_cmchc_pre,Mean corpuscular hematocrit concentration
+meth_cmcv_pre,Mean corpuscular volume
+meth_cmo_pre,Monocyte %
+meth_cmono_pre,Monocyte count
+meth_cmpv_pre,Mean platelet volume
+meth_cpct_pre,Plateletcrit count
+meth_cpdw_scr_pre,Platelet distribution width
+meth_cplt_pre,Platelet count
+meth_crbc_pre,Red blood cells
+meth_crdw_pre,Red cell distribution width
+meth_cwbc_pre,White blood cells
+meth_cwt_pre,child weight at screening (Kg)
+meth_cht_pre,child height at screening (cm)
+meth_csyst_pre,child syst BP  (mmHg)
+meth_cdiast_pre,child siast BP (mmHg)
+meth_cpulse_pre,child pulse  (/min)
+meth_cbmi_pre,child BMI (kg/m2)
+meth_cb12_pre,childs b12 at meth load test pre  -pmol/L
+meth_cb2_pre,childs b2 at meth load test pre  -microgm/L
+meth_cfolate_pre,childs folate at meth load test pre -nmol/L
+adjhc1,fetal head circ adj for 18 wks
+adjhc2,fetal head circ adj for 28 wks
+adjhc3,fetal head circ adj for 34 wks
+adjac1,fetal abdominal circ adj for 18 wks
+adjac2,fetal abdominal circ adj for 28 wks
+adjac3,fetal abdominal circ adj for 34 wks
+adjfl1,fetal femur length adj for 18 wks
+adjfl2,fetal femur length adj for 28 wks
+adjfl3,fetal femur length adj for 34 wks
+adjbpd1,Biparietal diam  adj for 18 wks
+adjbpd2,Biparietal diam  adj for 28 wks
+adjbpd3,Biparietal diam  adj for 34 wks
+SampleID,Sample ID
+A204GM.HOMO,1
+A204GM.HETERO,2
+A204GM.RARE,3
+C249TM.HOMO,1
+C249TM.HETERO,2
+C249TM.RARE,3
+C335TM.HOMO,1
+C335TM.HETERO,2
+C335TM.RARE,3
+C390TM.HOMO,1
+C390TM.HETERO,2
+C390TM.RARE,3
+G461AM.HOMO,1
+G461AM.HETERO,2
+G461AM.RARE,3
+C513TM.HOMO,1
+C513TM.HETERO,2
+C513TM.RARE,3
+G772AM.HOMO,1
+G772AM.HETERO,2
+G772AM.RARE,3
+FUT1,A204G_M:rs492602
+FUT2,C249T_M
+FUT3,C335T_M
+FUT4,C390T_M
+FUT5,G461A_M:rs601338
+FUT6,C513T_M
+FUT7,G772A_M:rs602662
+Test_Date,Test Date
+Test_Time,Test Time
+grs1cquar,Percentile Group of wt_7snp_grs
+gfddaysqn,Percentile Group of gfddays
+tg2qn,Percentile Group of tg2
+ssa_18y,SSA
+upt_18y,urinr pregnancy test
+abnf_18y,fasting >=100 mg% at 18y
+abn2h_18y,2hr >=140 and <200 at 18y
+cglyc_18y,glycemia in pmns children at 18y
+cgttcd_18y.child gtt complete at  18y,1
+cgttcd_18y.child gtt not complete at 18y,2
+cb12iquar,Percentile Group of cb12_i
+fb12iquar,Percentile Group of fb12_i
+mb12iquar,Percentile Group of mb12_i
+cb12scrquar,Percentile Group of cb12_scr
+sesquar,Percentile Group of slisc_i
+cbmiquar,Percentile Group of cbmi_scr
+cwbcquar,Percentile Group of cwbc_scr
+ccrp_18y,child crp (ng/mL)at 18y
+sliflag18,SLI AT 18Y BY NFHS
+pmns18y,pmns 18y fup
+pmns18yf,pmns 18y fup-father
+pmns18ym,pmns 18y fup-mother
+cgpcab_scr,Gastric parietal cell antibody (U/mL)
+cintrfact_scr,Intrinsic factor (U/mL)
+cadagly_18,Glycemic status of PMNS youung adults at 18 Y followup by ADA criteria
+chypgly_18,Hyperglycemia status of PMNS young adults at 18 y followup by ADA
+cngtifgigt_18,Classification of young adults at 18 by Normoglycemia-IFG-IGT
+cht18yq,Percentile Group of cht_18y
+gender.males,1
+gender.females,2
+Znchomar_18y,Zscore(nchomar_18y)
+Znchomabeta_18y,Zscore(nchomabeta_18y)
+Zncdispindex_18y,Zscore(ncdispindex_18y)
+Zncmatsuindex_18y,Zscore(ncmatsuindex_18y)
+qr_choma18,Percentile Group of Znchomar_18y
+qr_chomabeta18,Percentile Group of Znchomabeta_18y
+qr_cmatsuindex18,Percentile Group of Zncmatsuindex_18y
+qr_cdispindex18,Percentile Group of Zncdispindex_18y
+riskchoma18.At risk Q4,1
+riskchoma18.Non risk Q123,2
+Zcgluf_18y,Zscore:  Child Fasting Glucose (mg%) at 18yr
+Zcglu2hr_18y,Zscore:  Child 2 hr Glucose (mg%) at 18 yr
+Zcinsf_18y,Zscore:  Child Fasting Insulin at 18yr (mu/l)
+Zchomar_18y,Zscore:  child homa resistence at 18y using oxford model
+znchoma18y,Zscore(nchomar_18y)
+Zchomabeta_18y,Zscore:  child homa beta(%) at 18y using oxford model
+znchomabeta18y,Zscore(nchomabeta_18y)
+Zcinindexwh_18y,Zscore:  child-insulinogenic index at 18y using wareham formule
+Zncinindexwh_18y,Zscore(ncinindexwh_18y)
+Zcdispindex_18y,Zscore:  Child disposition index at 18y
+zcdispindex18y,Zscore(ncdispindex_18y)
+Zcht_18y,Zscore:  child height at 18y (cm)
+Zcwt_18y,Zscore:  child weight at 18y (kg)
+Zcbmi_18y,Zscore:  child BMI at 18y(kg/m2)
+Zcma_18y,Zscore:  child muac at 18y (mm)
+Zcss_18y,Zscore:  child subscapular skinfold at 18y (mm)
+Zctr_18y,Zscore:  child tricep skinfold at 18y (mm)
+Zcfatp_18y,Zscore:  pmns child-body fat % at 18y
+Zcwaist_18y,Zscore:  child waist circ at 18y (cm)
+Zchip_18y,Zscore:  child hip circ at 18y (cm)
+z_bw,Zscore(bw)  Birth weight (gm)
+Zlength,Zscore:  Length of the newborn (cm)
+Zhcn,Zscore:  Head circumference of the newborn (cm)
+Zchn,Zscore:  Chest circumference of the newborn (cm)
+Zabdn,Zscore:  Abdominal circumference of the newborn (cm)
+Zssn,Zscore:  Subscapular skinfold of the newborn (mm)
+Ztrn,Zscore:  Triceps skinfold of the newborn (mm)
+Zcchol_18y,Zscore:  child Cholesterol (mg%) at 18 yr
+Zctg_18y,Zscore:  child Triglycerides (mg%) at 18 yr
+Zchdl_18y,Zscore:  child  HDL(mg%) at 18 yr
+Zcsyst_18y,Zscore:  childs systolic bp at 18y (mmhg)
+Zcdiast_18y,Zscore:  childs diastolic bp at 18y (mmhg)
+Zman,Zscore:  Midarm circumference of the newborn (cm)
+mlt_post_date,post mlt date
+cngtifg_18.normoglycemic,1
+cngtifg_18.IFG,2
+cngtigt_18.normoglycemic,1
+cngtigt_18.IGT,2
+FAC1_2,REGR factor score   1 for analysis 2
+FAC2_2,REGR factor score   2 for analysis 2
+FAC3_2,REGR factor score   3 for analysis 2
+FAC4_2,REGR factor score   4 for analysis 2
+tb12v2_q,Percentile Group of tb12v2
+tb12v2_dec,Percentile Group of tb12v2
+tb12v2_qar,Percentile Group of tb12v2
+cmigr_18y,Any migration
+Zsstrn_sf,Zscore(sstrn_sf)
+Zcsstrsf_i,Zscore(csstrsf_i)
+Zcpm_rs,Zscore:  cpm test-correct response at pmns2
+Zpc_rs,Zscore:  pictute completion - correct respopnses at pmns2
+Zdf_sp,Zscore:  digit span-forward span at  pmns2
+Zdb_sp,Zscore:  digit span-backward span at  pmns2
+Ztm1_tm,Zscore:  trail making-1 total time in seconds at pmns2
+Ztm2_tm,Zscore:  trail making-2 total time in seconds at pmns2
+Zav_tlsc,Zscore:  avlt-total learning score at pmns2
+Zav_drsc,Zscore:  avlt-delayed recall score at pmns2
+Zbd_sc,Zscore:  block design-total score at pmns2
+c_sec_st_24y_E17_C306,Child's Secretor Status (24 year follow up)
+f_sec_st_24y_E18_C344,Father's Secretor Status (24 year follow up)
+f_sec_st_comm_24y_E18_C344,Comment on Secretor Status of Father  (24 year follow up)
+m_sec_st_24y_E19_C374,Mothers Secretor Status (24 year follow up)
+m_sec_st_comm_24y_E19_C374,Comment on Secretor Status of Mother  (24 year follow up)
+ses_category_24,socio economic score by sli at 24y
+covid_category,f1 child covid followup category at 24y
+ses_category_6year,f1 child socio economics status category at 6y
+ses_category_12year,f1 child socio economics status category at 12y
+ses_category_18year,f1 child socio economics status category at 18y
+transition_category,socio economics status category
+final_trsns_cate,socio economics status final category
+tertile_18,socio economics status tertile
+cB12_6y,f1 child c B12 by using Sergey Fedeso model at 6y
+cB12_cate_6y,f1 child c B12 categories 6y
+cB12_12y,f1 child c B12 by using Sergey Fedeso model at 12y
+cB12_cate_12y,f1 child c B12 categories 12y
+cB12_17y,f1 child c B12 by using Sergey Fedeso model at 17y
+cB12_cate_17y,f1 child c B12 categories 17y
+cB12_18y_sf,f1 child c B12 by using Sergey Fedeso model at 18y
+cB12_cate_18y,f1 child c B12 categories 18y
+cB12_28wks,f1 child c B12 by using Sergey Fedeso model at 28wks
+cB12_cate_28wks,f1 child c B12 categories 28wks
+cB12_delivary,f1 child c B12 by using Sergey Fedeso model at delivary
+cB12_cate_delivary,f1 child c B12 categories delivary
+f1_c_wt_zscore_WHO_6,f1 child weight Z score using by WHO at 6y
+f1_c_ht_zscore_WHO_6,f1 child height Z score using by WHO at 6y
+f1_c_bmi_zscore_WHO_6,f1 child bmi Z score using by WHO at 6y
+f1_c_wt_zscore_WHO_12,f1 child weight Z score using by WHO at 12y
+f1_c_ht_zscore_WHO_12,f1 child height Z score using by WHO at 12y
+f1_c_bmi_zscore_WHO_12,f1 child bmi Z score using by WHO at 12y
+LengthCentile,f1 child length centiles using intergrowth model
+WeightCentile,f1 child weight centiles using intergrowth model
+HeadCircumferenceCentile,f1 child head circumference centiles using intergrowth model
+Age_f2,f2 child age
+Sex_f2,f2 child sex
+Length_f2,f2 child length
+LengthCentile_f2,f2 child length centiles by using intergrowth model
+Weight_f2,f2 child weight
+WeightCentile_f2,f2 child weight centiles by using intergrowth model
+HeadCircumference_f2,f2 child head circunference
+HeadCircumferenceCentile_f2,f2 child head circunference centiles by using intergrowth model

@@ -1,0 +1,1567 @@
+---
+title: "Microbiome_analysis_26MAR26"
+author: "Pooja Kunte"
+format: html
+editor: visual
+---
+
+## Objective
+
+![](images/clipboard-1342673111.png)
+
+This analysis was done on Object 1: files from 105003427/1 and 105003427/2
+
+|                        | Sent | Sequenced |
+|------------------------|------|-----------|
+| F0_Fathers (24y)       | 50   | 49        |
+| F0_Mothers (24y)       | 50   | 49        |
+| F1_Boys_Placebo (18y)  | 50   | 50        |
+| F1_Girls_Placebo (18y) | 46   | 46        |
+| Total                  | 196  | 194       |
+
+# MultiQC reports: 105003427/1
+
+![](images/clipboard-3552854723.png)
+
+# MultiQC reports: 105003427/2
+
+![](images/clipboard-154144110.png)
+
+# Installing packages
+
+```{r}
+# if (!requireNamespace("BiocManager", quietly = TRUE))
+#     install.packages("BiocManager")
+# BiocManager::install("dada2", version = "3.22")
+
+library(dada2)
+```
+
+# Load files
+
+```{r}
+
+
+pathF <-"/home/admin/Microbiome/KEM_consolidated_raw_data/KEM_consolidated_raw_data/105003427/1_and_2_in_a_single_folder_for_analysis/R1"
+pathR <-"/home/admin/Microbiome/KEM_consolidated_raw_data/KEM_consolidated_raw_data/105003427/1_and_2_in_a_single_folder_for_analysis/R2"
+
+fastq_files_R1 <- list.files(pathF, pattern = "\\.fastq\\.gz$", full.names = TRUE)
+
+head(fastq_files_R1)
+
+
+fastq_files_R2 <- list.files(pathR, pattern = "\\.fastq\\.gz$", full.names = TRUE)
+
+head(fastq_files_R2)
+
+#check of number of files in R1 and R2 match
+
+n1 <- length(fastq_files_R1)
+n2 <- length(fastq_files_R2)
+
+n1
+n2
+
+if (n1 == n2) {
+  print("Number of files match ✅")
+} else {
+  print("Number of files do NOT match ❌")
+}
+```
+
+# Inspect read quality profiles: Forward reads
+
+```{r}
+plotQualityProfile(fastq_files_R1[1:2])
+```
+
+# Inspect read quality profiles: Reverse reads
+
+```{r}
+plotQualityProfile(fastq_files_R2[1:2])
+```
+
+# Filter and trim
+
+```{r}
+
+# Extract sample names, assuming filenames have format: SAMPLENAME_XXX.fastq
+sample.names <- sapply(strsplit(basename(fastq_files_R1), "_"), `[`, 1)
+
+# Place filtered files in filtered/ subdirectory
+filtFs <- file.path(pathF, "filtered", paste0(sample.names, "_R1_filt.fastq.gz"))
+filtRs <- file.path(pathR, "filtered", paste0(sample.names, "_R2_filt.fastq.gz"))
+names(filtFs) <- sample.names
+names(filtRs) <- sample.names
+```
+
+# Filter
+
+1.  minQ =25. Minimum QC score of 25 was selected.
+2.  truncLen = c(270, 210). FastQC+ MultiQC reports were generated, fall of read quality was observed and based on that truncation length of 270 bp for forward reads and 210 bp for reverse reads was selected.
+3.  trimLeft=c(20,20) This makes sure that primer sequences are removed from the start of sequences, if we know that primers are already removed then set this to 0, if not sure then set at 20
+4.  maxN =0 sequences with more than maxN Ns will be discarded
+5.  maxEE=c(2,2) reads with higher than maxEE "expected errors" will be discarded
+6.  truncQ=11 Truncate reads at the first instance of a quality score less than or equal to truncQ
+
+```{r}
+out <- filterAndTrim(fastq_files_R1, 
+                     filtFs, 
+                     fastq_files_R2, 
+                     filtRs, 
+                     minQ = 25, #reads containing a quality score less than minQ will be discarded.
+                     truncLen=c(270,210), #Truncate reads after truncLen bases. Reads shorter than this are discarded.
+                     trimLeft=c(20,20),#The number of nucleotides to remove from the start of each read. 
+                     maxN=0, #sequences with more than maxN Ns will be discarded.
+                     maxEE=c(2,2), #reads with higher than maxEE "expected errors" will be discarded. 
+                     truncQ=11, #Truncate reads at the first instance of a quality score less than or equal to truncQ.
+                     rm.phix=TRUE, #discard reads that match against the phiX genome
+                     compress=TRUE, 
+                     multithread=FALSE) # On Windows set multithread=FALSE (only needed for filterAndTrim)
+head(out)
+```
+
+# Learn the Error Rates R1
+
+```{r}
+errF <- learnErrors(filtFs, multithread=TRUE)
+```
+
+## Plot errors R1
+
+```{r}
+plotErrors(errF, nominalQ=TRUE)
+```
+
+# Learn the Error Rates R2
+
+```{r}
+errR <- learnErrors(filtRs, multithread=TRUE)
+```
+
+## Plot errors R2
+
+```{r}
+plotErrors(errR, nominalQ=TRUE)
+```
+
+# Sample Inference
+
+We are now ready to apply [the core sample inference algorithm](https://www.nature.com/articles/nmeth.3869#methods) to the filtered and trimmed sequence data.
+
+```{r}
+dadaFs <- dada(filtFs, err=errF, multithread=TRUE)
+dadaFs[[1]]
+```
+
+```{r}
+dadaRs <- dada(filtRs, err=errR, multithread=TRUE)
+dadaRs[[1]]
+```
+
+# Merge paired reads
+
+```{r}
+
+mergers <- mergePairs(dadaFs, filtFs, dadaRs, filtRs, verbose=TRUE)
+# Inspect the merger data.frame from the first sample
+head(mergers[[1]])
+
+```
+
+# Construct sequence table
+
+We can now construct an amplicon sequence variant table (ASV) table, a higher-resolution version of the OTU table produced by traditional methods.
+
+```{r}
+seqtab <- makeSequenceTable(mergers)
+dim(seqtab)
+```
+
+```{r}
+# Inspect distribution of sequence lengths
+table(nchar(getSequences(seqtab)))
+```
+
+The sequence table is a `matrix` with rows corresponding to (and named by) the samples, and columns corresponding to (and named by) the sequence variants. This table contains 293 ASVs, and the lengths of our merged sequences all fall within the expected range for this V3-V4 amplicon.
+
+# Remove chimeras
+
+```{r}
+seqtab.nochim <- removeBimeraDenovo(seqtab, method="consensus", multithread=TRUE, verbose=TRUE)
+dim(seqtab.nochim)
+```
+
+```{r}
+sum(seqtab.nochim)/sum(seqtab)
+```
+
+# Track reads through the pipeline
+
+As a final check of our progress, we’ll look at the number of reads that made it through each step in the pipeline:
+
+```{r}
+getN <- function(x) sum(getUniques(x))
+track <- cbind(out, sapply(dadaFs, getN), sapply(dadaRs, getN), sapply(mergers, getN), rowSums(seqtab.nochim))
+# If processing a single sample, remove the sapply calls: e.g. replace sapply(dadaFs, getN) with getN(dadaFs)
+colnames(track) <- c("input", "filtered", "denoisedF", "denoisedR", "merged", "nonchim")
+rownames(track) <- sample.names
+head(track)
+```
+
+# Assign taxonomy
+
+It is common at this point, especially in 16S/18S/ITS amplicon sequencing, to assign taxonomy to the sequence variants. The DADA2 package provides a native implementation of the [naive Bayesian classifier method](http://www.ncbi.nlm.nih.gov/pubmed/17586664) for this purpose. The `assignTaxonomy` function takes as input a set of sequences to be classified and a training set of reference sequences with known taxonomy, and outputs taxonomic assignments with at least `minBoot` bootstrap confidence.
+
+We maintain [formatted training fastas for the RDP training set, GreenGenes clustered at 97% identity, and the Silva reference database](https://benjjneb.github.io/dada2/training.html), and additional trainings fastas suitable for protists and certain specific environments have been contributed. For fungal taxonomy, the General Fasta release files from the [UNITE ITS database](https://unite.ut.ee/repository.php) can be used as is. To follow along, download the `silva_nr99_v138.2_toGenus_trainset.fa.gz` file, and place it in the directory with the fastq files. (Source: <https://benjjneb.github.io/dada2/tutorial.html>)
+
+```{r}
+start_time <- Sys.time()
+taxa <- assignTaxonomy(seqtab.nochim, "/home/admin/Microbiome/KEM_consolidated_raw_data/KEM_consolidated_raw_data/SILVA_v138.2/silva_nr99_v138.2_toGenus_trainset.fa.gz", multithread=TRUE)
+
+end_time <- Sys.time()
+
+end_time - start_time
+```
+
+# Assign species
+
+```{r}
+start_time2 <- Sys.time()
+taxa <- addSpecies(taxa, "/home/admin/Microbiome/KEM_consolidated_raw_data/KEM_consolidated_raw_data/SILVA_v138.2/silva_v138.2_assignSpecies.fa.gz")
+
+end_time2 <- Sys.time()
+
+end_time2 - start_time2
+```
+
+Let’s inspect the taxonomic assignments:
+
+```{r}
+taxa.print <- taxa # Removing sequence rownames for display only
+rownames(taxa.print) <- NULL
+head(taxa.print)
+```
+
+```{r}
+#BiocManager::install("DECIPHER")
+library(DECIPHER); packageVersion("DECIPHER")
+```
+
+```{r}
+dna <- DNAStringSet(getSequences(seqtab.nochim)) # Create a DNAStringSet from the ASVs
+load("/home/admin/Microbiome/Microbiome_R_2026/SILVA_SSU_r138.2_v2.RData") # CHANGE TO THE PATH OF YOUR TRAINING SET
+ids <- IdTaxa(dna, trainingSet, strand="top", processors=NULL, verbose=FALSE) # use all processors
+ranks <- c("domain", "phylum", "class", "order", "family", "genus", "species") # ranks of interest
+# Convert the output object of class "Taxa" to a matrix analogous to the output from assignTaxonomy
+taxid <- t(sapply(ids, function(x) {
+        m <- match(ranks, x$rank)
+        taxa <- x$taxon[m]
+        taxa[startsWith(taxa, "unclassified_")] <- NA
+        taxa
+}))
+colnames(taxid) <- ranks; rownames(taxid) <- getSequences(seqtab.nochim)
+```
+
+# Evaluate accuracy
+
+```{r}
+
+#1. how many reads were assigned to taxonomic levels?
+mean(!is.na(taxa[, "Genus"]))
+
+#2.Read retention
+sum(track_df$nonchim)/sum(track_df$input)
+
+#3. Number of ASVs
+nrow(seqtab.nochim)
+```
+
+# Make ASV table
+
+```{r}
+seqtab <- makeSequenceTable(mergers)
+```
+
+# Phyloseq
+
+```{r}
+# BiocManager::install("phyloseq")
+# BiocManager::install("Biostrings")
+# install.packages("ggplot2")
+
+library(phyloseq); packageVersion("phyloseq")
+library(Biostrings); packageVersion("Biostrings")
+library(ggplot2); packageVersion("ggplot2")
+library(ggpubr)
+theme_set(theme_bw())
+```
+
+```{r}
+
+
+```
+
+# Metadata
+
+```{r}
+samples.out <- rownames(seqtab.nochim)
+
+Microbiome_metadata <-read.csv("Microbiome_B12_metadata_30MAR26.csv", header = T,check.names = F,na.strings = "NA")
+
+rownames(Microbiome_metadata) <-Microbiome_metadata$File_IDs
+
+ps <- phyloseq(otu_table(seqtab.nochim, taxa_are_rows=FALSE),
+               sample_data(Microbiome_metadata),
+               tax_table(taxa))
+```
+
+# Editing ASV names
+
+```{r}
+dna <- Biostrings::DNAStringSet(taxa_names(ps))
+names(dna) <- taxa_names(ps)
+ps <- merge_phyloseq(ps, dna)
+taxa_names(ps) <- paste0("ASV", seq(ntaxa(ps)))
+ps
+```
+
+# **Visualize alpha-diversity**:
+
+```{r}
+library(dplyr)
+
+ps.all_taxa_pruned <- prune_samples(sample_sums(ps.all_taxa) > 0, ps.all_taxa)
+
+
+alpha_df <- estimate_richness(ps.all_taxa_pruned, measures = c("Observed", "Shannon", "Simpson", "Chao1", "ACE", "InvSimpson", "Fisher"))
+
+otu <- otu_table(ps.all_taxa_pruned)
+
+otu[is.na(otu)] <- 0
+otu[is.nan(otu)] <- 0
+
+otu_table(ps.all_taxa_pruned) <- otu
+
+rownames(alpha_df) <- sub("^X", "", rownames(alpha_df))
+
+alpha_df$File_IDs2 <-rownames(alpha_df)
+
+alpha_df <- alpha_df %>% left_join(Microbiome_metadata %>% dplyr::select(File_IDs2, B12_category, B12_combined, Gender, Family_status2, Family_no), by="File_IDs2")
+
+write.csv(alpha_df , "alpha_df_OBJ1.CSV")
+
+#shannon, simpson
+plot_richness(ps, x="Family_status", measures=c("Shannon", "Simpson"), color="Family_status") + geom_boxplot()+
+   stat_compare_means(method = "wilcox.test")
+
+#observed
+plot_richness(ps, x="Family_status", measures=c("Observed"), color="Family_status") + geom_boxplot() +
+   stat_compare_means(method = "wilcox.test") 
+
+#observed
+plot_richness(ps, x="Gender", measures=c("Observed"), color="Gender") + geom_boxplot() +
+   stat_compare_means(method = "wilcox.test") + facet_wrap(~Family_status)
+
+
+#observed
+plot_richness(ps, x="Family_status", measures=c("Observed"), color="B12_category") + geom_boxplot() +
+   stat_compare_means(method = "wilcox.test") + facet_wrap(~Family_status)
+
+
+
+#observed
+# plot_richness(ps, x="SS_pheno", measures=c("Observed"), color="Gender") + geom_boxplot() +
+#    stat_compare_means(method = "wilcox.test") + facet_wrap(~Family_status)
+```
+
+# Alpha diversity plots in ggplot
+
+```{r}
+alpha_df 
+
+
+```
+
+**Ordinate**:
+
+```{r}
+# Transform data to proportions as appropriate for Bray-Curtis distances
+ps.prop <- transform_sample_counts(ps, function(otu) otu/sum(otu))
+
+#check is there are NAs
+any(is.na(otu_table(ps.prop)))
+
+rowSums(otu_table(ps.prop))
+
+ps.prop <- prune_samples(sample_sums(ps.prop) > 0, ps.prop)
+
+ps.prop <- prune_taxa(taxa_sums(ps.prop) > 0, ps.prop)
+
+
+otu_table(ps.prop)[is.na(otu_table(ps.prop))] <- 0
+
+
+ord.nmds.bray <- ordinate(ps.prop, method="NMDS", distance="bray")
+
+ord.PCOA <- ordinate(ps.prop, method="PCoA", distance="bray")
+
+
+plot_ordination(ps.prop, ord.nmds.bray, color="B12_category", title="Bray NMDS")
+
+
+plot_ordination(ps.prop, ord.PCOA, color="B12_category", title="PCoA")
+```
+
+# Beta diversity in ggplot
+
+```{r}
+
+ord_df <- plot_ordination(ps.prop, ord.PCOA, justDF=TRUE)
+ord_df_NMDS_BRAY <- plot_ordination(ps.prop, ord.nmds.bray, justDF=TRUE)
+
+
+
+library(ggplot2)
+
+ggplot(ord_df, aes(x=Axis.1, y=Axis.2, color=B12_category)) +
+  geom_point(size=3)
+
+
+ggplot(ord_df, aes(x=Axis.1, y=Axis.2, color=Family_status2, shape=B12_category)) +
+  geom_point(alpha=0.6) +
+  stat_summary(fun=mean, geom="point", size=5, shape=4, stroke=1.5)
+
+
+ggplot(ord_df, aes(x=Axis.1, y=Axis.2, color=B12_category)) +
+  geom_point(alpha=0.6) +
+  stat_ellipse(level=0.95)
+
+
+ggplot(ord_df, aes(x=Axis.1, y=Axis.2, color=B12_category)) +
+  geom_point(size=3, alpha=0.7) +
+  stat_ellipse(level=0.95, linetype=2) +
+  stat_summary(fun=mean, geom="point", size=5, shape=4, stroke=1.5) +
+  theme_classic() +
+  labs(title="PCoA (Bray-Curtis)",
+       x="PCoA1",
+       y="PCoA2")
+
+
+ggplot(na.omit(ord_df[,c(1:5,8:14,20:22)]), aes(x=Axis.1, y=Axis.2, 
+                   color=Family_status2, 
+                   shape=B12_category)) +
+  geom_point(alpha=0.6) +
+  stat_summary(aes(group=interaction(Family_status2, B12_category)),
+               fun=mean, geom="point", size=5, shape=4, stroke=1.5)
+
+
+
+ggplot(na.omit(ord_df[,c(1:5,8:14,20:22)]), aes(x=Axis.1, y=Axis.2, 
+                   color=Family_status2, 
+                   shape=B12_category)) +
+  geom_point(alpha=0.6) +
+  stat_summary(aes(group=Family_status2),
+             fun=mean, geom="point", size=5, shape=4)
+
+
+
+ggplot(ord_df, aes(x=Axis.1, y=Axis.2, 
+                   color=Family_status2, 
+                   shape=B12_category)) +
+  geom_point(alpha=0.6) +
+  stat_ellipse(aes(group=interaction(Family_status2, B12_category)),
+               level=0.95, linetype=2) +
+  stat_summary(aes(group=interaction(Family_status2, B12_category)),
+               fun=mean, geom="point", size=5, shape=4, stroke=1.5) +
+  theme_classic()
+
+
+
+
+
+
+
+
+ggplot(ord_df, aes(x=Axis.1, y=Axis.2, color=Family_status2)) +
+  stat_summary(fun=mean, geom="point", size=6)
+```
+
+# PCoA plot standardisation
+
+```{r}
+library(vegan)
+
+
+bray_dist <- phyloseq::distance(ps.prop, method = "bray")
+
+group <- sample_data(ps.prop)$
+
+```
+
+```{r}
+library(vegan)
+
+# extract OTU matrix
+otu <- as(otu_table(ps.prop), "matrix")
+
+# Bray-Curtis distance
+bray_dist <- vegdist(otu, method = "bray")
+
+# grouping variable
+group <- sample_data(ps.prop)$Family_status2
+
+# beta dispersion
+bd <- betadisper(bray_dist, group)
+
+# test
+anova(bd)
+permutest(bd)
+
+# plot
+plot(bd)
+
+# boxplot
+boxplot(bd)
+```
+
+```{r}
+ord_df_PCoA <- plot_ordination(ps.prop, ord.PCOA, justDF=TRUE)
+ord_df_NMDS_BRAY <- plot_ordination(ps.prop, ord.nmds.bray, justDF=TRUE)
+
+```
+
+# Multiple combination of methods: beta diversity
+
+```{r}
+#Step 1. prepare data
+ps.prop <- transform_sample_counts(ps, function(x) x / sum(x))
+ps.prop <- prune_samples(sample_sums(ps.prop) > 0, ps.prop)
+ps.prop <- prune_taxa(taxa_sums(ps.prop) > 0, ps.prop)
+
+
+#2.define distances
+dist_methods <- c("bray", "jaccard", "euclidean")
+ord_methods  <- c("PCoA", "NMDS")
+
+#Step 3: Loop and generate plots
+library(ggplot2)
+
+plots <- list()
+
+for (dist in dist_methods) {
+  for (ord in ord_methods) {
+    
+    ord_obj <- ordinate(ps.prop, method = ord, distance = dist)
+    
+    p <- plot_ordination(ps.prop, ord_obj, color="Family_status2") +
+      geom_point(size=3, alpha=0.7) +
+      stat_ellipse(level=0.95) +
+      theme_classic() +
+      ggtitle(paste(ord, "-", dist))
+    
+    plots[[paste(ord, dist, sep="_")]] <- p
+  }
+}
+
+
+#4. display plots
+
+library(patchwork)
+
+wrap_plots(plots)
+```
+
+# Ord plot: PCoA
+
+```{r}
+#step1. ordination
+ord <- ordinate(ps.prop, method = "PCoA", distance = "bray")
+
+#step2 . extract coordinates
+ord_df <- as.data.frame(ord$vectors[,1:2])
+
+
+colnames(ord_df) <- c("PCoA1", "PCoA2")
+
+ord_df$SampleID <- rownames(ord_df)
+
+meta <-data.frame(sample_data(ps.prop))
+
+meta$SampleID <- rownames(meta)
+
+df <- merge(ord_df, meta, by= "SampleID")
+
+#step3. summarise by group
+library(dplyr)
+
+summary_df <- df %>% group_by(Family_status2, B12_category) %>% summarise(mean_PCoA1 = mean(PCoA1), 
+                                                                         mean_PCoA2 = mean(PCoA2), 
+                                                                         se_PCoA1 = sd(PCoA1)/sqrt(n()),
+                                                                         se_PCoA2 = sd(PCoA2)/sqrt(n()),
+                                                                         .groups = "drop"
+                                                                         )
+  
+
+# step 4:plot
+library(ggplot2)
+
+svg("OBJ1_beta_diversity_PCoA_1APR26.svg", width= 30, height=15)
+ggplot(na.omit(summary_df), aes(x= mean_PCoA1, y= mean_PCoA2)) + 
+  #horizontal bars
+geom_errorbar(aes(xmin = mean_PCoA1 - se_PCoA1,
+                  xmax = mean_PCoA1 + se_PCoA1),
+              height =0) +
+  #vertical error bars
+  geom_errorbar(aes(ymin= mean_PCoA2 - se_PCoA2,
+                    ymax = mean_PCoA2 + se_PCoA2), width=0) +
+  #points
+  geom_point(aes(color = Family_status2, shape = B12_category), size= 36,alpha= 0.7)+
+  geom_vline(xintercept =0, color = "black") + 
+  geom_hline(yintercept = 0, color= "black")+ 
+  #stat_ellipse(aes(group = Family_status2), type = "t", level = 0.95, linewidth = 2) + 
+  xlab("PCoA1 (3%)") +
+  ylab("PCoA2 (3.8%)") + 
+  theme_classic() +
+  theme(axis.text = element_text(face = "bold", size = 36),
+        axis.title = element_text(face = "bold",size = 36),
+        legend.text = element_text(face = "bold",size=36),
+        legend.title = element_text(face = "bold",size=36))
+
+dev.off()
+```
+
+# Ord plot: PCoA2
+
+```{r}
+setwd("/home/admin/Microbiome/Microbiome_R_2026")
+
+
+
+library(phyloseq)
+library(ggplot2)
+library(dplyr)
+
+methods <- c("bray", "jaccard", "euclidean", "manhattan", "canberra", "kulczynski")
+
+for (method in methods) {
+  
+  cat("Running:", method, "\n")
+  
+  tryCatch({
+    
+    ord <- ordinate(ps.all_taxa, method = "PCoA", distance = method)
+    
+    ord_df <- as.data.frame(ord$vectors[,1:2])
+    colnames(ord_df) <- c("PCoA1", "PCoA2")
+    ord_df$SampleID <- rownames(ord_df)
+    
+    meta <- as.data.frame(sample_data(ps.all_taxa))
+    meta$SampleID <- rownames(meta)
+    
+    #df <- merge(ord_df, meta, by = "SampleID")
+    
+    df <- ord_df %>% left_join(meta, by = "SampleID")
+    summary_df <- df %>%
+      group_by(Family_status2, B12_category) %>%
+      summarise(mean_PCoA1 = mean(PCoA1),
+                mean_PCoA2 = mean(PCoA2),
+                .groups = "drop")
+    
+    file_name <- paste0("PCoA_", method, ".svg")
+    cat("Saving:", file_name, "\n")
+    
+    svg(file_name, width = 12, height = 10)
+    
+    p <- ggplot(df, aes(x = PCoA1, y = PCoA2)) +
+      geom_point(aes(color = Family_status2, shape = B12_category),
+                 size = 4, alpha = 0.7) +
+      stat_ellipse(aes(color = Family_status2),
+                   type = "t", level = 0.95) +
+      geom_point(data = summary_df,
+                 aes(x = mean_PCoA1, y = mean_PCoA2,
+                     color = Family_status2, shape = B12_category),
+                 size = 8) +
+      ggtitle(paste("PCoA -", method)) +
+      theme_classic()
+    
+    print(p)
+    dev.off()
+    
+  }, error = function(e) {
+    cat("❌ Error in", method, ":", e$message, "\n")
+  })
+}
+```
+
+# Ord plot: PCoA for children
+
+```{r}
+setwd("/home/admin/Microbiome/Microbiome_R_2026")
+
+
+
+library(phyloseq)
+library(ggplot2)
+library(dplyr)
+
+methods <- c("bray", "jaccard", "euclidean", "manhattan", "canberra", "kulczynski")
+
+for (method in methods) {
+  
+  cat("Running:", method, "\n")
+  
+  tryCatch({
+    
+    ord <- ordinate(ps.all_taxa_pruned, method = "PCoA", distance = method)
+    
+    ord_df <- as.data.frame(ord$vectors[,1:2])
+    colnames(ord_df) <- c("PCoA1", "PCoA2")
+    ord_df$SampleID <- rownames(ord_df)
+    
+    meta <- as.data.frame(sample_data(ps.all_taxa))
+    meta$SampleID <- rownames(meta)
+    
+    #df <- merge(ord_df, meta, by = "SampleID")
+    
+    df <- ord_df %>% left_join(meta, by = "SampleID")
+    summary_df <- df %>%
+      group_by(Family_status2, B12_category) %>%
+      summarise(mean_PCoA1 = mean(PCoA1),
+                mean_PCoA2 = mean(PCoA2),
+                .groups = "drop")
+    
+    file_name <- paste0("PCoA_", method, ".svg")
+    cat("Saving:", file_name, "\n")
+    
+    df <- df %>% filter(Family_status2 %in% c("Boys", "Girls"))
+    
+    svg(paste0("Children",file_name), width = 12, height = 10)
+    
+    p <- ggplot(df, aes(x = PCoA1, y = PCoA2)) +
+      geom_point(aes(color = Family_status2, shape = B12_category),
+                 size = 4, alpha = 0.7) +
+      stat_ellipse(aes(color = Family_status2),
+                   type = "t", level = 0.95) +
+      geom_point(data = summary_df,
+                 aes(x = mean_PCoA1, y = mean_PCoA2,
+                     color = Family_status2, shape = B12_category),
+                 size = 8) +
+      ggtitle(paste("PCoA -", method)) +
+      theme_classic()
+    
+    print(p)
+    dev.off()
+    
+  }, error = function(e) {
+    cat("❌ Error in", method, ":", e$message, "\n")
+  })
+}
+```
+
+# Ord plot: NMDS
+
+```{r}
+#step1. ordination
+ord <- ordinate(ps.prop, method = "NMDS", distance = "bray")
+
+#step2 . extract coordinates
+ord_df <- as.data.frame(ord$points[,1:2])
+
+
+colnames(ord_df) <- c("NMDS1", "NMDS2")
+
+ord_df$SampleID <- rownames(ord_df)
+
+meta <-data.frame(sample_data(ps.prop))
+
+meta$SampleID <- rownames(meta)
+
+df <- merge(ord_df, meta, by= "SampleID")
+
+#step3. summarise by group
+library(dplyr)
+
+summary_df <- df %>% group_by(Family_status2, B12_category) %>% summarise(mean_NMDS1 = mean(NMDS1), 
+                                                                         mean_NMDS2 = mean(NMDS2), 
+                                                                         se_NMDS1 = sd(NMDS1)/sqrt(n()),
+                                                                         se_NMDS2 = sd(NMDS2)/sqrt(n()),
+                                                                         .groups = "drop"
+                                                                         )
+  
+
+# step 4:plot
+library(ggplot2)
+
+svg("OBJ1_beta_diversity_NMDS_1APR26.svg", width= 30, height=20)
+ggplot(na.omit(summary_df), aes(x= mean_NMDS1, y= mean_NMDS2)) + 
+  #horizontal bars
+geom_errorbar(aes(xmin = mean_NMDS1 - se_NMDS1,
+                  xmax = mean_NMDS1 + se_NMDS1),
+              height =0) +
+  #vertical error bars
+  geom_errorbar(aes(ymin= mean_NMDS2 - se_NMDS2,
+                    ymax = mean_NMDS2 + se_NMDS2), width=0) +
+  #points
+  geom_point(aes(color = Family_status2, shape = B12_category),  size= 24)+
+  geom_vline(xintercept =0, color = "black") + 
+  geom_hline(yintercept = 0, color= "black")+ 
+  stat_ellipse(aes(group = Family_status2), type = "t", level = 0.95, linewidth = 2) +
+  theme_minimal() +
+  theme(axis.text = element_text(face = "bold", size = 36),
+        axis.title = element_text(face = "bold",size = 36),
+        legend.text = element_text(face = "bold",size=36),
+        legend.title = element_text(face = "bold",size=36))
+
+dev.off()
+```
+
+NMDS
+
+```{r}
+svg("OBJ1_beta_diversity_NMDS_1APR26_2.svg", width=12, height=10)
+
+ggplot(df, aes(x = NMDS1, y = NMDS2)) +   # ✅ use raw data for ellipse
+  
+  geom_point(aes(color = Family_status2, shape = B12_category),
+             size = 6, alpha = 0.8) +   # ✅ bigger + clean
+  
+  stat_ellipse(aes(color = Family_status2),
+               type = "t", level = 0.95,
+               linewidth = 1.5) +
+  
+  # optional: centroids (your summary_df)
+  geom_point(data = summary_df,
+             aes(x = mean_NMDS1, y = mean_NMDS2,
+                 color = Family_status2, shape = B12_category),
+             size = 10, stroke = 2) +   # ✅ big centroid markers
+  
+  geom_vline(xintercept = 0, color = "black", linewidth = 0.5) + 
+  geom_hline(yintercept = 0, color = "black", linewidth = 0.5) +
+  
+  scale_color_manual(values = c(
+    "Boys" = "#E64B35",
+    "Girls" = "#4DBBD5"
+  )) +
+  
+  theme_classic() +
+  theme(
+    axis.text = element_text(face = "bold", size = 20),
+    axis.title = element_text(face = "bold", size = 22),
+    legend.text = element_text(face = "bold", size = 18),
+    legend.title = element_text(face = "bold", size = 20)
+  ) +
+  
+  labs(
+    x = "NMDS1",
+    y = "NMDS2",
+    color = "Family Status",
+    shape = "B12 Category"
+  )
+
+dev.off()
+```
+
+# **Bar plot**:
+
+```{r}
+all_taxa_names <-names(sort(taxa_sums(ps), decreasing=TRUE))
+
+ps.all_taxa <-transform_sample_counts(ps, function(OTU) OTU/sum(OTU))
+
+ps.all_taxa <- prune_taxa(all_taxa_names, ps.all_taxa)
+write.csv(ps.all_taxa, "ps.all_taxa_OBJ1.csv")
+
+taxa_table_OBJ1 <- as.data.frame(tax_table(ps.all_taxa))
+
+
+write.csv(table(taxa_table_OBJ1$Kingdom), "OBJ1_Kingdom.csv")
+write.csv(table(taxa_table_OBJ1$Phylum), "OBJ1_Phylum.csv")
+write.csv(table(taxa_table_OBJ1$Class), "OBJ1_Class.csv")
+write.csv(table(taxa_table_OBJ1$Order), "OBJ1_Order.csv")
+write.csv(table(taxa_table_OBJ1$Family), "OBJ1_Family.csv")
+write.csv(table(taxa_table_OBJ1$Genus), "OBJ1_Genus.csv")
+write.csv(table(taxa_table_OBJ1$Species), "OBJ1_Species.csv")
+```
+
+# Calculating
+
+```{r}
+library(phyloseq)
+library(dplyr)
+
+otu <- as.data.frame(otu_table(ps))
+tax <- as.data.frame(tax_table(ps))
+meta <- as.data.frame(sample_data(ps))
+
+if(taxa_are_rows(ps)) {
+  otu <- t(otu)
+}
+
+
+library(tidyr)
+library(tibble)
+
+otu_long <- otu %>%
+  rownames_to_column("SampleID") %>%
+  pivot_longer(-SampleID, names_to="ASV", values_to="Abundance")
+
+
+tax$ASV <- rownames(tax)
+
+
+########## Phylum
+otu_long <- left_join(otu_long, tax[, c("ASV", "Phylum")], by="ASV")
+
+meta$SampleID <- rownames(meta)
+
+otu_long <- left_join(otu_long, meta, by="SampleID")
+
+otu_present <- otu_long %>%
+  filter(Abundance > 0)
+
+phyla_count <- otu_present %>%
+  group_by(Family_status2, B12_category, Phylum) %>%
+  summarise(n = n(), .groups="drop") %>%
+  group_by(Family_status2,B12_category) %>%
+  summarise(n_phyla = n_distinct(Phylum))
+
+phyla_count 
+
+########## Family
+otu_long <- left_join(otu_long, tax[, c("ASV", "Family")], by="ASV")
+
+meta$SampleID <- rownames(meta)
+
+otu_long <- left_join(otu_long, meta, by="SampleID")
+
+otu_present <- otu_long %>%
+  filter(Abundance > 0)
+
+family_count <- otu_present %>%
+  group_by(Family_status2, B12_category, Family) %>%
+  summarise(n = n(), .groups="drop") %>%
+  group_by(Family_status2, B12_category) %>%
+  summarise(n_phyla = n_distinct(Family))
+
+family_count 
+
+```
+
+```{r}
+top20 <- names(sort(taxa_sums(ps), decreasing=TRUE))
+ps.top20 <- transform_sample_counts(ps, function(OTU) OTU/sum(OTU))
+ps.top20 <- prune_taxa(top20, ps.top20)
+plot_bar(ps.top20, x="Family_status2", fill="Phylum") + facet_wrap(~B12_category, scales="free_x")
+```
+
+Taxa table
+
+```{r}
+taxa_table_OBJ1 <- as.data.frame(tax_table(ps))
+```
+
+Phyla table
+
+```{r}
+top20 <- names(sort(taxa_sums(ps), decreasing=TRUE))[1:100]
+ps.top20 <- transform_sample_counts(ps, function(OTU) OTU/sum(OTU))
+ps.top20 <- prune_taxa(top20, ps.top20)
+plot_bar(ps.top20, x="Family_status2", fill="Phylum") + facet_wrap(~B12_category, scales="free_x")
+```
+
+```{r}
+library(phyloseq)
+library(dplyr)
+library(tidyr)
+
+otu <- as.data.frame(otu_table(ps.all_taxa))
+tax <- as.data.frame(tax_table(ps.all_taxa))
+
+
+if(taxa_are_rows(ps)) {
+  otu <- t(otu)
+}
+
+
+otu$SampleID <- rownames(otu)
+
+
+otu_long <- pivot_longer(otu,
+                         cols = -SampleID,
+                         names_to = "ASV",
+                         values_to = "Abundance")
+
+
+tax$ASV <- rownames(tax)
+
+otu_long <- left_join(otu_long, tax, by="ASV")
+
+
+otu_present <- otu_long %>%
+  filter(Abundance > 0)
+
+taxa_counts <- otu_present %>%
+  group_by(SampleID) %>%
+  summarise(
+    n_phyla  = n_distinct(Phylum, na.rm=TRUE),
+    n_family = n_distinct(Family, na.rm=TRUE),
+    n_genus  = n_distinct(Genus, na.rm=TRUE)
+  )
+```
+
+# Alpha diversity plots: B12_category
+
+```{r}
+library(ggplot2)
+library(ggpubr)
+
+alpha_long <- alpha_df %>%
+  pivot_longer(cols = c(Observed, Shannon, Simpson, InvSimpson, Fisher),
+               names_to = "Metric",
+               values_to = "Value")
+
+
+alpha_long<-na.omit(alpha_long)
+
+
+svg("alpha_diversity_OBJ1.svg", width= 40, height=10)
+
+library(ggpubr)
+
+ggplot(alpha_long, aes(x = B12_category, y = Value, fill = B12_category)) +
+  geom_boxplot(outlier.shape = NA) +
+  geom_jitter(width = 0.2, alpha = 0.5) +
+  
+  stat_compare_means(method = "wilcox.test", label = "p.signif") + 
+  facet_wrap(~Metric, scales = "free_y", nrow = 1, ncol = 5) +
+  
+  theme_classic() +
+  theme(axis.title = element_text(size=36, face="bold"),
+        axis.text = element_text(size=24, face="bold"),
+        strip.text = element_text(size=36, face="bold"),
+        legend.text = element_text(size=36),
+        legend.title = element_text(size=36))
+
+dev.off()
+```
+
+# Alpha diversity plots: B12_category \~ Family_status2
+
+```{r}
+library(ggplot2)
+library(ggpubr)
+library(dplyr)
+library(tidyr)
+
+alpha_long <- alpha_df %>%
+  pivot_longer(cols = c(Observed, Shannon, Simpson, InvSimpson, Fisher, Chao1),
+               names_to = "Metric",
+               values_to = "Value") %>%
+  na.omit()
+
+# define comparison
+my_comparisons <- list(c("B12_deficient", "B12_sufficient"))
+
+svg("alpha_diversity_OBJ1_family_status.svg", width=40, height=30)
+
+ggplot(alpha_long, aes(x = B12_category, y = Value, fill = B12_category)) +
+  geom_boxplot(outlier.shape = NA, alpha=0.8) +
+  geom_jitter(aes(color=B12_category),width = 0.2, alpha = 0.5, size=16) +
+  
+  stat_compare_means(comparisons = my_comparisons,
+                     method = "wilcox.test",
+                     label = "p.format",
+                     step.increase = 0.01,
+                     size=16,
+                     abel.y = 0.85 * max(alpha_long$Value, na.rm = TRUE)) +
+  scale_fill_manual(values = c(
+    "B12_deficient" = "red",
+    "B12_sufficient" = "darkgreen"
+  )) +
+  scale_color_manual(values = c(
+    "B12_deficient" = "red",
+    "B12_sufficient" = "darkgreen"
+  )) +
+  
+  facet_grid(Family_status2 ~ Metric, scales = "free_y") +   #
+ scale_y_continuous(trans = "log2",expand = expansion(mult = c(0.05, 0.25))) + 
+  theme_classic() +
+  theme(axis.title = element_text(size=36, face="bold"),
+        axis.text = element_text(size=24, face="bold"),
+        strip.text = element_text(size=60, face="bold"), strip.background = element_rect(color= "black", linewidth=1),
+        panel.border = element_rect(color="black", linewidth = 1),
+        legend.text = element_text(size=58),
+        legend.title = element_text(size=68))
+
+dev.off()
+```
+
+# Barplot: Phylum
+
+```{r}
+library(phyloseq)
+library(dplyr)
+library(ggplot2)
+
+# 1. transform
+ps.rel <- transform_sample_counts(ps.all_taxa, function(x) x / sum(x))
+
+# 2. agglomerate
+ps.phylum <- tax_glom(ps.rel, taxrank = "Phylum")
+
+# 3. melt
+df_OBJ1_phylum <- psmelt(ps.phylum)
+
+# 4. clean taxonomy
+df_OBJ1_phylum$Phylum[is.na(df_OBJ1_phylum$Phylum)] <- "Unknown"
+
+# 5. top taxa
+top_taxa <- df_OBJ1_phylum %>%
+  group_by(Phylum) %>%
+  summarise(total = sum(Abundance)) %>%
+  arrange(desc(total)) %>%
+  slice(1:5) %>%
+  pull(Phylum)
+
+# 6. group others
+df_OBJ1_phylum$Phylum_mod <- ifelse(df_OBJ1_phylum$Phylum %in% top_taxa,
+                                    df_OBJ1_phylum$Phylum,
+                                    "Other")
+
+
+df_OBJ1_phylum <- df_OBJ1_phylum %>% dplyr::select(OTU, Sample, Abundance, SampleID, File_IDs, File_Ids2, SampleName, Family_no, Family_status, Family_status2, Category, Follow.up.timepoint, B12_combined, B12_category, B12_combined_timepoint, Gender, Kingdom, Phylum, Phylum_mod)
+
+# 7. plot
+svg("barplot_phylum_OBJ1.svg", width=30, height=10)
+ggplot(na.omit(df_OBJ1_phylum), aes(x = B12_category, y = Abundance, fill = Phylum_mod)) +
+  geom_bar(stat = "identity", position = "fill") +
+  facet_wrap(~Family_status2, nrow = 1) +
+  theme_light() +
+  labs(x = "", y = "Relative abundance") +
+  theme(strip.text = element_text(size = 24, face = "bold"),
+        axis.text = element_text(size = 24, angle = 0, vjust = 0.5), 
+        axis.title = element_text(size=36), 
+        legend.text = element_text(size=36),
+        legend.title = element_text(size=36))
+
+dev.off()
+```
+
+Percent of phyla
+
+```{r}
+library(dplyr)
+
+phyla_summary <- df_OBJ1_phylum %>%
+  group_by(Family_status2, B12_category, Phylum_mod) %>%
+  summarise(total_abundance = sum(Abundance), .groups = "drop") %>%
+  
+  group_by(Family_status2, B12_category) %>%
+  mutate(percent = 100 * total_abundance / sum(total_abundance))
+```
+
+# Family abundance summary
+
+```{r}
+library(dplyr)
+
+family_summary <- df_OBJ1_Family %>%
+  group_by(Family_status2, B12_category, Family_mod) %>%
+  summarise(total_abundance = sum(Abundance), .groups = "drop") %>%
+  
+  group_by(Family_status2, B12_category) %>%
+  mutate(percent = 100 * total_abundance / sum(total_abundance))
+
+write.csv(family_summary, "obj1_family_summary.csv")
+```
+
+# Genus abundance summary
+
+```{r}
+library(dplyr)
+
+Genus_summary <- df_OBJ1_Genus %>%
+  group_by(Family_status2, B12_category, Genus_mod) %>%
+  summarise(total_abundance = sum(Abundance), .groups = "drop") %>%
+  
+  group_by(Family_status2, B12_category) %>%
+  mutate(percent = 100 * total_abundance / sum(total_abundance))
+
+write.csv(Genus_summary, "obj1_Genus_summary.csv")
+```
+
+# Barplot: Family
+
+```{r}
+library(phyloseq)
+library(dplyr)
+library(ggplot2)
+library(scales)
+
+# 1. transform
+ps.rel <- transform_sample_counts(ps.all_taxa, function(x) x / sum(x))
+
+# 2. agglomerate
+ps.Family <- tax_glom(ps.rel, taxrank = "Family")
+
+# 3. melt
+df_OBJ1_Family <- psmelt(ps.Family)
+
+# 4. clean taxonomy
+df_OBJ1_Family$Family[is.na(df_OBJ1_Family$Family)] <- "Unknown"
+
+# 5. top 20 families
+top_taxa_Family <- df_OBJ1_Family %>%
+  group_by(Family) %>%
+  summarise(total = sum(Abundance)) %>%
+  arrange(desc(total)) %>%
+  slice(1:10) %>%   # ✅ FIXED
+  pull(Family)
+
+# 6. group others
+df_OBJ1_Family$Family_mod <- ifelse(df_OBJ1_Family$Family %in% top_taxa_Family,
+                                   df_OBJ1_Family$Family,
+                                   "Other")
+
+# 7. optional ordering (recommended)
+df_OBJ1_Family$Family_mod <- factor(df_OBJ1_Family$Family_mod,
+                                   levels = c(top_taxa_Family, "Other"))
+
+
+df_OBJ1_Family <- df_OBJ1_Family %>%
+  filter(!is.na(Abundance), !is.na(Family_status2))
+
+
+df_OBJ1_Family  <- df_OBJ1_Family %>% dplyr::select(OTU, Abundance, File_IDs, File_Ids2, SampleID,B12_category, Family_status2, Family, Family_mod)
+
+
+df_plot <- df_OBJ1_Family %>%
+  group_by(SampleID, B12_category, Family_status2, Family_mod) %>%
+  summarise(Abundance = sum(Abundance), .groups = "drop")
+
+# 8. plot
+svg("barplot_Family_OBJ1.svg", width=30, height=10)
+
+ggplot(na.omit(df_plot),
+       aes(x = B12_category, y = Abundance, fill = Family_mod)) +   # ✅ FIXED
+  geom_bar(stat = "identity", position = "stack", color=NA) +
+  facet_wrap(~Family_status2, nrow = 1) +
+  theme_light() +
+  scale_fill_manual(values = hue_pal()(length(unique(df_OBJ1_Family$Family_mod)))) +
+  labs(x = "", y = "Relative abundance") +
+  theme(strip.text = element_text(size = 24, face = "bold"),
+        axis.text = element_text(size = 24),
+        axis.title = element_text(size = 36)
+       )   
+
+dev.off()
+```
+
+# Barplot: Genus
+
+```{r}
+library(phyloseq)
+library(dplyr)
+library(ggplot2)
+library(scales)
+
+# 1. transform
+ps.rel <- transform_sample_counts(ps.all_taxa, function(x) x / sum(x))
+
+# 2. agglomerate
+ps.Genus <- tax_glom(ps.rel, taxrank = "Genus")
+
+# 3. melt
+df_OBJ1_Genus<- psmelt(ps.Genus)
+
+# 4. clean taxonomy
+df_OBJ1_Genus$Genus[is.na(df_OBJ1_Genus$Genus)] <- "Unknown"
+
+# 5. top 20 families
+top_taxa_Genus <- df_OBJ1_Genus %>%
+  group_by(Genus) %>%
+  summarise(total = sum(Abundance)) %>%
+  arrange(desc(total)) %>%
+  slice(1:10) %>%   # ✅ FIXED
+  pull(Genus)
+
+# 6. group others
+df_OBJ1_Genus$Genus_mod <- ifelse(df_OBJ1_Genus$Genus %in% top_taxa_Genus,
+                                   df_OBJ1_Genus$Genus,
+                                   "Other")
+
+# 7. optional ordering (recommended)
+df_OBJ1_Genus$Genus_mod <- factor(df_OBJ1_Genus$Genus_mod,
+                                   levels = c(top_taxa_Genus, "Other"))
+
+
+df_OBJ1_Genus <- df_OBJ1_Genus %>%
+  filter(!is.na(Abundance), !is.na(Family_status2))
+
+
+df_OBJ1_Genus  <- df_OBJ1_Genus %>% dplyr::select(OTU, Abundance, File_IDs, File_Ids2, SampleID,B12_category, Family_status2, Genus, Genus_mod)
+
+
+df_plot <- df_OBJ1_Genus %>%
+  group_by(SampleID, B12_category, Family_status2, Genus_mod) %>%
+  summarise(Abundance = sum(Abundance), .groups = "drop")
+
+# 8. plot
+svg("barplot_Genus_OBJ1.svg", width=30, height=10)
+
+ggplot(na.omit(df_plot),
+       aes(x = B12_category, y = Abundance, fill = Genus_mod)) +   # ✅ FIXED
+  geom_bar(stat = "identity", position = "stack") +
+  facet_wrap(~Family_status2, nrow = 1) +
+  theme_light() +
+  scale_fill_manual(values = hue_pal()(length(unique(df_OBJ1_Genus$Genus_mod)))) +
+  labs(x = "", y = "Relative abundance") +
+  theme(strip.text = element_text(size = 24, face = "bold"),
+        axis.text = element_text(size = 24),
+        axis.title = element_text(size = 36)
+       )   
+
+dev.off()
+```
+
+Genus barplot2
+
+```{r}
+#physeq_genus <- tax_glom(ps.all_taxa_pruned, taxrank = "Genus")
+-+
+df_genus2 <-df_genus,  %>% group_by(SampleID, Genus, B12_category) %>%
+  summarise(Abundance_aggregate = sum(Abundance))
+```
+
+Bifidobacterium
+
+```{r}
+df_bifido <- df_OBJ1_Genus %>%
+  filter(Genus == "Bifidobacterium")
+
+df_bifido_sum <- df_bifido %>%
+  group_by(SampleID, B12_category, Family_status2) %>%
+  summarise(Abundance = sum(Abundance), .groups = "drop")
+
+library(ggplot2)
+library(ggpubr)
+
+ggplot(na.omit(df_bifido_sum),
+       aes(x = B12_category, y = Abundance, fill = B12_category)) +
+  
+  geom_boxplot(outlier.shape = NA) +
+  geom_jitter(width = 0.2, alpha = 0.6, size = 3) +
+  
+  facet_wrap(~Family_status2) +
+  
+  theme_classic() +
+  labs(y = "Relative abundance (Bifidobacterium)", x = "") +
+  
+  theme(axis.text = element_text(size = 16, face = "bold"),
+        axis.title = element_text(size = 18, face = "bold"),
+        strip.text = element_text(size = 16, face = "bold"))
+
+
+my_comparisons <- list(c("B12_deficient", "B12_sufficient"))
+
+svg("bifidobacterium_obj1.svg", width=15, height=10)
+ggplot(na.omit
+       (df_bifido_sum),
+       aes(x = B12_category, y = Abundance, fill = B12_category)) +
+  
+  geom_boxplot(outlier.shape = NA) +
+  geom_jitter(width = 0.2, alpha = 0.6, size = 3) +
+  
+  stat_compare_means(comparisons = my_comparisons,
+                     method = "wilcox.test",
+                     label = "p.format",
+                     size = 6) +
+  
+  facet_wrap(~Family_status2) +
+  
+  theme_classic()
+
+dev.off()
+```
+
+```{r}
+df_organism <- df_OBJ1_Genus %>%
+  filter(Genus == "Ruminococcus")
+
+df_organism_sum <- df_organism %>%
+  group_by(SampleID, B12_category, Family_status2) %>%
+  summarise(Abundance = sum(Abundance), .groups = "drop")
+
+library(ggplot2)
+library(ggpubr)
+
+ggplot(na.omit(df_organism_sum),
+       aes(x = B12_category, y = Abundance, fill = B12_category)) +
+  
+  geom_boxplot(outlier.shape = NA) +
+  geom_jitter(width = 0.2, alpha = 0.6, size = 3) +
+  
+  facet_wrap(~Family_status2) +
+  
+  theme_classic() +
+  labs(y = "Relative abundance (Ruminococcus)", x = "") +
+  
+  theme(axis.text = element_text(size = 16, face = "bold"),
+        axis.title = element_text(size = 18, face = "bold"),
+        strip.text = element_text(size = 16, face = "bold"))
+
+
+my_comparisons <- list(c("B12_deficient", "B12_sufficient"))
+
+svg("ruminococcus_obj1.svg", width=15, height=10)
+ggplot(na.omit(df_organism_sum),
+       aes(x = B12_category, y = Abundance, fill = B12_category)) +
+  
+  geom_boxplot(outlier.shape = NA) +
+  geom_jitter(width = 0.2, alpha = 0.6, size = 3) +
+  
+  stat_compare_means(comparisons = my_comparisons,
+                     method = "wilcox.test",
+                     label = "p.format",
+                     size = 6) +
+  
+  facet_wrap(~Family_status2) +
+  
+  theme_classic()
+
+dev.off()
+```
+
+compare all genus
+
+```{r}
+library(dplyr)
+
+df_genus <- df_OBJ1_Genus %>%
+  filter(!is.na(B12_category)) %>%   # remove NA group
+  group_by(SampleID, Family_status2, B12_category, Genus) %>%
+  summarise(Abundance = sum(Abundance), .groups = "drop")
+
+
+results <- df_genus %>%
+  group_by(Genus, Family_status2) %>%
+  
+  # ensure both groups exist
+  filter(n_distinct(B12_category) == 2) %>%
+  
+  summarise(
+    n_def = sum(B12_category == "B12_deficient"),
+    n_suff = sum(B12_category == "B12_sufficient"),
+    
+    p_value = wilcox.test(Abundance ~ B12_category)$p.value,
+    
+    median_def = median(Abundance[B12_category == "B12_deficient"]),
+    median_suff = median(Abundance[B12_category == "B12_sufficient"]),
+    
+    effect = median_suff - median_def,   # direction of change
+    
+    .groups = "drop"
+  )
+
+
+results <- results %>%
+  mutate(p_adj = p.adjust(p_value, method = "BH"))
+
+head(results)
+write.csv(results, "B12_status_in_Genus_Family_wise.csv")
+```
+
+cmpare only B12 status wise
+
+```{r}
+library(dplyr)
+
+df_genus <- df_OBJ1_Genus %>%
+  filter(!is.na(B12_category)) %>%   # remove NA
+  group_by(SampleID, B12_category, Genus) %>%
+  summarise(Abundance = sum(Abundance), .groups = "drop")
+
+results <- df_genus %>%
+  group_by(Genus) %>%
+  
+  # ensure both groups exist
+  filter(n_distinct(B12_category) == 2) %>%
+  
+  summarise(
+    n_def = sum(B12_category == "B12_deficient"),
+    n_suff = sum(B12_category == "B12_sufficient"),
+    
+    p_value = wilcox.test(Abundance ~ B12_category)$p.value,
+    
+    median_def = median(Abundance[B12_category == "B12_deficient"]),
+    median_suff = median(Abundance[B12_category == "B12_sufficient"]),
+    
+    effect = median_suff - median_def,
+    
+    .groups = "drop"
+  )
+
+results <- results %>%
+  mutate(p_adj = p.adjust(p_value, method = "BH"))
+
+head(results)
+
+write.csv(results, "Only_B12_status_in_Genus.csv")
+```
+
+Tree building
+
+```{r}
+seqs <- getSequences(seqtab.nochim)
+names(seqs) <- seqs   # required for tree building
+
+
+library(DECIPHER)
+library(Biostrings)
+
+dna <- DNAStringSet(seqs)
+
+alignment <- AlignSeqs(dna, anchor = NA)
+library(phangorn)
+
+# convert alignment
+phang.align <- phyDat(as(alignment, "matrix"), type = "DNA")
+
+# distance matrix
+dm <- dist.ml(phang.align)
+
+# initial tree (neighbor-joining)
+treeNJ <- NJ(dm)
+
+# maximum likelihood tree
+fit <- pml(treeNJ, data = phang.align)
+
+fitGTR <- optim.pml(fit,
+                    model = "GTR",
+                    optInv = TRUE,
+                    optGamma = TRUE,
+                    rearrangement = "stochastic",
+                    control = pml.control(trace = 0))
+
+
+ps.all_taxa <- phyloseq(
+  otu_table(ps.all_taxa),
+  tax_table(ps.all_taxa),
+  sample_data(ps.all_taxa),
+  phy_tree(fitGTR$tree)
+)
+
+phy_tree(ps.all_taxa)
+
+
+#ord <- ordinate(ps.all_taxa, method = "PCoA", distance = "unifrac")
+
+#ord_w <- ordinate(ps.all_taxa, method = "PCoA", distance = "wunifrac")
+```
+
+2.  Comparison: Parents vs children
+
+    ```{r}
+
+    ```

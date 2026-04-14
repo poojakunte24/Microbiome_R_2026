@@ -1,0 +1,33 @@
+---
+title: "Microbiome_analysis_105003581_26MAR26"
+author: "Pooja Kunte"
+format: html
+editor: visual
+---
+
+## Objective
+
+![This analysis was done on Object 1: files from 105003581/1 and 105003581/2 and 105003581/3](images/clipboard-2831961611.png)
+
+|                 | Sent | Sequenced |
+|-----------------|------|-----------|
+| Mother_28week   | 75   | 74        |
+| Mother_delivery | 75   | 75        |
+| Baby_meconium   | 98   | 35        |
+| Baby_3month     | 35   | 34        |
+| Baby_6month     | 35   | 35        |
+| Baby_9month     | 35   | 34        |
+| Baby_12month    | 35   | 35        |
+| Total           | 388  | 322       |
+
+# MultiQC reports: 
+
+![](images/clipboard-4187929446.png)
+
+Folder 2 has same samples profiled again
+
+![](images/clipboard-3398417515.png)
+
+Folder 3
+
+![](images/clipboard-370571617.png)

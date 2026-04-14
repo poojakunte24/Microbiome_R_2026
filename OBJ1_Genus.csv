@@ -1,0 +1,209 @@
+"","Var1","Freq"
+"1","[Bacteroides] pectinophilus group",3
+"2","[Clostridium] innocuum group",3
+"3","[Eubacterium] brachy group",3
+"4","[Eubacterium] eligens group",55
+"5","[Eubacterium] ruminantium group",25
+"6","[Eubacterium] siraeum group",43
+"7","[Eubacterium] sulci group",1
+"8","[Eubacterium] ventriosum group",20
+"9","[Eubacterium] xylanophilum group",26
+"10","[Ruminococcus] gauvreauii group",35
+"11","[Ruminococcus] gnavus group",12
+"12","Acinetobacter",3
+"13","Acutalibacter",39
+"14","Adlercreutzia",22
+"15","Agathobacter",79
+"16","Agathobaculum",92
+"17","Akkermansia",26
+"18","Alistipes",73
+"19","Allisonella",2
+"20","Anaerobutyricum",61
+"21","Anaerococcus",9
+"22","Anaeroplasma",2
+"23","Anaerostipes",53
+"24","Anaerovibrio",1
+"25","Aquamonas",3
+"26","Arcobacter",1
+"27","Asaccharobacter",1
+"28","Asaccharospora",1
+"29","Asteroleplasma",5
+"30","Bacillus",1
+"31","Bacteroides",251
+"32","Barnesiella",25
+"33","Bifidobacterium",178
+"34","Bilophila",2
+"35","Blautia",164
+"36","Brachyspira",1
+"37","Bradyrhizobium",4
+"38","Butyribacter",10
+"39","Butyricimonas",9
+"40","Butyrivibrio",13
+"41","CAG-196",4
+"42","CAG-352",28
+"43","CAG-56",10
+"44","Caproiciproducens",2
+"45","Catenibacterium",20
+"46","Caulobacter",6
+"47","Cetobacterium",9
+"48","Christensenellaceae R-7 group",233
+"49","Chryseobacterium",1
+"50","Clostridium",80
+"51","Colidextribacter",27
+"52","Collinsella",44
+"53","Conservatibacter",2
+"54","Coprobacter",1
+"55","Coprococcus",127
+"56","Coriobacteriaceae UCG-003",4
+"57","Corynebacterium",3
+"58","Curvibacter",1
+"59","Defluviitaleaceae UCG-011",2
+"60","Desulfovibrio",1
+"61","dgA-11 gut group",1
+"62","Dialister",44
+"63","Dorea",90
+"64","Dyadobacter",1
+"65","Eggerthella",1
+"66","Eisenbergiella",1
+"67","Elusimicrobium",5
+"68","Enhydrobacter",1
+"69","Enterobacter",6
+"70","Enterocloster",29
+"71","Enterococcus",7
+"72","Erysipelotrichaceae UCG-003",14
+"73","Erysipelotrichaceae UCG-006",4
+"74","Escherichia-Shigella",20
+"75","Ezakiella",6
+"76","Faecalibacterium",150
+"77","Faecalimonas",9
+"78","Family XIII AD3011 group",54
+"79","Family XIII UCG-001",29
+"80","Fastidiosipila",1
+"81","FD2005",1
+"82","Fenollaria",15
+"83","Finegoldia",5
+"84","Flavonifractor",5
+"85","Fournierella",6
+"86","Fusicatenibacter",31
+"87","Fusobacterium",2
+"88","GCA-900066575",1
+"89","Gemella",2
+"90","Gemmiger",109
+"91","Gordonibacter",4
+"92","Granulicatella",1
+"93","Haemophilus",24
+"94","Holdemanella",34
+"95","Howardella",12
+"96","HT002",1
+"97","Hungatella",4
+"98","Intestinibacter",34
+"99","Intestinimonas",19
+"100","Kineothrix",1
+"101","Klebsiella",26
+"102","Kocuria",1
+"103","Lachnoclostridium",37
+"104","Lachnospira",61
+"105","Lachnospiraceae AC2044 group",20
+"106","Lachnospiraceae FCS020 group",16
+"107","Lachnospiraceae NC2004 group",1
+"108","Lachnospiraceae ND3007 group",15
+"109","Lachnospiraceae NK3A20 group",7
+"110","Lachnospiraceae NK4A136 group",111
+"111","Lachnospiraceae NK4B4 group",5
+"112","Lachnospiraceae UCG-003",9
+"113","Lachnospiraceae UCG-004",37
+"114","Lachnospiraceae UCG-007",2
+"115","Lachnospiraceae UCG-010",29
+"116","Lacticaseibacillus",2
+"117","Lactiplantibacillus",2
+"118","Lactobacillus",23
+"119","Lancefieldella",1
+"120","Lawsonella",3
+"121","Lelliottia",3
+"122","Lentilactobacillus",2
+"123","Leptotrichia",1
+"124","Levilactobacillus",2
+"125","Leyella",78
+"126","Ligilactobacillus",32
+"127","Limosilactobacillus",19
+"128","Marvinbryantia",24
+"129","Massiliomicrobiota",3
+"130","Massiliprevotella",6
+"131","Mediterraneibacter",60
+"132","Megamonas",26
+"133","Megasphaera",15
+"134","Methanobrevibacter",9
+"135","Methanosphaera",2
+"136","Mitsuokella",28
+"137","Mixta",2
+"138","Mogibacterium",3
+"139","Monoglobus",79
+"140","Moryella",3
+"141","Murdochiella",2
+"142","Negativicoccus",3
+"143","Neisseria",1
+"144","NK4A214 group",95
+"145","Odoribacter",16
+"146","Olsenella",9
+"147","Oribacterium",10
+"148","Oscillibacter",8
+"149","Oxalobacter",2
+"150","Paludicola",11
+"151","Parabacteroides",41
+"152","Paracoccus",2
+"153","Paraprevotella",13
+"154","Parasutterella",2
+"155","Parolsenella",19
+"156","Parvimonas",1
+"157","Pediococcus",2
+"158","Peptoniphilus",9
+"159","Phascolarctobacterium",4
+"160","Prevotellaceae NK3B31 group",6
+"161","Prevotellaceae UCG-003",2
+"162","Pseudocitrobacter",1
+"163","Pseudomonas",1
+"164","Ralstonia",7
+"165","Raoultibacter",1
+"166","Rikenellaceae RC9 gut group",26
+"167","Romboutsia",57
+"168","Roseburia",138
+"169","Rothia",11
+"170","Ruminococcus",276
+"171","Rummeliibacillus",1
+"172","Ruthenibacterium",3
+"173","S5-A14a",1
+"174","Sarcina",15
+"175","Schaalia",3
+"176","Segatella",290
+"177","Sellimonas",1
+"178","Senegalimassilia",65
+"179","Shewanella",1
+"180","Shuttleworthia",3
+"181","Slackia",36
+"182","Solobacterium",29
+"183","Sphingomonas",6
+"184","Staphylococcus",1
+"185","Stenotrophomonas",15
+"186","Streptococcus",72
+"187","Subdoligranulum",2
+"188","Succinivibrio",26
+"189","Sutterella",9
+"190","Terrisporobacter",23
+"191","Thomasclavelia",5
+"192","TM7x",13
+"193","Tractidigestivibacter",39
+"194","Treponema",2
+"195","Turicibacter",11
+"196","Tyzzerella",8
+"197","UCG-001",2
+"198","UCG-002",130
+"199","UCG-003",29
+"200","UCG-004",3
+"201","UCG-005",122
+"202","UCG-008",27
+"203","UCG-009",5
+"204","Veillonella",6
+"205","Victivallis",2
+"206","Weissella",9
+"207","Z20",1
+"208","Zag_111",71

@@ -1,0 +1,298 @@
+---
+title: "Microbiome_analysis_1APR26"
+author: "Pooja Kunte"
+format: html
+editor: visual
+---
+
+## Objective 3
+
+This analysis was done on Object 1: files from 105003874/1
+
+|                       | Sent | Sequenced |
+|-----------------------|------|-----------|
+| G1_F1_Boys_B12_MMN    | 50   | 50        |
+| G1_F1_Girls_B12_MMN   | 43   | 41        |
+| G3_F1_Boys_B12_alone  | 50   | 50        |
+| G3_F1_Girls_B12_alone | 50   | 50        |
+| Total                 | 193  | 191       |
+
+# Installing packages
+
+```{r}
+# if (!requireNamespace("BiocManager", quietly = TRUE))
+#     install.packages("BiocManager")
+# BiocManager::install("dada2", version = "3.22")
+
+library(dada2)
+```
+
+# Load files
+
+```{r}
+
+pathF_OBJ3 <-"/home/admin/Microbiome/KEM_consolidated_raw_data/KEM_consolidated_raw_data/105003874/1_OBJ_3/R1"
+pathR_OBJ3 <-"/home/admin/Microbiome/KEM_consolidated_raw_data/KEM_consolidated_raw_data/105003874/1_OBJ_3/R2/"
+
+fastq_files_R1_OBJ3 <- list.files(pathF_OBJ3, pattern = "\\.fastq\\.gz$", full.names = TRUE)
+
+head(fastq_files_R1_OBJ3)
+
+
+fastq_files_R2_OBJ3 <- list.files(pathR_OBJ3, pattern = "\\.fastq\\.gz$", full.names = TRUE)
+
+head(fastq_files_R2_OBJ3)
+
+#check of number of files in R1 and R2 match
+
+n1_OBJ3 <- length(fastq_files_R1_OBJ3)
+n2_OBJ3 <- length(fastq_files_R2_OBJ3)
+
+n1_OBJ3
+n2_OBJ3
+
+if (n1_OBJ3 == n2_OBJ3) {
+  print("Number of files match ✅")
+} else {
+  print("Number of files do NOT match ❌")
+}
+```
+
+# Inspect read quality profiles: Forward reads
+
+```{r}
+plotQualityProfile(fastq_files_R1_OBJ3[1:2])
+```
+
+# Inspect read quality profiles: Reverse reads
+
+```{r}
+plotQualityProfile(fastq_files_R2_OBJ3[1:2])
+```
+
+# Filter and trim
+
+```{r}
+
+# Extract sample names, assuming filenames have format: SAMPLENAME_XXX.fastq
+sample.names_OBJ3 <- sapply(strsplit(basename(fastq_files_R1_OBJ3), "_"), `[`, 1)
+
+# Place filtered files in filtered/ subdirectory
+filtFs_OBJ3 <- file.path(pathF_OBJ3, "filtered", paste0(sample.names_OBJ3, "_R1_filt.fastq.gz"))
+filtRs_OBJ3 <- file.path(pathR_OBJ3, "filtered", paste0(sample.names_OBJ3, "_R2_filt.fastq.gz"))
+names(filtFs_OBJ3) <- sample.names_OBJ3
+names(filtRs_OBJ3) <- sample.names_OBJ3
+```
+
+# Filter
+
+1.  minQ =25. Minimum QC score of 25 was selected.
+2.  truncLen = c(270, 210). FastQC+ MultiQC reports were generated, fall of read quality was observed and based on that truncation length of 270 bp for forward reads and 210 bp for reverse reads was selected.
+3.  trimLeft=c(20,20) This makes sure that primer sequences are removed from the start of sequences, if we know that primers are already removed then set this to 0, if not sure then set at 20
+4.  maxN =0 sequences with more than maxN Ns will be discarded
+5.  maxEE=c(2,2) reads with higher than maxEE "expected errors" will be discarded
+6.  truncQ=11 Truncate reads at the first instance of a quality score less than or equal to truncQ
+
+```{r}
+out_OBJ3 <- filterAndTrim(fastq_files_R1_OBJ3, 
+                     filtFs_OBJ3, 
+                     fastq_files_R2_OBJ3, 
+                     filtRs_OBJ3, 
+                     minQ = 25, #reads containing a quality score less than minQ will be discarded.
+                     truncLen=c(270,210), #Truncate reads after truncLen bases. Reads shorter than this are discarded.
+                     trimLeft=c(20,20),#The number of nucleotides to remove from the start of each read. 
+                     maxN=0, #sequences with more than maxN Ns will be discarded.
+                     maxEE=c(2,2), #reads with higher than maxEE "expected errors" will be discarded. 
+                     truncQ=11, #Truncate reads at the first instance of a quality score less than or equal to truncQ.
+                     rm.phix=TRUE, #discard reads that match against the phiX genome
+                     compress=TRUE, 
+                     multithread=FALSE) # On Windows set multithread=FALSE (only needed for filterAndTrim)
+head(out_OBJ3)
+```
+
+# Learn the Error Rates R1
+
+```{r}
+errF_OBJ3 <- learnErrors(filtFs_OBJ3, multithread=TRUE)
+```
+
+## Plot errors R1
+
+```{r}
+plotErrors(errF_OBJ3, nominalQ=TRUE)
+```
+
+# Learn the Error Rates R2
+
+```{r}
+errR_OBJ3 <- learnErrors(filtRs_OBJ3, multithread=TRUE)
+```
+
+## Plot errors R2
+
+```{r}
+plotErrors(errR_OBJ3, nominalQ=TRUE)
+```
+
+# Sample Inference
+
+We are now ready to apply [the core sample inference algorithm](https://www.nature.com/articles/nmeth.3869#methods) to the filtered and trimmed sequence data.
+
+```{r}
+dadaFs_OBJ3 <- dada(filtFs_OBJ3, err=errF_OBJ3, multithread=TRUE)
+dadaFs_OBJ3[[1]]
+```
+
+```{r}
+dadaRs_OBJ3 <- dada(filtRs_OBJ3, err=errR_OBJ3, multithread=TRUE)
+dadaRs_OBJ3[[1]]
+```
+
+# Merge paired reads
+
+```{r}
+mergers_OBJ3 <- mergePairs(dadaFs_OBJ3, filtFs_OBJ3, dadaRs_OBJ3, filtRs_OBJ3, verbose=TRUE)
+# Inspect the merger data.frame from the first sample
+head(mergers_OBJ3[[1]])
+```
+
+# Construct sequence table
+
+We can now construct an amplicon sequence variant table (ASV) table, a higher-resolution version of the OTU table produced by traditional methods.
+
+```{r}
+seqtab_OBJ3 <- makeSequenceTable(mergers_OBJ3)
+dim(seqtab_OBJ3)
+```
+
+```{r}
+# Inspect distribution of sequence lengths
+table(nchar(getSequences(seqtab_OBJ3)))
+```
+
+# Remove chimeras
+
+```{r}
+seqtab.nochim_OBJ3 <- removeBimeraDenovo(seqtab_OBJ3, method="consensus", multithread=TRUE, verbose=TRUE)
+dim(seqtab.nochim_OBJ3)
+```
+
+```{r}
+sum(seqtab.nochim_OBJ3)/sum(seqtab_OBJ3)
+```
+
+# Track reads through the pipeline
+
+As a final check of our progress, we’ll look at the number of reads that made it through each step in the pipeline:
+
+```{r}
+getN_OBJ3 <- function(x) sum(getUniques(x))
+track_OBJ3 <- cbind(out_OBJ3, sapply(dadaFs_OBJ3, getN_OBJ3), sapply(dadaRs_OBJ3, getN_OBJ3), sapply(mergers_OBJ3, getN_OBJ3), rowSums(seqtab.nochim_OBJ3))
+# If processing a single sample, remove the sapply calls: e.g. replace sapply(dadaFs, getN) with getN(dadaFs)
+colnames(track_OBJ3) <- c("input", "filtered", "denoisedF", "denoisedR", "merged", "nonchim")
+rownames(track_OBJ3) <- sample.names_OBJ3
+head(track_OBJ3)
+```
+
+# Assign taxonomy
+
+It is common at this point, especially in 16S/18S/ITS amplicon sequencing, to assign taxonomy to the sequence variants. The DADA2 package provides a native implementation of the [naive Bayesian classifier method](http://www.ncbi.nlm.nih.gov/pubmed/17586664) for this purpose. The `assignTaxonomy` function takes as input a set of sequences to be classified and a training set of reference sequences with known taxonomy, and outputs taxonomic assignments with at least `minBoot` bootstrap confidence.
+
+We maintain [formatted training fastas for the RDP training set, GreenGenes clustered at 97% identity, and the Silva reference database](https://benjjneb.github.io/dada2/training.html), and additional trainings fastas suitable for protists and certain specific environments have been contributed. For fungal taxonomy, the General Fasta release files from the [UNITE ITS database](https://unite.ut.ee/repository.php) can be used as is. To follow along, download the `silva_nr99_v138.2_toGenus_trainset.fa.gz` file, and place it in the directory with the fastq files. (Source: <https://benjjneb.github.io/dada2/tutorial.html>)
+
+```{r}
+start_time_OBJ3 <- Sys.time()
+taxa_OBJ3 <- assignTaxonomy(seqtab.nochim_OBJ3, "/home/admin/Microbiome/KEM_consolidated_raw_data/KEM_consolidated_raw_data/SILVA_v138.2/silva_nr99_v138.2_toGenus_trainset.fa.gz", multithread=TRUE)
+
+end_time_OBJ3 <- Sys.time()
+
+end_time_OBJ3 - start_time_OBJ3
+```
+
+# Assign species
+
+```{r}
+start_time2_OBJ3 <- Sys.time()
+taxa_OBJ3 <- addSpecies(taxa_OBJ3, "/home/admin/Microbiome/KEM_consolidated_raw_data/KEM_consolidated_raw_data/SILVA_v138.2/silva_v138.2_assignSpecies.fa.gz")
+
+end_time2_OBJ3 <- Sys.time()
+
+end_time2_OBJ3 - start_time2_OBJ3
+```
+
+Let’s inspect the taxonomic assignments:
+
+```{r}
+taxa.print_OBJ3 <- taxa_OBJ3 # Removing sequence rownames for display only
+rownames(taxa.print_OBJ3) <- NULL
+head(taxa.print_OBJ3)
+```
+
+```{r}
+#BiocManager::install("DECIPHER")
+library(DECIPHER); packageVersion("DECIPHER")
+```
+
+```{r}
+dna_OBJ3 <- DNAStringSet(getSequences(seqtab.nochim_OBJ3)) # Create a DNAStringSet from the ASVs
+load("/home/admin/Microbiome/Microbiome_R_2026/SILVA_SSU_r138.2_v2.RData") # CHANGE TO THE PATH OF YOUR TRAINING SET
+ids_OBJ3 <- IdTaxa(dna_OBJ3, trainingSet, strand="top", processors=NULL, verbose=FALSE) # use all processors
+ranks_OBJ3 <- c("domain", "phylum", "class", "order", "family", "genus", "species") # ranks of interest
+# Convert the output object of class "Taxa" to a matrix analogous to the output from assignTaxonomy
+taxid_OBJ3 <- t(sapply(ids_OBJ3, function(x) {
+        m <- match(ranks, x$rank)
+        taxa <- x$taxon[m]
+        taxa[startsWith(taxa, "unclassified_")] <- NA
+        taxa
+}))
+colnames(taxid_OBJ3) <- ranks_OBJ3; rownames(taxid_OBJ3) <- getSequences(seqtab.nochim_OBJ3)
+```
+
+# Evaluate accuracy
+
+```{r}
+
+#1. how many reads were assigned to taxonomic levels?
+mean(!is.na(taxa_OBJ3[, "Genus"]))
+
+track_OBJ3_df<-as.data.frame(track_OBJ3)
+#2.Read retention
+sum(track_OBJ3_df$nonchim)/sum(track_OBJ3_df$input)
+
+#3. Number of ASVs
+nrow(seqtab.nochim_OBJ3)
+```
+
+# Make ASV table
+
+```{r}
+seqtab_OBJ3 <- makeSequenceTable(mergers_OBJ3)
+```
+
+# Phyloseq
+
+```{r}
+# BiocManager::install("phyloseq")
+# BiocManager::install("Biostrings")
+# install.packages("ggplot2")
+
+library(phyloseq); packageVersion("phyloseq")
+library(Biostrings); packageVersion("Biostrings")
+library(ggplot2); packageVersion("ggplot2")
+library(ggpubr)
+theme_set(theme_bw())
+```
+
+# Metadata
+
+```{r}
+samples.out_OBJ3 <- rownames(seqtab.nochim_OBJ3)
+
+Microbiome_metadata <-read.csv("seqtab.nochim_objective3_30MAR26.csv", header = T,check.names = F,na.strings = "NA")
+
+rownames(Microbiome_metadata) <-Microbiome_metadata$File_IDs
+
+ps_OBJ3 <- phyloseq(otu_table(seqtab.nochim_OBJ3, taxa_are_rows=FALSE),
+               sample_data(Microbiome_metadata),
+               tax_table(taxa_OBJ3))
+```
