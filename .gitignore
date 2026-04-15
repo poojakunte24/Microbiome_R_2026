@@ -1,0 +1,9 @@
+*.RData
+*.rds
+*.csv
+*.fastq
+*.fastq.gz
+*.fq.gz
+*.bam
+*.sam
+*.txt
